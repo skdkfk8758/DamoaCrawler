@@ -10,8 +10,8 @@ Last Update 2017.08.13
 
 import scrapy
 from bs4 import BeautifulSoup
-import requests
-import urllib.request
+from selenium import webdriver
+
 
 from Crawler.filterItem import *
 from Crawler.items import DamoaItem
@@ -117,16 +117,17 @@ class DcInside(scrapy.Spider):
 
                 item['pop'] = commentTmp    # 인기도 저장
 
-                yield scrapy.Request(item["link"], callback=self.parseText)
+                driver = webdriver.PhantomJS()
+                driver.get(item['link'])
 
-                print(item['text'])
+                textTmp = driver.find_element_by_class_name("re_gall_box_1").text
+
+                item['text'] = textTmp
+
+                # print(item['text'])
 
                 if filterItem(item) != None:
                     yield filterItem(item)
 
-    def parseText(self, response):
 
-        # ss = BeautifulSoup(response)
-
-        response.xpath("//title")
 
