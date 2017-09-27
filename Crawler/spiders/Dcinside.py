@@ -24,27 +24,27 @@ class DcInside(scrapy.Spider):
     baseUrl = "http://gall.dcinside.com"
 
     # 리퀘스트 요청
-    def start_requests(self):
+    def start_requests(self): 
         for i in range(1, MAX_PAGE, 1):
             yield scrapy.Request("http://gall.dcinside.com/board/lists?id=47&page={0}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=leavesister&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=strongest&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=manhole&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=onmyoji&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=hit&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=superidea&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=yusik&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=event_voicere&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=dcwiki&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=study_listN&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=cool&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=dogdripdoctor&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=rb&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=xmas&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=biza&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=biza_1&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=congratulation&page={}".format(i))
-            # yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=assistance&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=leavesister&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=strongest&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=manhole&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=onmyoji&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=hit&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=superidea&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=yusik&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=event_voicere&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=dcwiki&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=study_listN&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=cool&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=dogdripdoctor&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=rb&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=xmas&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=biza&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=biza_1&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=congratulation&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=assistance&page={}".format(i))
 
     # 사이트 파싱
     def parse(self, response):
@@ -117,7 +117,8 @@ class DcInside(scrapy.Spider):
 
                 item['pop'] = commentTmp    # 인기도 저장
 
-                driver = webdriver.PhantomJS()
+#                driver = webdriver.PhantomJS()
+                driver = webdriver.PhantomJS("C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe")
                 driver.get(item['link'])
 
                 textTmp = driver.find_element_by_class_name("re_gall_box_1").text
