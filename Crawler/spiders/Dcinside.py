@@ -124,6 +124,7 @@ class DcInside(scrapy.Spider):
                 textTmp = driver.find_element_by_class_name("re_gall_box_1").text
 
                 item['text'] = textTmp
+                driver.close()
 
                 # print(item['text'])
 
