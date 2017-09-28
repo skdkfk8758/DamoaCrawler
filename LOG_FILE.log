@@ -5625,3 +5625,262 @@ Traceback (most recent call last):
   File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ruliweb.py", line 89, in parse
     attributeTmp = select.xpath('td[@class="divsn"]/a/text()').extract()[0]
 IndexError: list index out of range
+2017-09-28 11:46:10 [scrapy.core.scraper] ERROR: Spider error processing <GET http://gall.dcinside.com/board/lists/?id=cool&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Dcinside.py", line 124, in parse
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 485, in find_element_by_class_name
+    return self.find_element(by=By.CLASS_NAME, value=name)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: {"errorMessage":"Unable to find element with class name 're_gall_box_1'","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"102","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:9959","User-Agent":"Python http auth"},"httpVersion":"1.1","method":"POST","post":"{\"using\": \"class name\", \"value\": \"re_gall_box_1\", \"sessionId\": \"2bd3a630-a3f7-11e7-b97c-33d900db409e\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/2bd3a630-a3f7-11e7-b97c-33d900db409e/element"}}
+Screenshot: available via screen
+
+2017-09-28 11:47:23 [py.warnings] WARNING: c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py:323: Warning: (1300, "Invalid utf8 character string: 'F09F94'")
+  self._do_get_result()
+
+2017-09-28 11:47:23 [scrapy.core.scraper] ERROR: Error processing {'attribute': 'HIT',
+ 'date': '2017-09-23 11:05:16',
+ 'hits': '32778',
+ 'last_update': '2017-09-28 11:47:18',
+ 'link': 'http://gall.dcinside.com/board/view/?id=hit&no=14222&page=1',
+ 'pop': 828.5646158307289,
+ 'recommened': '557',
+ 'source': 'dcinside',
+ 'text': '조선 시대에는 천인은 아니었지만 천인 취급을 받았던 이들이 있었다. \n'
+         '\n'
+         '조례(皂隷)⋅나장(羅將)⋅일수(日守)⋅조졸(漕卒)⋅봉수군⋅역졸(驛卒) 등 이른바 신량역천(身良役賤)층이 그들이다. 이들은 '
+         '신분상으로는 양인이었지만 하는 일이 천하다고 하여 천인 취급을 받았다. \n'
+         '\n'
+         '하지만 이들보다 더 천하게 여겨진 부류도 있었는데 그 대표적인 이들이 바로 백정(白丁)이다.\n'
+         '\n'
+         '백정은 본래 고려 시대의 여진족 출신 재인(才人)과 화척(禾尺)을 세종(世宗, 재위 1418~1450) 대에 하나로 합쳐서 '
+         '부른 이름이다. 고려 시대의 재인과 화척은 유목 생활을 하던 여진족의 후예로 천인 취급을 받았다. \n'
+         '\n'
+         '세종대왕께서는 이들을 사회 구성원으로 통합하기 위해 천하게 불리던 재인이나 화척 대신에 고려 시대의 일반 백성을 뜻하는 '
+         '백정이라는 이름을 붙여 주었다. \n'
+         '\n'
+         '아울러 백정들에게 호적을 만들어 주고 평민과 섞여 살게 하는 등의 조치도 취하였다. 이렇게 하여 백정은 호적을 갖게 되었고 '
+         '신분상으로는 양인이었다. 하지만 정부의 조치와 상관없이 사람들은 그들을 신백정(新白丁)이라 부르며 계속 천시하였을 뿐만 '
+         '아니라 양반이나 관료들은 노비처럼 멋대로 부리기까지 하였다.\n'
+         '\n'
+         '한편 화척의 후예인 백정들은 재인들과는 달리 마을에 거주하며 도살이나 유기(柳器) 제조 등에 종사하였다. 유기를 만드는 '
+         '사람들은 유기의 우리말인 고리를 붙여 고리백정(古里白丁)이라고도 불렀다. \n'
+         '\n'
+         '이들 백정은 다른 마을 사람들로부터 심한 멸시를 받았다. \n'
+         '\n'
+         '1809년(순조 9) 개성부의 한 백정이 혼인을 하면서 관복(冠服)을 입고 일산(日傘)을 받쳤다고 하여 마을 사람들이 '
+         '관복을 빌려 준 사람을 난타하고 백정의 집을 부순 후 개성부에 호소한 사건은 백정들의 처지가 어떠하였는지 잘 보여 '
+         '준다. \n'
+         '\n'
+         '마을 사람들은 심지어 관청에서 그 죄를 엄히 다스리지 않는다는 이유로 개성부 건물에 돌을 던지며 소란을 피우기까지 '
+         '하였다.\n'
+         '\n'
+         '\n'
+         '\n'
+         '🔼 사또에게 송사하는 백정의 모습. 빨간 칸, 김홍도의 풍속도 노상송사 中\n'
+         '\n'
+         '\n'
+         '\n'
+         '성대중의 아들 성해응(成海應, 1760~1839)에 따르면 백정 가운데 고리백정이 소를 잡는 백정보다 더 천시받았고 그 '
+         '때문에 주현에서 사형시킬 죄수가 있으면 그들에게 형 집행을 맡기기도 하였다고 한다.(『연경재집』 권59, 「楊禾尺」) '
+         '자료에 나오는 백정이 고리백정이었는지는 알 수 없지만 어쨌든 부당한 처사에 맞섰던 데서 백정들의 새로운 면모를 확인할 수 '
+         '있다.\n'
+         '\n'
+         '백정들의 그러한 모습은 다음 자료에서도 확인된다.\n'
+         '\n'
+         '\n'
+         '\n'
+         '우리나라에서 가장 천한 자는 백정이다. 그렇지만 가장 두려워할 만한 자도 백정이니, 그들이 가장 천하기 때문이다. 문경의 '
+         '공고(工庫)에 소속된 종이 백정을 구타하였는데, 백정이 죽자 재판을 하여 그를 사형시키려 하였다. 그러나 관아에서 종의 '
+         '편을 들까 염려한 나머지 온 군내의 백정들이 소매를 걷어붙이고 칼날을 세우고 몰려와서는 마치 자신들의 원수를 갚듯이 하여, '
+         '기어이 직접 그의 사지를 갈가리 찢어 버리겠다고 관문에서 시끄럽게 굴었다. 이에 관아에서 간곡히 타이르니 그제야 '
+         '돌아갔다.\n'
+         '\n'
+         '성대중(成大中, 1732~1809), 『청성잡기(靑城雜記)』\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '지방 관아에 소속된 종이 백정이 구타를 당해 죽이는 일이 발생하자 백정들이 억울하게 죽은 동료를 위해 집단행동까지 불사했던 '
+         '것이다. 관노비에게 맞아 죽을 만큼 백정의 처지는 열악했지만 그들은 자신들의 의사를 분명하게 표출하고 있었다. \n'
+         '\n'
+         '백정들의 의식이 변화했다고 해서 당장 신분의 굴레에서 벗어날 수는 없었다. \n'
+         '\n'
+         '그러나 이러한 과정이 있었기에 결국 1894년(고종 31) 갑오경장 때 자유의 신분이 될 수 있었다. 물론 사회적 차별은 '
+         '여전하였기 때문에 그들은 다시 사회적 차별에 저항하는 운동을 벌여 나가야 했다. 조선 시대에 백정은 가장 긴 고난의 길을 '
+         '걸었던 부류였다.\n'
+         '\n'
+         '\n'
+         '\n'
+         '출처: 국사편찬위원회 우리역사넷\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '출처: 카툰-연재 갤러리 [원본보기]',
+ 'title': '[역사툰] 백정의 사위가 된 이장곤 이야기.jpg'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+    self.dao.checkDB(item)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 60, in checkDB
+    self.insertDB(item)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 42, in insertDB
+    self.cursor.execute(sql, listTotuple)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect string value: '\\xF0\\x9F\\x94\\xBC \\xEC...' for column 'posttext' at row 1")
+2017-09-28 11:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://gall.dcinside.com/board/lists/?id=congratulation&page=1>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+2017-09-28 11:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://gall.dcinside.com/board/lists/?id=biza&page=1>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+2017-09-28 11:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://gall.dcinside.com/board/lists/?id=assistance&page=1>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+2017-09-28 11:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://gall.dcinside.com/board/lists/?id=biza_1&page=1>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+2017-09-28 11:51:23 [scrapy.core.scraper] ERROR: Error processing {'attribute': 'HIT',
+ 'date': '2017-09-14 16:50:52',
+ 'hits': '46511',
+ 'last_update': '2017-09-28 11:51:17',
+ 'link': 'http://gall.dcinside.com/board/view/?id=hit&no=14204&page=1',
+ 'pop': 959.5136683100808,
+ 'recommened': '819',
+ 'source': 'dcinside',
+ 'text': '조선 21대 임금인 영조는 침방 궁녀의 아들로 태어난 이유로 여러 사대부들에게 놀림을 받았다고 한다. 영조 임금이 왕자 '
+         '시절 무시당한 일은 실록에도 실려 있다.\n'
+         '\n'
+         '\n'
+         '나는 번저(藩邸)에서 입승(入承)하여 궁중(宮中)에서 \n'
+         '\n'
+         '생장(生長)하였으므로 일찍이 예(禮)를 읽지 못하였고, \n'
+         '\n'
+         '다만 조종조(祖宗朝)의 예법(禮法)을 따랐을 뿐이다. \n'
+         '\n'
+         '일찍이 경자년 대상(大喪) 뒤에 전도(前導) 없이 \n'
+         '\n'
+         '대궐로 가다가 길에서 대신(大臣)을 만났는데, \n'
+         '\n'
+         '앞에 있으면서 끝내 길을 비키지 않았기 때문에 \n'
+         '\n'
+         '내가 뒤따라 가지 않으려고 피하여 다른 길로 갔었다. \n'
+         '\n'
+         '내가 왕자인데도 오히려 이와 같았다. \n'
+         '\n'
+         '돌아보건대 지금 나라에 저사(儲嗣)가 없고 \n'
+         '\n'
+         '종실(宗室)은 고단(孤單)하여 세력을 부릴 만한 기운이 없는데 \n'
+         '\n'
+         '또 제재하고 억누르고자 하니, \n'
+         '\n'
+         '내가 붙들어 주지 않으면 누가 다시 돌아보겠는가? 하였다. \n'
+         '\n'
+         '\n'
+         '- 영조실록 36권, 영조 9년 11월 7일 갑신 2번째기사 \n'
+         '\n'
+         '\n'
+         '\n'
+         '이렇듯 신분에 대한 컴플렉스가 심했던 영조는 신분의 하자를 극복하기 위해 끊임없이 어머니의 추숭을 시도한다. 무려 30년을 '
+         '투쟁하고 어머니의 묘호를 원호로 고치는 데 성공했다. \n'
+         '\n'
+         '효성이 지극했던 그는 민생에도 관심이 커서 부왕인 숙종이 그랬던 것처럼 미복 차림의 잠행을 즐겼다고 한다. \n'
+         '\n'
+         '대체로 연잉군 시절 사저에서 생활한 경험도 있고, 궁녀의 아들인지라 같은 처지(?)로 동질감을 느꼈는지는 모르겠지만 민국 '
+         '정치(民國 政治: 일반 백성을 위한 정치)를 국정운영의 방점으로 찍었기에 백성의 질고에 있어서도 무척 신경을 썼을 '
+         '것이다. \n'
+         '\n'
+         '나뭇꾼의 일화 역시 이와 관련된 야사로 계압만록에 수록되어 있다.\n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '🔼 1714년에 작성된 연잉군의 한성부 호적단자. 거주지는 한성부 북부 의통방 연추문계(現 종로구 세종로 1번지) 7통 '
+         '5호이며 가족은 21살의 젊은 왕자 연잉군 이금과 2살 연상인 그의 부인 대구서씨 2명뿐이다. 빨간 칸이 연잉군의 관직과 '
+         '이름. 오위도총부 도총관직을 맡고 있다. 파란 칸이 연잉군이 소유한 궁노비들인데 총 20명이다. 강희 연간의 여타 '
+         '사대부들과 비교해선 정말 초라하고 검소한 수준이다. 동시대 호남 거부였던 녹우당 해남윤씨 윤덕희 소유의 사노비는 600명 '
+         '정도였다. \n'
+         '\n'
+         '\n'
+         '이와 같이 최고 권력자의 궁궐 밖으로의 미행은 비단 조선에만 있었던 것은 아니다. 청나라 황제인 건륭제 역시 미복 잠행을 '
+         '무척 즐겼던 걸로 유명하다.\n'
+         '\n'
+         '1752년 섣달 그믐날 미복 잠행에 나섰던 건륭제는 궁으로 돌아오는 길에 자금성 근처 식당가를 찾았다고 한다. 그러나 늦은 '
+         '밤이라 딱 한 곳만 영업을 하고 있었다. 그곳에서 맛있게 야참을 즐긴 건륭제는 밤중에 문을 연 까닭을 주인에게 물었다. \n'
+         '\n'
+         '주인이 말하길 황제께서 국사를 돌보기 위해 밤낮을 가리지 않는데, 혹시 자금성을 찾는 백성들이 허기를 채우지 못한다면 이것 '
+         '역시 황제의 어진 정사를 위한 장사치의 도리가 아니다.라며 대답했다고 한다. \n'
+         '\n'
+         '\n'
+         '\n'
+         '\n'
+         '🔼 도일처(두이추)에서 만두를 먹고 있는 건륭황제\n'
+         '\n'
+         '\n'
+         '\n'
+         '기분이 흡족해진 건륭제는 주인에게 상점의 이름이 무엇인지 하문했는데 주인은 아직 상호을 짓지 못했다고 한다. 아무말 없이 '
+         '건륭제는 궁으로 돌아갔고, 며칠후 사람을 보내 도일처(都一處: 두이추)라는 편액을 하사했다고 한다. \n'
+         '\n'
+         '물론 황성내 제일의 식당으로 부상했음은 두말 할 필요없다. 오늘날까지 성업하고 있는 식당인데 아직도 베이징 사람들의 발길이 '
+         '끊이지 않는다고 한다.\n'
+         '\n'
+         '18세기 동시대를 살았던 조선왕과 청국황제가 미복 잠행을 즐겼다는 점은 참으로 특이하다. 또 미행 중 일반 백성들을 향해 '
+         '더없이 은사(恩賜)를 배풀었다는 것 역시 흥미롭기만 하다. \n'
+         '\n'
+         '\n'
+         '출처: 카툰-연재 갤러리 [원본보기]',
+ 'title': '[역사툰]  영조 임금과 무식한 나뭇꾼 이야기.jpg'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+    self.dao.checkDB(item)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 60, in checkDB
+    self.insertDB(item)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 42, in insertDB
+    self.cursor.execute(sql, listTotuple)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect string value: '\\xF0\\x9F\\x94\\xBC 1...' for column 'posttext' at row 1")

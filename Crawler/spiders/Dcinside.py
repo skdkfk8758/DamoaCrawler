@@ -11,6 +11,7 @@ Last Update 2017.08.13
 import scrapy
 from bs4 import BeautifulSoup
 from selenium import webdriver
+import signal
 
 
 from Crawler.filterItem import *
@@ -124,7 +125,8 @@ class DcInside(scrapy.Spider):
                 textTmp = driver.find_element_by_class_name("re_gall_box_1").text
 
                 item['text'] = textTmp
-                driver.close()
+                driver.service.process.send_signal(signal.SIGTERM)
+                driver.quit()
 
                 # print(item['text'])
 
