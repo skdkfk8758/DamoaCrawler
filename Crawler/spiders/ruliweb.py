@@ -20,53 +20,38 @@ from Crawler.spiders.Setting import *
 class RuliWeb(scrapy.Spider):
     name = 'ruli' # spider name
 
-    #게시판 속성 -> url이동에 사용
-    postListTitle = ['http://bbs.ruliweb.com/ps', 'http://bbs.ruliweb.com/psp', 'http://bbs.ruliweb.com/xbox',
-                     'http://bbs.ruliweb.com/nin', 'http://bbs.ruliweb.com/nds', 'http://bbs.ruliweb.com/pc',
-                     'http://bbs.ruliweb.com/mobile', 'http://bbs.ruliweb.com/av', 'http://bbs.ruliweb.com/sports',
-                     'http://bbs.ruliweb.com/news', 'http://bbs.ruliweb.com/hobby', 'http://bbs.ruliweb.com/market/board/1020',
-                     'http://bbs.ruliweb.com/community', 'http://bbs.ruliweb.com/twitch', 'http://bbs.ruliweb.com/best',
-                     'http://bbs.ruliweb.com/game/search', 'http://bbs.ruliweb.com/family/212', 'http://bbs.ruliweb.com/family/242',
-                     'http://bbs.ruliweb.com/family/232', 'http://bbs.ruliweb.com/family/211', 'http://bbs.ruliweb.com/family/249']
-
-    # 중복게시물 처리를 위한 리스트
-    tmp1 = []
-    tmp2 = []
-    tmp3 = []
-
     # postListTitle의 title을 하나씩 가져와서 리퀘스트 요청
     def start_requests(self):
-        for title in self.postListTitle:
-            yield scrapy.Request(title, self.parse_url)
+        for i in range(1, MAX_PAGE, 1):
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/1020/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300421/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300423/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300426/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300019/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300549/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300416/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300021/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/299999/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/299998/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300496/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300537/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/320105/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300418/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300406/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300401/list?page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300152/list?cate=1&page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300143/list?cate=2&page={}".format(i))
+            yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300145/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))
+            # yield scrapy.Request("http://bbs.ruliweb.com/ps/board/300001/list?page={}".format(i))s
 
-    # 1차적으로 url받아와서 하위 url파싱(하위 게시판)
-    def parse_url(self, response):
-        for select in response.xpath('//ul[@class="sub_wrapper"]/li/a/@href'):
-            if 'http://mypi.ruliweb.com/m/index_market.htm' in select.extract() \
-                    or '/grb.htm' in select.extract() \
-                    or '/list.htm' in select.extract() \
-                    or '/310001' in select.extract() \
-                    or '/310002' in select.extract():
-                # 로그인이 필요하거나 파싱이 불필요한 게시판 필터링
-                pass
-            else:
-                # 필터링 후 남은 url처리
-                self.tmp1.append(select.extract()) # tmp1에 필터링 후 남은 url추가
-                self.tmp2.append(select.extract().split('/')[-1]) # 필터링 후 중복되는 게시판을 처리하기위해 게시판 번호 추출
 
-                for url_Last in self.tmp2: # 게시판번호를 기준으로 중복된 게시판은 한개만 저장
-                    count = 0 # 중복게시판 중 최초 한개만 추출하기위한 변수
-                    for url in self.tmp1:
-                        if url_Last in url and count<1:
-                            self.tmp3.append(url)
-                            count += 1
-                        else:
-                            continue
-
-        for url in set(self.tmp3): # 게시물 파싱을 위해 리퀘스트 요청
-            for i in range(1,MAX_PAGE,1):
-                URL = url + '/list?page={}'.format(i)
-                yield scrapy.Request(URL)
 
     # 사이트 파싱
     def parse(self, response):
