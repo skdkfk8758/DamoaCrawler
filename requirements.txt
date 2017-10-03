@@ -1,6 +1,0 @@
-bs4
-pymysql
-requests
-BeautifulSoup4
-selector
-

@@ -16,12 +16,12 @@ class TotalpostDAO:
     # DB접속을 위해 커넥션 얻는 부분
     def __init__(self):
         try:
-            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",
-                                    charset="utf8")
-            self.cursor = self.conn.cursor(pymysql.cursors.DictCursor)
+            # self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8")
+            self.conn = pymysql.connect(host="damoadb.c7efoq9ndida.us-east-1.rds.amazonaws.com", port = 3306, user="skdkfk8758", password="sxcv5012", db="damoa", charset='utf8')
+            self.cursor = self.conn.cursor()
 
         except pymysql.Error:
-            print(pymysql.Error.args)
+            # print(pymysql.Error.args)
             print("DB Connection Error")
 
     # DB에 데이터 저장
@@ -31,7 +31,7 @@ class TotalpostDAO:
 
         sql = """insert into
                 totalposts
-                (source ,title, link, post_attribute, mydate, hits, recommened, last_update, popurarity, posttext)
+                (source ,title, postlink, attr, postdate, hits, recommened, lastupdate, pop, text)
                 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
 
         # item 값을 db에 저장하기 위해 튜플로 바꾸는 작업
@@ -47,16 +47,18 @@ class TotalpostDAO:
 
         # print(item['source'] + item["title"])
 
-        sql = "select count(*) from totalposts where source=%s and title=%s and posttext=%s"
+        sql = "select count(*) from totalposts where source=%s and title=%s and text=%s"
+        # sql = "select count(*) from totalposts"
 
         # link를 가지고 DB에 레코드 존재하는지 확인
         self.cursor.execute(sql,(item['source'],item['title'],item['text']))
+        # self.cursor.execute(sql,)
 
         result = self.cursor.fetchone()
 
         # link 기준으로 레코드 수 세서 1개 이상이면 갱신하고 없으면 추가
         # 1시간 이상 지났으면 업데이트
-        if result['count(*)'] <= 0:
+        if list(result)[0] <= 0:
             self.insertDB(item)
         else:
             if self.checkDate(item)>=1:
@@ -68,7 +70,7 @@ class TotalpostDAO:
 
         check = 0
 
-        sql = "select mydate, last_update from totalposts where link=%s"
+        sql = "select postdate, lastupdate from totalposts where postlink=%s"
 
         # link를 가지고 DB에 레코드 존재하는지 확인
         self.cursor.execute(sql, item['link'])
@@ -76,8 +78,8 @@ class TotalpostDAO:
         result = self.cursor.fetchone()
 
         try:
-            timeTmp1 = datetime.strptime(str(result['last_update']), "%Y-%m-%d %H:%M:%S")
-            timeTmp2 = datetime.strptime(str(result['mydate']), "%Y-%m-%d %H:%M:%S")
+            timeTmp1 = datetime.strptime(str(result['lastupdate']), "%Y-%m-%d %H:%M:%S")
+            timeTmp2 = datetime.strptime(str(result['postdate']), "%Y-%m-%d %H:%M:%S")
             timeGap = (timeTmp1-timeTmp2).total_seconds()/3600
 
             if timeGap <= 1:
@@ -92,8 +94,8 @@ class TotalpostDAO:
     def updateDB(self, item):
 
         sql = """update totalposts
-        set source = %s, post_attribute = %s, title = %s, link = %s, mydate = %s, hits = %s,
-        recommened = %s,last_update = %s, popurarity = %s,posttext = %s
+        set source = %s, attr = %s, title = %s, link = %s, postdate = %s, hits = %s,
+        recommened = %s,lastupdate = %s, pop = %s,text = %s
         where link = %s"""
 
         tmpItemList = [item['source'], item['attribute'], item['title'], item['link'],
