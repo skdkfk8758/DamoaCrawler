@@ -36,7 +36,7 @@ class DamoaPipeline(object):
     # 스파이더 진행 후 데이터베이스에 저장
     def process_item(self, item, spider):
 
-        # print("start DB")
+        # print(str(item['title']) + str(item['attribute']))
         self.dao.checkDB(item)
         # print("end DB")
 

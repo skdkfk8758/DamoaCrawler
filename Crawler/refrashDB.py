@@ -8,6 +8,7 @@
 import pymysql
 from datetime import datetime
 from Crawler.filterItem import *
+from Crawler.spiders.Setting import *
 
 class refrashDB:
 
@@ -34,11 +35,11 @@ class refrashDB:
         dateTmp_curr = datetime.strptime(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
 
         for rs in result:
-            timeTmp1 = datetime.strptime(str(rs['mydate']), "%Y-%m-%d %H:%M:%S")
+            timeTmp1 = datetime.strptime(str(rs['postdate']), "%Y-%m-%d %H:%M:%S")
             timeGap = (dateTmp_curr - timeTmp1).total_seconds()
             # print(str(rs['mydate']) + " " + str(timeGap))
 
-            if timeGap > 2592000: # 한달이상 지난 게시물 삭제
+            if timeGap > SIX_MONTH: # 일정기간 지난 게시물 삭제
                 self.deleteRecord(rs['link'])
                 # print("delete")
 

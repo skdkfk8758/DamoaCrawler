@@ -136,6 +136,7 @@ class HumorUniv(scrapy.Spider):
             # print(item['title'])
             # print("*********************************")
             # item 누적
+
             if filterItem(item) != None:
                 # print(item['title'])
                 yield filterItem(item)

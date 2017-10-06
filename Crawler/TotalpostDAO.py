@@ -16,8 +16,8 @@ class TotalpostDAO:
     # DB접속을 위해 커넥션 얻는 부분
     def __init__(self):
         try:
-            # self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8")
-            self.conn = pymysql.connect(host="damoadb.c7efoq9ndida.us-east-1.rds.amazonaws.com", port = 3306, user="skdkfk8758", password="sxcv5012", db="damoa", charset='utf8')
+            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8")
+            # self.conn = pymysql.connect(host="damoadb.c7efoq9ndida.us-east-1.rds.amazonaws.com", port = 3306, user="skdkfk8758", password="sxcv5012", db="damoa", charset='utf8')
             self.cursor = self.conn.cursor()
 
         except pymysql.Error:
@@ -31,7 +31,7 @@ class TotalpostDAO:
 
         sql = """insert into
                 totalposts
-                (source ,title, postlink, attr, postdate, hits, recommened, lastupdate, pop, text)
+                (source ,title, link, attr, postdate, hits, recommened, lastupdate, pop, text)
                 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
 
         # item 값을 db에 저장하기 위해 튜플로 바꾸는 작업
@@ -70,10 +70,10 @@ class TotalpostDAO:
 
         check = 0
 
-        sql = "select postdate, lastupdate from totalposts where postlink=%s"
+        sql = "select postdate, lastupdate from totalposts where source=%s and link=%s"
 
         # link를 가지고 DB에 레코드 존재하는지 확인
-        self.cursor.execute(sql, item['link'])
+        self.cursor.execute(sql, (item['source'], item['link'],))
 
         result = self.cursor.fetchone()
 
@@ -96,22 +96,13 @@ class TotalpostDAO:
         sql = """update totalposts
         set source = %s, attr = %s, title = %s, link = %s, postdate = %s, hits = %s,
         recommened = %s,lastupdate = %s, pop = %s,text = %s
-        where link = %s"""
+        where source=%s and link = %s"""
 
         tmpItemList = [item['source'], item['attribute'], item['title'], item['link'],
                        item['date'], item['hits'], item['recommened'], item['last_update'], item['pop'],
-                       item['text'], item['link']]
+                       item['text'], item['source'], item['link']]
 
         self.cursor.execute(sql, tmpItemList)
 
         self.conn.commit()
-
-
-    # def deleteDB(self, item):
-    #     sql = """delete from totalposts where link = %s """
-    #
-    #     self.cursor.execute(sql, item["link"])
-    #
-    #     self.conn.commit()
-
 
