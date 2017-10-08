@@ -35,11 +35,6 @@ class DamoaPipeline(object):
         self.end = time.time()
         print(spider.name +" "+ str(self.end - self.start))
         subprocess.call("curl http://localhost:6800/schedule.json -d project=Damoa -d spider={}".format(spider.name), shell=True)
-        # subprocess.call(["curl",])
-
-
-
-
 
     # 스파이더 진행 후 데이터베이스에 저장
     def process_item(self, item, spider):
