@@ -10,6 +10,8 @@ clien 파이프라인
 import time # 시간측정을 위한 모듈
 from Crawler.TotalpostDAO import TotalpostDAO
 from Crawler.refrashDB import refrashDB
+import os
+import subprocess
 
 class DamoaPipeline(object):
 
@@ -32,13 +34,16 @@ class DamoaPipeline(object):
         print(spider.name + " Spider Stop")
         self.end = time.time()
         print(spider.name +" "+ str(self.end - self.start))
+        subprocess.call("curl http://localhost:6800/schedule.json -d project=Damoa -d spider={}".format(spider.name), shell=True)
+        # subprocess.call(["curl",])
+
+
+
+
 
     # 스파이더 진행 후 데이터베이스에 저장
     def process_item(self, item, spider):
-
-        # print(str(item['title']) + str(item['attribute']))
         self.dao.checkDB(item)
-        # print("end DB")
 
 
 

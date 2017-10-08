@@ -1,3 +1,4 @@
+README.md
 setup.py
 Crawler/TotalpostDAO.py
 Crawler/__init__.py
@@ -5,6 +6,7 @@ Crawler/filterItem.py
 Crawler/items.py
 Crawler/middlewares.py
 Crawler/pipelines.py
+Crawler/refrashDB.py
 Crawler/settings.py
 Crawler/spiders/Clien.py
 Crawler/spiders/Dcinside.py

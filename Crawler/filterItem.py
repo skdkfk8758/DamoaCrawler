@@ -7,13 +7,11 @@ def filterItem(item):
         # print("filter")
         pass
     else:
-
         dateTmp_post = datetime.strptime(item['date'], '%Y-%m-%d %H:%M:%S')
         dateTmp_curr = datetime.strptime(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
 
         # 한시간당 가중치 감소(시간으로 조회수 나눔)
         timeTmp = (dateTmp_curr - dateTmp_post).total_seconds() / 60
-
 
         # if timeTmp>1:
         #     # 1분 이상 게시물의 분당 조회수 계산

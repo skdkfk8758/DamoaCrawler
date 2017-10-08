@@ -45,6 +45,7 @@ class Clien(scrapy.Spider):
             # 해당xpath 텍스트를 읽어와서 문자열로 바꾸고 item객체에 저장
             titleTmp = select.xpath('div[@class="list-title"]/a[@class="list-subject"]/text()').extract()
             titleTmp2 = "".join(titleTmp).replace('\t','').replace('\n','').replace('\r','')
+
             item['title'] = titleTmp2
 
             # print(type(item["title"]))
@@ -55,7 +56,7 @@ class Clien(scrapy.Spider):
             # print(type(item["link"]))
 
             # 게시판에 게시물 링크 타고가기 위해 리퀘스트 재요청
-            postUrl = BeautifulSoup(requests.get(item['link']).content, "html.parser")
+            postUrl = BeautifulSoup(requests.get(item['link']).content, "html.parser",from_encoding='CP949')
 
             # 게시물로 이동후 속성읽어서 저장
             attributeTmp = postUrl.find(name="li", attrs={"class": "board-title"}).text.strip()
@@ -104,7 +105,8 @@ class Clien(scrapy.Spider):
 
             # 게시물 텍스트 읽어서 문자열로 변환후 저장
             textTmp = postUrl.find(name="div", attrs={"class":"post-article fr-view"}).text.strip()
-            item['text'] = "".join(textTmp).replace('\n','')
+            postText = "".join(textTmp).replace('\n','')
+            item['text'] = postText
 
             # print(type(item["text"]))
             # print("\n")

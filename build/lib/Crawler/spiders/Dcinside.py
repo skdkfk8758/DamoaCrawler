@@ -9,6 +9,10 @@ Last Update 2017.08.13
 """
 
 import scrapy
+from bs4 import BeautifulSoup
+from selenium import webdriver
+import signal
+
 
 from Crawler.filterItem import *
 from Crawler.items import DamoaItem
@@ -20,12 +24,10 @@ class DcInside(scrapy.Spider):
 
     baseUrl = "http://gall.dcinside.com"
 
-    # driver = webdriver.Chrome("/Volumes/WorkSpace/knu/Capstone/Damoa/Crawler/spiders/chromedriver")
-
     # 리퀘스트 요청
-    def start_requests(self):
+    def start_requests(self): 
         for i in range(1, MAX_PAGE, 1):
-            yield scrapy.Request("http://gall.dcinside.com/board/lists?id=47&page={}".format(i))
+            yield scrapy.Request("http://gall.dcinside.com/board/lists?id=47&page={0}".format(i))
             yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=leavesister&page={}".format(i))
             yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=strongest&page={}".format(i))
             yield scrapy.Request("http://gall.dcinside.com/board/lists/?id=manhole&page={}".format(i))
@@ -48,8 +50,8 @@ class DcInside(scrapy.Spider):
     # 사이트 파싱
     def parse(self, response):
 
-        # print(len(response.xpath("//body/div[@id='dgn_wrap']/div[@id='dgn_gallery_wrap']/div[@class='gallery_content']/div[@class='gallery_list']/div[@class='list_table']/table/tbody/tr")))
-        for select in response.xpath("//body/div[@id='dgn_wrap']/div[@id='dgn_gallery_wrap']/div[@class='gallery_content']/div[@class='gallery_list']/div[@class='list_table']/table/tbody/tr"):
+        for select in response.xpath("//table/tbody/tr"):
+
             item = DamoaItem() # item객체 생성
 
             # print(select.xpath("td[@class='t_notice']/text()").extract())
@@ -116,11 +118,20 @@ class DcInside(scrapy.Spider):
 
                 item['pop'] = commentTmp    # 인기도 저장
 
-                # 게시판에 게시물 링크 타고가기 위해 리퀘스트 재요청
-                self.driver.get(item['link'])
-                textTmp = self.driver.find_element_by_class_name("re_gall_box_1").text
-                item['text'] = "".join(textTmp).replace('\n', '')
+#                driver = webdriver.PhantomJS()
+                driver = webdriver.PhantomJS("C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+                driver.get(item['link'])
+
+                textTmp = driver.find_element_by_class_name("re_gall_box_1").text
+
+                item['text'] = textTmp
+                driver.service.process.send_signal(signal.SIGTERM)
+                driver.quit()
+
+                # print(item['text'])
 
                 if filterItem(item) != None:
                     yield filterItem(item)
+
+
 

@@ -5,6 +5,9 @@ DB에 접근 및 입력, 삭제, 수정하는 클래스
 중복된 내용은 DB에 갱신하고
 내용이 없으면 추가됨
 
+2017.10.06
+    - DB : link에 index 만들어서 checkDate() 속도 향상
+
 """
 
 import pymysql
@@ -16,7 +19,7 @@ class TotalpostDAO:
     # DB접속을 위해 커넥션 얻는 부분
     def __init__(self):
         try:
-            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8")
+            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8mb4")
             # self.conn = pymysql.connect(host="damoadb.c7efoq9ndida.us-east-1.rds.amazonaws.com", port = 3306, user="skdkfk8758", password="sxcv5012", db="damoa", charset='utf8')
             self.cursor = self.conn.cursor()
 
@@ -47,11 +50,11 @@ class TotalpostDAO:
 
         # print(item['source'] + item["title"])
 
-        sql = "select count(*) from totalposts where source=%s and title=%s and text=%s"
-        # sql = "select count(*) from totalposts"
+        sql = "select count(*) from totalposts where title=%s and text=%s"
+        # sql = "select count(*) from totalposts"2
 
         # link를 가지고 DB에 레코드 존재하는지 확인
-        self.cursor.execute(sql,(item['source'],item['title'],item['text']))
+        self.cursor.execute(sql,(item['title'],item['text']))
         # self.cursor.execute(sql,)
 
         result = self.cursor.fetchone()
@@ -70,10 +73,10 @@ class TotalpostDAO:
 
         check = 0
 
-        sql = "select postdate, lastupdate from totalposts where source=%s and link=%s"
+        sql = "select postdate, lastupdate from totalposts where link=%s"
 
         # link를 가지고 DB에 레코드 존재하는지 확인
-        self.cursor.execute(sql, (item['source'], item['link'],))
+        self.cursor.execute(sql, (item['link'],))
 
         result = self.cursor.fetchone()
 
@@ -95,12 +98,12 @@ class TotalpostDAO:
 
         sql = """update totalposts
         set source = %s, attr = %s, title = %s, link = %s, postdate = %s, hits = %s,
-        recommened = %s,lastupdate = %s, pop = %s,text = %s
-        where source=%s and link = %s"""
+        recommened = %s, lastupdate = %s, pop = %s, text = %s
+        where and link = %s"""
 
         tmpItemList = [item['source'], item['attribute'], item['title'], item['link'],
                        item['date'], item['hits'], item['recommened'], item['last_update'], item['pop'],
-                       item['text'], item['source'], item['link']]
+                       item['text'], item['link']]
 
         self.cursor.execute(sql, tmpItemList)
 
