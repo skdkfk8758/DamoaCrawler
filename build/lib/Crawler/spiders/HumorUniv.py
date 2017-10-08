@@ -21,7 +21,7 @@ from Crawler.spiders.Setting import *
 
 
 class HumorUniv(scrapy.Spider):
-    name = 'humor'
+    name = 'humoruniv'
 
     # 리퀘스트 요청 (여러 게시판 돌때 동기적으로 수행됨)
     def start_requests(self):
@@ -70,7 +70,7 @@ class HumorUniv(scrapy.Spider):
         for parse_path in sel.xpath('//div[@id="cnts_list_new"]/div/table/tr'):
             item = DamoaItem()
 
-            item['source'] = "humoruniv"
+            item['source'] = self.name
 
             # 해당xpath 텍스트를 읽어와서 문자열로 바꾸고 item객체에 저장
             titleTmp = parse_path.xpath('td[@class="li_sbj"]/a/text()').extract()

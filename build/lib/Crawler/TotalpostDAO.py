@@ -19,7 +19,7 @@ class TotalpostDAO:
     # DB접속을 위해 커넥션 얻는 부분
     def __init__(self):
         try:
-            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8")
+            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8mb4")
             # self.conn = pymysql.connect(host="damoadb.c7efoq9ndida.us-east-1.rds.amazonaws.com", port = 3306, user="skdkfk8758", password="sxcv5012", db="damoa", charset='utf8')
             self.cursor = self.conn.cursor()
 

@@ -23,23 +23,18 @@ class DamoaPipeline(object):
     refDB = refrashDB()
 
     # 스파이더 시작하면 수행되는 부분
-    def open_spider(self, spider):
-        self.start = time.time()
-        print(spider.name + " Spider Start")
+    # def open_spider(self, spider):
+        # self.start = time.time()
+        # print(spider.name + " Spider Start")
 
 
     # 스파이더 종료되면 수행되는 부분
     def close_spider(self, spider):
         self.refDB.searchDB(spider.name)
-        print(spider.name + " Spider Stop")
-        self.end = time.time()
-        print(spider.name +" "+ str(self.end - self.start))
+        # print(spider.name + " Spider Stop")
+        # self.end = time.time()
+        # print(spider.name +" "+ str(self.end - self.start))
         subprocess.call("curl http://localhost:6800/schedule.json -d project=Damoa -d spider={}".format(spider.name), shell=True)
-        # subprocess.call(["curl",])
-
-
-
-
 
     # 스파이더 진행 후 데이터베이스에 저장
     def process_item(self, item, spider):

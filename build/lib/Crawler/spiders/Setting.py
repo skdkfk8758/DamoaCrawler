@@ -1,5 +1,5 @@
 
-MAX_PAGE = 2 # 크롤링할 페이지 수
+MAX_PAGE = 10 # 크롤링할 페이지 수
 
 MONTH = 2592000
 SIX_MONTH = 15552000

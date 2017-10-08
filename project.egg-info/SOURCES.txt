@@ -9,7 +9,7 @@ Crawler/pipelines.py
 Crawler/refrashDB.py
 Crawler/settings.py
 Crawler/spiders/Clien.py
-Crawler/spiders/Dcinside.py
+Crawler/spiders/GameShot.py
 Crawler/spiders/HumorUniv.py
 Crawler/spiders/Setting.py
 Crawler/spiders/__init__.py
