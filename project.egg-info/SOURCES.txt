@@ -12,6 +12,7 @@ Crawler/spiders/Clien.py
 Crawler/spiders/GameShot.py
 Crawler/spiders/HumorUniv.py
 Crawler/spiders/Setting.py
+Crawler/spiders/ThisIsGame.py
 Crawler/spiders/__init__.py
 Crawler/spiders/ruliweb.py
 project.egg-info/PKG-INFO

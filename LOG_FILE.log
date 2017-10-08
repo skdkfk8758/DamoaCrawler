@@ -1,4 +1,4 @@
-2017-10-08 14:36:07 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.gameshot.net/talk/?&bbs=gamenews&sby=title&skey=&pg=1> (referer: None)
+2017-10-08 15:43:52 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=956&page=1> (referer: None)
 Traceback (most recent call last):
   File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
     yield next(it)
@@ -10,10 +10,10 @@ Traceback (most recent call last):
     return (r for r in result or () if _filter(r))
   File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
     return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\GameShot.py", line 39, in parse
-    if select.xpath("td/text()").extract()[0] == "관리자":
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 45, in parse
+    if select.xpath("td/span/text()").extract()[0] == "공지":
 IndexError: list index out of range
-2017-10-08 14:36:10 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.gameshot.net/talk/?&bbs=ip_shop&sby=title&skey=&pg=1> (referer: None)
+2017-10-08 15:43:54 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=38&page=1> (referer: None)
 Traceback (most recent call last):
   File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
     yield next(it)
@@ -25,10 +25,10 @@ Traceback (most recent call last):
     return (r for r in result or () if _filter(r))
   File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
     return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\GameShot.py", line 39, in parse
-    if select.xpath("td/text()").extract()[0] == "관리자":
-IndexError: list index out of range
-2017-10-08 14:36:10 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.gameshot.net/talk/?&bbs=free&sby=title&skey=&pg=1> (referer: None)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 86, in parse
+    recommenedTmp = postUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2017-10-08 15:43:54 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=32&page=1> (referer: None)
 Traceback (most recent call last):
   File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
     yield next(it)
@@ -40,6 +40,81 @@ Traceback (most recent call last):
     return (r for r in result or () if _filter(r))
   File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
     return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\GameShot.py", line 39, in parse
-    if select.xpath("td/text()").extract()[0] == "관리자":
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 45, in parse
+    if select.xpath("td/span/text()").extract()[0] == "공지":
 IndexError: list index out of range
+2017-10-08 15:43:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=39&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 86, in parse
+    recommenedTmp = postUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2017-10-08 15:43:57 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=40&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 86, in parse
+    recommenedTmp = postUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2017-10-08 15:43:59 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=37&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 86, in parse
+    recommenedTmp = postUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2017-10-08 15:44:06 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=1&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 86, in parse
+    recommenedTmp = postUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2017-10-08 15:44:08 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=2&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 86, in parse
+    recommenedTmp = postUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
