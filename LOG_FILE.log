@@ -1,10 +1,10 @@
-2017-10-09 20:49:41 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:49:41 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:49:41 [scrapy.middleware] INFO: Enabled extensions:
+2017-10-09 22:03:01 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
+2017-10-09 22:03:01 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
+2017-10-09 22:03:01 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:49:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2017-10-09 22:03:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
@@ -16,65 +16,1057 @@
  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:49:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+2017-10-09 22:03:01 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:49:41 [scrapy.middleware] INFO: Enabled item pipelines:
+2017-10-09 22:03:01 [scrapy.middleware] INFO: Enabled item pipelines:
 ['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:49:41 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:49:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:49:41 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:49:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:49:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
-2017-10-09 20:49:42 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257829%20javascript:void(0) HTTP/1.1" 404 None
-2017-10-09 20:49:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 97, in parse
-    item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="utf8")
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 29, in createItemUseBs4
-    origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
-AttributeError: 'NoneType' object has no attribute 'text'
-2017-10-09 20:49:42 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:49:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15390,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 49, 45, 8126),
- 'log_count/DEBUG': 4,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/AttributeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 49, 41, 679918)}
-2017-10-09 20:49:45 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:50:33 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:50:33 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:50:33 [scrapy.middleware] INFO: Enabled extensions:
+2017-10-09 22:03:01 [scrapy.core.engine] INFO: Spider opened
+2017-10-09 22:03:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-10-09 22:03:01 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-10-09 22:03:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
+2017-10-09 22:03:01 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:02 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:03 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:03 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:03 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:04 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:04 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:04 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:05 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:05 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:05 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:06 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:06 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:06 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:06 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:07 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:07 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:07 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:07 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:07 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:07 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:08 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:08 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:08 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:10 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:10 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:10 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:11 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:11 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:11 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:12 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:12 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:12 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:12 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:13 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:13 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:13 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:13 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:14 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:03:15 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:15 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:03:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:15 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:03:16 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:16 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:03:16 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:16 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:03:17 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:17 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.007018732426055874, below negative shortcut threshhold 0.05
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006411377207592307, below negative shortcut threshhold 0.05
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4126575379465847
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4126575379465847
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:17 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:17 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.007018732426055874, below negative shortcut threshhold 0.05
+2017-10-09 22:03:17 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006411377207592307, below negative shortcut threshhold 0.05
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4226830948839916
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4226830948839916
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:18 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.007018732426055874, below negative shortcut threshhold 0.05
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006411377207592307, below negative shortcut threshhold 0.05
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.41353962425602775
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.41353962425602775
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:18 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:18 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.007018732426055874, below negative shortcut threshhold 0.05
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006411377207592307, below negative shortcut threshhold 0.05
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4226019236673949
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.062136115430875175
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05129351438642293
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015730106224406775
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018922484887986507
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0011461661261148548
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.058909346406575
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4226019236673949
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:19 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:19 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:20 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257851 HTTP/1.1" 200 None
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 702
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 712
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 695
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.009691421517362417, below negative shortcut threshhold 0.05
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006468519998266043, below negative shortcut threshhold 0.05
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06796336224743472
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.050228216532383616
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01658091409271357
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.020086245708026567
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003855916244945006
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.060226840553310186
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4208931998585578
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06796336224743472
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.050228216532383616
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01658091409271357
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.020086245708026567
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003855916244945006
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.060226840553310186
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4208931998585578
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:20 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:20 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257851 HTTP/1.1" 200 None
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 702
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 712
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 695
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 688
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.009302964689464812, below negative shortcut threshhold 0.05
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006664082920256923, below negative shortcut threshhold 0.05
+2017-10-09 22:03:20 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.049299380528537474, below negative shortcut threshhold 0.05
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06738054965700635
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01651574954172584
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.019939325299535796
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003815470439662693
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05836797370310805
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.41575337172516663
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06738054965700635
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01651574954172584
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.019939325299535796
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003815470439662693
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05836797370310805
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.41575337172516663
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:21 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:21 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257851 HTTP/1.1" 200 None
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 702
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 712
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 695
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.009302964689464812, below negative shortcut threshhold 0.05
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006664082920256923, below negative shortcut threshhold 0.05
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.049299380528537474, below negative shortcut threshhold 0.05
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06738054965700635
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01651574954172584
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.019939325299535796
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003815470439662693
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05836797370310805
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.42770098899362724
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06738054965700635
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01651574954172584
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.019939325299535796
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003815470439662693
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05836797370310805
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.42770098899362724
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:21 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:21 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:21 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257851 HTTP/1.1" 200 None
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 702
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 712
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 688
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 695
+2017-10-09 22:03:21 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 688
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.009302964689464812, below negative shortcut threshhold 0.05
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006664082920256923, below negative shortcut threshhold 0.05
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.049299380528537474, below negative shortcut threshhold 0.05
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06738054965700635
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01651574954172584
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.019939325299535796
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003815470439662693
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05836797370310805
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4208985829863452
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06738054965700635
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01651574954172584
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.019939325299535796
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003815470439662693
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05836797370310805
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4208985829863452
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:22 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:22 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257850 HTTP/1.1" 200 None
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257850 HTTP/1.1" 200 None
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257850 HTTP/1.1" 200 None
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:23 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257850 HTTP/1.1" 200 None
+2017-10-09 22:03:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:24 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257849 HTTP/1.1" 200 None
+2017-10-09 22:03:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:24 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257849 HTTP/1.1" 200 None
+2017-10-09 22:03:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:25 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257849 HTTP/1.1" 200 None
+2017-10-09 22:03:25 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:25 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257849 HTTP/1.1" 200 None
+2017-10-09 22:03:26 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:26 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:26 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257848 HTTP/1.1" 200 None
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 679
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 742
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 657
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00801900163487565, below negative shortcut threshhold 0.05
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006264108281945182, below negative shortcut threshhold 0.05
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.04913658013814796, below negative shortcut threshhold 0.05
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00035708450237223704, below negative shortcut threshhold 0.05
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06427387479595496
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.018882539017775743
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.0224131533800967
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.060658592589621196
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4149870833927501
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06427387479595496
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.018882539017775743
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.0224131533800967
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.060658592589621196
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4149870833927501
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:26 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:26 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:26 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257848 HTTP/1.1" 200 None
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 679
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 742
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 657
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 656
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00801900163487565, below negative shortcut threshhold 0.05
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006264108281945182, below negative shortcut threshhold 0.05
+2017-10-09 22:03:26 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.04913658013814796, below negative shortcut threshhold 0.05
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00035708450237223704, below negative shortcut threshhold 0.05
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06427387479595496
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.018882539017775743
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.0224131533800967
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.060658592589621196
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4217711652916876
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06427387479595496
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.018882539017775743
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.0224131533800967
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.060658592589621196
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4217711652916876
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:27 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257848 HTTP/1.1" 200 None
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 679
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 656
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 742
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 656
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 656
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 657
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 656
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00801269993128376, below negative shortcut threshhold 0.05
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006258151394010928, below negative shortcut threshhold 0.05
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.04930389210537555, below negative shortcut threshhold 0.05
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.0003568220415147095, below negative shortcut threshhold 0.05
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06420920760521151
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01884006696949998
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.022353652157394193
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06060212645147152
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4167161198398638
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06420920760521151
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01884006696949998
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.022353652157394193
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06060212645147152
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4167161198398638
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:27 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:28 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257848 HTTP/1.1" 200 None
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 679
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 656
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 742
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 656
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 656
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 657
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 656
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00801269993128376, below negative shortcut threshhold 0.05
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006258151394010928, below negative shortcut threshhold 0.05
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.04930389210537555, below negative shortcut threshhold 0.05
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.0003568220415147095, below negative shortcut threshhold 0.05
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06420920760521151
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01884006696949998
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.022353652157394193
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06060212645147152
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.42830601873526325
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06420920760521151
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01884006696949998
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.022353652157394193
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06060212645147152
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.42830601873526325
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:28 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:28 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:29 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257847 HTTP/1.1" 200 None
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257847 HTTP/1.1" 200 None
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257847 HTTP/1.1" 200 None
+2017-10-09 22:03:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:30 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257847 HTTP/1.1" 200 None
+2017-10-09 22:03:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:30 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:30 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257846 HTTP/1.1" 200 None
+2017-10-09 22:03:30 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:31 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257846 HTTP/1.1" 200 None
+2017-10-09 22:03:31 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:31 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257846 HTTP/1.1" 200 None
+2017-10-09 22:03:31 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:31 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257846 HTTP/1.1" 200 None
+2017-10-09 22:03:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:32 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:32 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257845 HTTP/1.1" 200 None
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 752
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 744
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 762
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 744
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 747
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 744
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 742
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.006997670300421888, below negative shortcut threshhold 0.05
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006288447935621019, below negative shortcut threshhold 0.05
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4272241108919813
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4272241108919813
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:32 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:32 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:32 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:33 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257845 HTTP/1.1" 200 None
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 752
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 744
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 762
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 744
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 747
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 744
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 742
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.006997670300421888, below negative shortcut threshhold 0.05
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006288447935621019, below negative shortcut threshhold 0.05
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4329863282123633
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4329863282123633
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:33 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:33 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257845 HTTP/1.1" 200 None
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 752
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 744
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 762
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 744
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 747
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 744
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 742
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.006997670300421888, below negative shortcut threshhold 0.05
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006288447935621019, below negative shortcut threshhold 0.05
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.43131309569167636
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.43131309569167636
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:33 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:33 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:34 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257845 HTTP/1.1" 200 None
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 752
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 744
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 762
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 744
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 747
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 744
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 742
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.006997670300421888, below negative shortcut threshhold 0.05
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006288447935621019, below negative shortcut threshhold 0.05
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.43344820555720004
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06453655106480416
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05105923216603497
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015873254833563763
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018938653068045284
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.0003995909967511432
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06134519978742652
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.43344820555720004
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:34 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:34 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:35 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257844 HTTP/1.1" 200 None
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257844 HTTP/1.1" 200 None
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257844 HTTP/1.1" 200 None
+2017-10-09 22:03:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:36 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257844 HTTP/1.1" 200 None
+2017-10-09 22:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:36 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257843 HTTP/1.1" 200 None
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257843 HTTP/1.1" 200 None
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257843 HTTP/1.1" 200 None
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:37 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257843 HTTP/1.1" 200 None
+2017-10-09 22:03:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:38 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257842 HTTP/1.1" 200 None
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 601
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 596
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 596
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 596
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 597
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 596
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.010863489654478812, below negative shortcut threshhold 0.05
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006807807282345681, below negative shortcut threshhold 0.05
+2017-10-09 22:03:38 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.0006656911241283542, below negative shortcut threshhold 0.05
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0654366392161065
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05054959047559377
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.013252723973322268
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.015549055281037933
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.0634052993682899
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4052214648227375
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0654366392161065
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05054959047559377
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.013252723973322268
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.015549055281037933
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.0634052993682899
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4052214648227375
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:39 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257842 HTTP/1.1" 200 None
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 601
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 597
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.010865110494408942, below negative shortcut threshhold 0.05
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006782679152387028, below negative shortcut threshhold 0.05
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.04905545519285183, below negative shortcut threshhold 0.05
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.0006635578381955736, below negative shortcut threshhold 0.05
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06492518528692402
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01506606784456728
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.017542525741048306
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06364470070505265
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.416374517253155
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06492518528692402
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.01506606784456728
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.017542525741048306
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06364470070505265
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.416374517253155
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:39 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:39 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257842 HTTP/1.1" 200 None
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 601
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 596
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 597
+2017-10-09 22:03:39 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 596
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.011576787476015938, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006739685349778318, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.048815630548321574, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.0006706414036657013, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0648842422589953
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.013374713578669274
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.015560348100730634
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06465404300892363
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4168902174147702
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0648842422589953
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.013374713578669274
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.015560348100730634
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06465404300892363
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4168902174147702
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:40 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:40 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257842 HTTP/1.1" 200 None
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 601
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 596
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 596
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 596
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 597
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 596
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.010926046007377285, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.006976635806127522, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: IBM855 confidence = 0.04867577579671679, below negative shortcut threshhold 0.05
+2017-10-09 22:03:40 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.0006682696897738138, below negative shortcut threshhold 0.05
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06487563042896961
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.013227241694204358
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.015366390077220644
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06481387977003317
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.40979296517215646
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.06487563042896961
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: IBM855 not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.013227241694204358
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.015366390077220644
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.06481387977003317
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.40979296517215646
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:41 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:03:41 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:03:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:41 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257841 HTTP/1.1" 200 None
+2017-10-09 22:03:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:42 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257841 HTTP/1.1" 200 None
+2017-10-09 22:03:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:42 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257841 HTTP/1.1" 200 None
+2017-10-09 22:03:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:42 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257841 HTTP/1.1" 200 None
+2017-10-09 22:03:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:43 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257840 HTTP/1.1" 200 None
+2017-10-09 22:03:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:44 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257840 HTTP/1.1" 200 None
+2017-10-09 22:03:48 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
+2017-10-09 22:03:48 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
+2017-10-09 22:03:48 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:50:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2017-10-09 22:03:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
@@ -86,65 +1078,283 @@ AttributeError: 'NoneType' object has no attribute 'text'
  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:50:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+2017-10-09 22:03:48 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:50:33 [scrapy.middleware] INFO: Enabled item pipelines:
+2017-10-09 22:03:48 [scrapy.middleware] INFO: Enabled item pipelines:
 ['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:50:33 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:50:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:50:33 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:50:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:50:34 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
-2017-10-09 20:50:34 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257829%20javascript:void(0) HTTP/1.1" 404 None
-2017-10-09 20:50:34 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 97, in parse
-    item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="utf8")
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 29, in createItemUseBs4
-    origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
-AttributeError: 'NoneType' object has no attribute 'text'
-2017-10-09 20:50:34 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:50:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15470,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 50, 37, 139431),
- 'log_count/DEBUG': 4,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/AttributeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 50, 33, 801640)}
-2017-10-09 20:50:37 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:51:22 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:51:22 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:51:22 [scrapy.middleware] INFO: Enabled extensions:
+2017-10-09 22:03:48 [scrapy.core.engine] INFO: Spider opened
+2017-10-09 22:03:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-10-09 22:03:48 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-10-09 22:03:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:49 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:50 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:03:50 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:50 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:50 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:50 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:51 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:51 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:51 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:51 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:51 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:03:52 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:52 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:52 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:52 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:53 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:53 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:03:53 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:53 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:53 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:54 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:54 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:54 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:54 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:54 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:54 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:03:55 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:55 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:55 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:55 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:55 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:55 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:56 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:56 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:56 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:03:57 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:58 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257856 HTTP/1.1" 200 None
+2017-10-09 22:03:58 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:03:58 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:03:59 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257855 HTTP/1.1" 200 None
+2017-10-09 22:04:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:00 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:00 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:04:00 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:00 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:04:00 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:01 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:04:01 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:01 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257854 HTTP/1.1" 200 None
+2017-10-09 22:04:02 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:02 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:04:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:02 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:04:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:03 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:04:03 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:03 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257853 HTTP/1.1" 200 None
+2017-10-09 22:04:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:03 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:04 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00761119960522556, below negative shortcut threshhold 0.05
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.0057521413443150865, below negative shortcut threshhold 0.05
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4154560117574414
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4154560117574414
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:04 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:04:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:04 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00761119960522556, below negative shortcut threshhold 0.05
+2017-10-09 22:04:04 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.0057521413443150865, below negative shortcut threshhold 0.05
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4267661687895813
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4267661687895813
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:04:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:05 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00761119960522556, below negative shortcut threshhold 0.05
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.0057521413443150865, below negative shortcut threshhold 0.05
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4162435192623528
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4162435192623528
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:05 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:04:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:06 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257852 HTTP/1.1" 200 None
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: SHIFT_JIS Japanese prober hit error at byte 604
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: EUC-JP Japanese prober hit error at byte 602
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: GB2312 Chinese prober hit error at byte 604
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: EUC-KR Korean prober hit error at byte 602
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: CP949 Korean prober hit error at byte 602
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: Big5 Chinese prober hit error at byte 603
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: EUC-TW Taiwan prober hit error at byte 597
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-5 confidence = 0.00761119960522556, below negative shortcut threshhold 0.05
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: MacCyrillic confidence = 0.0057521413443150865, below negative shortcut threshhold 0.05
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4221783326244716
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1251 Russian confidence = 0.01
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: KOI8-R Russian confidence = 0.01
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-5 not active
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: MacCyrillic not active
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: IBM866 Russian confidence = 0.0612555123401949
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: IBM855 Russian confidence = 0.05050580225867119
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-7 Greek confidence = 0.015727647698739047
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1253 Greek confidence = 0.018865215213766988
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-5 Bulgairan confidence = 0.001966513102753008
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1251 Bulgarian confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: TIS-620 Thai confidence = 0.05993256499040236
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: ISO-8859-9 Turkish confidence = 0.4221783326244716
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:06 [chardet.charsetprober] DEBUG: windows-1255 Hebrew confidence = 0.0
+2017-10-09 22:04:06 [bs4.dammit] WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2017-10-09 22:04:19 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
+2017-10-09 22:04:19 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
+2017-10-09 22:04:19 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:51:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2017-10-09 22:04:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
@@ -156,393 +1366,68 @@ AttributeError: 'NoneType' object has no attribute 'text'
  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:51:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+2017-10-09 22:04:20 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:51:22 [scrapy.middleware] INFO: Enabled item pipelines:
+2017-10-09 22:04:20 [scrapy.middleware] INFO: Enabled item pipelines:
 ['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:51:22 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:51:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:51:22 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:51:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:51:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
-2017-10-09 20:51:22 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257829%20javascript:void(0) HTTP/1.1" 404 None
-2017-10-09 20:51:22 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 95, in parse
-    item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="CP949")
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 29, in createItemUseBs4
-    origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
-AttributeError: 'NoneType' object has no attribute 'text'
-2017-10-09 20:51:22 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:51:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15458,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 51, 25, 712567),
- 'log_count/DEBUG': 4,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/AttributeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 51, 22, 580088)}
-2017-10-09 20:51:25 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:53:36 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:53:36 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:53:37 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:53:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.ajaxcrawl.AjaxCrawlMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:53:37 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:53:37 [scrapy.middleware] INFO: Enabled item pipelines:
-['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:53:37 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:53:37 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:53:37 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:53:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:53:37 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 79, in parse
-    print(item['title'])
-UnicodeEncodeError: 'cp949' codec can't encode character '\xa0' in position 3: illegal multibyte sequence
-2017-10-09 20:53:37 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:53:40 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15403,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 53, 40, 541613),
- 'log_count/DEBUG': 2,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/UnicodeEncodeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 53, 37, 371706)}
-2017-10-09 20:53:40 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:55:18 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:55:18 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:55:18 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:55:19 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.ajaxcrawl.AjaxCrawlMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:55:19 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:55:19 [scrapy.middleware] INFO: Enabled item pipelines:
-['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:55:19 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:55:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:55:19 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:55:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:55:19 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 78, in parse
-    item['title'] = createItemUseXpath(select, titleXpath, texttype="")
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 27, in createItemUseXpath
-    print(conversion)
-UnicodeEncodeError: 'cp949' codec can't encode character '\xa0' in position 3: illegal multibyte sequence
-2017-10-09 20:55:19 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:55:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15459,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 55, 22, 405703),
- 'log_count/DEBUG': 2,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/UnicodeEncodeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 55, 19, 299439)}
-2017-10-09 20:55:22 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:55:58 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:55:58 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:55:58 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:55:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.ajaxcrawl.AjaxCrawlMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:55:58 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:55:58 [scrapy.middleware] INFO: Enabled item pipelines:
-['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:55:58 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:55:58 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:55:58 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:55:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:55:59 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 78, in parse
-    item['title'] = createItemUseXpath(select, titleXpath, texttype="")[0]
-IndexError: string index out of range
-2017-10-09 20:55:59 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:56:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15527,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 56, 2, 140694),
- 'log_count/DEBUG': 2,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/IndexError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 55, 58, 717999)}
-2017-10-09 20:56:02 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:56:41 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:56:41 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:56:41 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:56:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.ajaxcrawl.AjaxCrawlMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:56:41 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:56:41 [scrapy.middleware] INFO: Enabled item pipelines:
-['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:56:41 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:56:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:56:41 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:56:41 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 78, in parse
-    item['title'] = createItemUseXpath(select, titleXpath, texttype="")
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 27, in createItemUseXpath
-    print(conversion)
-UnicodeEncodeError: 'cp949' codec can't encode character '\xa0' in position 3: illegal multibyte sequence
-2017-10-09 20:56:41 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:56:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15536,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 56, 44, 970815),
- 'log_count/DEBUG': 2,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/UnicodeEncodeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 56, 41, 504187)}
-2017-10-09 20:56:44 [scrapy.core.engine] INFO: Spider closed (finished)
-2017-10-09 20:57:20 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
-2017-10-09 20:57:20 [scrapy.utils.log] INFO: Overridden settings: {'AJAXCRAWL_ENABLED': True, 'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': 'LOG_FILE.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'SPIDER_MODULES': ['Crawler.spiders']}
-2017-10-09 20:57:20 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.logstats.LogStats']
-2017-10-09 20:57:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.ajaxcrawl.AjaxCrawlMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-10-09 20:57:20 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-10-09 20:57:20 [scrapy.middleware] INFO: Enabled item pipelines:
-['Crawler.pipelines.DamoaPipeline']
-2017-10-09 20:57:20 [scrapy.core.engine] INFO: Spider opened
-2017-10-09 20:57:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-10-09 20:57:20 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-10-09 20:57:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-2017-10-09 20:57:21 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
-2017-10-09 20:57:21 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257829%20javascript:void(0) HTTP/1.1" 404 None
-2017-10-09 20:57:21 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
-Traceback (most recent call last):
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
-    yield next(it)
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
-    for x in result:
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
-    return (_set_referer(r) for r in result or ())
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
-    return (r for r in result or () if _filter(r))
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Ygosu.py", line 95, in parse
-    item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="CP949")
-  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 30, in createItemUseBs4
-    print(JoinPostUrl)
-UnicodeEncodeError: 'cp949' codec can't encode character '\xa0' in position 23901: illegal multibyte sequence
-2017-10-09 20:57:21 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-10-09 20:57:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 235,
- 'downloader/request_count': 1,
- 'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 15539,
- 'downloader/response_count': 1,
- 'downloader/response_status_count/200': 1,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 10, 9, 11, 57, 24, 417802),
- 'log_count/DEBUG': 4,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 7,
- 'response_received_count': 1,
- 'scheduler/dequeued': 1,
- 'scheduler/dequeued/memory': 1,
- 'scheduler/enqueued': 1,
- 'scheduler/enqueued/memory': 1,
- 'spider_exceptions/UnicodeEncodeError': 1,
- 'start_time': datetime.datetime(2017, 10, 9, 11, 57, 20, 996381)}
-2017-10-09 20:57:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-10-09 22:04:20 [scrapy.core.engine] INFO: Spider opened
+2017-10-09 22:04:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-10-09 22:04:20 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-10-09 22:04:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ygosu.com/community/yeobgi/?page=1> (referer: None)
+2017-10-09 22:04:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:20 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:04:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:20 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:04:21 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:21 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:04:21 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:21 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257861 HTTP/1.1" 200 None
+2017-10-09 22:04:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:04:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:23 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257860 HTTP/1.1" 200 None
+2017-10-09 22:04:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:23 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:04:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:24 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:04:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:24 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:04:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:25 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2017-10-09 22:04:25 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257859 HTTP/1.1" 200 None
+2017-10-09 22:04:26 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:26 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2017-10-09 22:04:26 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:26 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:04:26 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:26 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:04:26 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:26 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:04:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:27 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257858 HTTP/1.1" 200 None
+2017-10-09 22:04:27 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2017-10-09 22:04:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None
+2017-10-09 22:04:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.ygosu.com
+2017-10-09 22:04:28 [urllib3.connectionpool] DEBUG: http://www.ygosu.com:80 "GET /community/yeobgi/1257857 HTTP/1.1" 200 None
+2017-10-09 22:04:29 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ygosu.com/community/yeobgi/?page=1>
+None

@@ -1,4 +1,3 @@
-
 """
 Item 객체에 데이터를 구성해주는 클래스
 Create : 2017.10.09
@@ -13,7 +12,7 @@ def replaceText(text, texttype):
     if texttype == "link":
         replacedText = text.replace('\t','').replace('\n', '').replace('\r', '').replace(',', '')
     elif texttype == "date":
-        replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '').replace('/','').replace('.','-').replace("(","").replace(")","").replace('DATE : ','')
+        replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '').replace('/','').replace('.','-').replace("(","").replace(")","").replace('DATE : ','').replace('READ : ','')
     elif texttype == "hits":
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '').replace('조회: ','').replace('READ : ','')
     else:
@@ -27,7 +26,6 @@ def createItemUseXpath(select, xpath, texttype):
 
 def createItemUseBs4(url, name, attr,texttype, encoding):
     JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser", from_encoding=encoding)
-    print(JoinPostUrl)
     origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
     conversion = replaceText(origin, texttype)
     return conversion
