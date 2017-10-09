@@ -12,9 +12,13 @@ def replaceText(text, texttype):
     if texttype == "link":
         replacedText = text.replace('\t','').replace('\n', '').replace('\r', '').replace(',', '')
     elif texttype == "date":
-        replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '').replace('/','').replace('.','-').replace("(","").replace(")","").replace('DATE : ','').replace('READ : ','')
+        replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '')\
+            .replace(',', '').replace('/','').replace('.','-').replace("(","").replace('\xa0',' ')\
+            .replace(")","").replace('DATE : ','').replace('READ : ','')\
+            .replace('일','').replace('월','').replace('화','').replace('수','').replace('목','').replace('금','').replace('토', '')
     elif texttype == "hits":
-        replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '').replace('조회: ','').replace('READ : ','')
+        replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '')\
+            .replace('조회: ','').replace('READ : ','').replace('조회 ','').replace('추천 ','')
     else:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '')
     return replacedText
