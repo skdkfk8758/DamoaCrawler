@@ -3,7 +3,7 @@ from datetime import datetime
 
 def filterItem(item):
 
-    if "공지" in item["attribute"] or "이용" in item["title"] :
+    if "공지" in item["attribute"] or "이용" in item["title"]:
         # print("filter")
         pass
     else:
