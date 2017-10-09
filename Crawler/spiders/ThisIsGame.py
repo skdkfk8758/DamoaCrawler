@@ -1,7 +1,7 @@
 
 """
 This is Game Spider
-Make :  2017.10.08
+Create :  2017.10.08
 
 MAX_PAGE -> Damoa.spiders.Setting에 있음
 
@@ -11,12 +11,11 @@ MAX_PAGE -> Damoa.spiders.Setting에 있음
 """
 
 import scrapy
-import requests
-from bs4 import BeautifulSoup
 
 from Crawler.filterItem import *
 from Crawler.items import DamoaItem
 from Crawler.spiders.Setting import *
+from Crawler.CreateItem import *
 
 class ThisIsGame(scrapy.Spider):
     name = 'thisisgame' # spider name
@@ -47,59 +46,58 @@ class ThisIsGame(scrapy.Spider):
             else:
                 item = DamoaItem() # item객체 생성
 
-                #출처 저장
+                # 게시물 출처 저장
                 item['source'] = self.name
 
                 # 게시물 제목 저장
-                item['title'] = "".join(select.xpath('td/a/text()').extract()).replace('\t','').replace('\n','').replace('\r','')
+                titleXpath = "td/a/text()"
+                item['title'] = createItemUseXpath(select, titleXpath, texttype="")
                 # print(item['title'])
 
-                # 링크 저장
-                item['link'] = self.baseUrl + select.xpath('td/a/@href').extract()[0]
+                # 게시물 링크 저장
+                linkXpath = "td/a/@href"
+                item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype="link")
                 # print(item['link'])
 
-                # 게시물 텍스트를 읽기위해 게시물 링크로 이동
-                JoinPostUrl = BeautifulSoup(requests.get(item['link']).content, "html.parser")
-
-                # 게시물로 이동후 속성읽어서 저장
-                item['attribute'] = "".join(select.xpath("//div[@class='board-title-part']/h1/a/strong/text()").extract()[0]).replace('\t', '').replace('\n', '').replace('\r', '')
+                # 게시물 속성 저장
+                attrXpath = "//div[@class='board-title-part']/h1/a/strong/text()"
+                item['attribute'] = createItemUseXpath(select, attrXpath, texttype="")
                 # print(item['attribute'])
 
-                # 게시일 저장
-                item['date'] = JoinPostUrl.find(name='span', attrs={"class": "info-one postdate"}).text.strip().replace(".", "-")
+                # 게시물 게시일 저장
+                tagName = "span"
+                tagAttrs = {"class": "info-one postdate"}
+                item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="date")
                 # print(item['date'])
 
-                # 조회수 저장 -> 게시물 이동후 확인해야함
-                item['hits'] = "".join(JoinPostUrl.find(name='span', attrs={"class": "info-one readcount"}).text.strip()).replace(',', '').replace('조회: ','')
+                # 게시물 조회수 저장
+                tagName = "span"
+                tagAttrs = {"class": "info-one readcount"}
+                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="hits")
                 # print(item['hits'])
 
-                # 추천수 저장 -> 공감수
-                item['recommened'] = JoinPostUrl.find(name='span', attrs={"class": "field-tboard-overall-article-ratingsum"}).text.strip()
+                # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
+                tagName = "span"
+                tagAttrs = {"class": "field-tboard-overall-article-ratingsum"}
+                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재시간
-                item['last_update'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                item['last_update'] = getCurrentTime("str")
 
-                postDateTypeOfDateTime = datetime.strptime(item['date'], '%Y-%m-%d %H:%M:%S')  # 문자열 날짜를 datetime으로 변형
-                currentDateTypeOfDateTime = datetime.strptime(item['last_update'],
-                                                              '%Y-%m-%d %H:%M:%S')  # 문자열 날짜를 datetime으로 변형
+                # 게시물 인기도 저장
+                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
+                # print(item['pop'])
 
-                # 한시간당 가중치 감소(시간으로 조회수 나눔)
-                postOpeningTime = (currentDateTypeOfDateTime - postDateTypeOfDateTime).total_seconds() / 3600
-
-                # 인기도 계산 -> 저장
-                if (postOpeningTime <= 0):
-                    postOpeningTime = 1
-                    item['pop'] = int(item['recommened']) + ((int(item['hits']) / postOpeningTime))
-                else:
-                    item['pop'] = int(item['recommened']) + ((int(item['hits']) / postOpeningTime))
-                    # print(item['pop'])
-
-                    # 게시물 텍스트 저장
-                item['text'] = "".join(JoinPostUrl.find(name="div", attrs={"class": "content board-content"}).text.strip()).replace('\n', '')
+                # 게시물 텍스트 저장
+                tagName = "div"
+                tagAttrs = {"class": "content board-content"}
+                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
                 # print(postText)
 
+                # Item -> DB에 저장
                 if filterItem(item) != None:
+                    # 아이템 필터링 후 DB저장
                     yield filterItem(item)
 
 

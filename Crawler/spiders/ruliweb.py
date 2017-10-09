@@ -1,7 +1,7 @@
 
 """
 Ruliweb Spider
-Make : 2017.06.16
+Create : 2017.06.16
 
 MAX_PAGE -> DamoaCrawler.spiders.spider_Setting에 있음
 
@@ -14,12 +14,11 @@ MAX_PAGE -> DamoaCrawler.spiders.spider_Setting에 있음
 """
 
 import scrapy
-import requests
-from bs4 import BeautifulSoup
 
 from Crawler.filterItem import *
 from Crawler.items import DamoaItem
 from Crawler.spiders.Setting import *
+from Crawler.CreateItem import *
 
 class RuliWeb(scrapy.Spider):
     name = 'ruli' # spider name
@@ -398,50 +397,47 @@ class RuliWeb(scrapy.Spider):
         for select in response.xpath('//tr[@class="table_body"]'):
             item = DamoaItem()
 
-            # 출처 저장
+            # 게시물 출처 저장
             item['source'] = self.name
 
             # 게시물 제목 저장
-            item['title'] = select.xpath('td[@class="subject"]/div[@class="relative"]/a/text()').extract()
+            titleXpath = "td[@class='subject']/div[@class='relative']/a/text()"
+            item['title'] = createItemUseXpath(select, titleXpath, texttype="")
 
-            # 링크 저장
-            item['link'] = select.xpath('td/div[@class="relative"]/a/@href').extract()[0]
+            # 게시물 링크 저장
+            linkXpath = "td/div[@class='relative']/a/@href"
+            item['link'] = createItemUseXpath(select, linkXpath, texttype="link")
 
-            # 게시물 텍스트를 읽기위해 게시물 링크로 이동
-            JoinPostUrl = BeautifulSoup(requests.get(item['link']).content, "html.parser", from_encoding="utf-8")
+            # 게시물 속성 저장
+            attrXpath = "td[@class='divsn']/a/text()"
+            item['attribute'] = createItemUseXpath(select, attrXpath, texttype="")
 
-            # 게시물로 이동후 속성읽어서 저장
-            item['attribute'] = select.xpath('td[@class="divsn"]/a/text()').extract()[0]
+            # 게시물 게시일 저장
+            tagName = "span"
+            tagAttr = {"class": "regdate"}
+            item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="CP949")
+            # print(item['date'])
 
-            # 게시일 저장
-            item['date'] = datetime.strptime("".join(JoinPostUrl.find(name="span", attrs={"class": "regdate"}).text.replace("(","").replace(")","")),'%Y.%m.%d %H:%M:%S').strftime('%Y-%m-%d %H:%M:%S')
+            # 게시물 조회수 저장
+            hitsXpath = "td[@class='hit']/text()"
+            item['hits'] = createItemUseXpath(select, hitsXpath, texttype="")
+            # print(item['hits'])
 
-            # 조회수 저장 -> 게시물 이동후 확인
-            item['hits'] = "".join(select.xpath('td[@class="hit"]/text()').extract()[0]).replace('\t','').replace('\n','').replace('\r','')
-
-            # 추천수 저장 -> 공감수
-            item['recommened'] = "".join(select.xpath('td[@class="recomd"]/text()').extract()[0]).replace('\t', '').replace('\n', '').replace('\r', '')
+            # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
+            recommenedXpath = "td[@class='recomd']/text()"
+            item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype="")
 
             # 마지막 갱신일 저장 -> 현재시간
-            item['last_update'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            item['last_update'] = getCurrentTime("string")
 
-            postDateTypeOfDateTime = datetime.strptime(item['date'], '%Y-%m-%d %H:%M:%S')  # 문자열 날짜를 datetime으로 변형
-            currentDateTypeOfDateTime = datetime.strptime(item['last_update'],
-                                                          '%Y-%m-%d %H:%M:%S')  # 문자열 날짜를 datetime으로 변형
-
-            # 한시간당 가중치 감소(시간으로 조회수 나눔)
-            postOpeningTime = (currentDateTypeOfDateTime - postDateTypeOfDateTime).total_seconds() / 3600
-
-            # 인기도 계산 -> 저장
-            if (postOpeningTime <= 0):
-                postOpeningTime = 1
-                item['pop'] = int(item['recommened']) + ((int(item['hits']) / postOpeningTime))
-            else:
-                item['pop'] = int(item['recommened']) + ((int(item['hits']) / postOpeningTime))
+            # 게시물 인기도 저장
+            item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
             # print(item['pop'])
 
-            # 게시물 텍스트 읽어서 문자열로 변환후 저장
-            item['text'] = "".join(JoinPostUrl.find(name="div", attrs={"class": "view_content"}).text.strip()).replace('\n', '')
+            # 게시물 텍스트 저장
+            tagName = "div"
+            tagAttrs = {"class": "view_content"}
+            item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
 
             # Item -> DB에 저장
             if filterItem(item) != None:
