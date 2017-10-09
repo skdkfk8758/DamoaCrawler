@@ -36,7 +36,7 @@ ROBOTSTXT_OBEY = False
 #COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
-#TELNETCONSOLE_ENABLED = False
+# TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 #DEFAULT_REQUEST_HEADERS = {
@@ -46,15 +46,15 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
+# SPIDER_MIDDLEWARES = {
 #    'Damoa.middlewares.DamoaSpiderMiddleware': 543,
-#}
+# }
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+# DOWNLOADER_MIDDLEWARES = {
 #    'Damoa.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+# }
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -91,15 +91,18 @@ ITEM_PIPELINES = {
 
 CONCURRENT_REQUESTS = 100 # 동시에 요청하는 횟수
 REACTOR_THREADPOOL_MAXSIZE = 20 # 스레드 풀 사이즈
-RETRY_ENABLED = False # 실패요쳥 재시도 안한
-# DOWNLOAD_TIMEOUT = 15 # 다운로드 제한시간
-# REDIRECT_ENABLED = False # 리디렉션 설정해체
+RETRY_ENABLED = True # 실패요쳥 재시도
+DOWNLOAD_TIMEOUT = 30 # 다운로드 제한시간
+REDIRECT_ENABLED = True # 리디렉션 설정
 AJAXCRAWL_ENABLED = True # Ajax 크롤링가능 페이지 사용
+COOKIES_ENABLED  =  False
 
-USER_AGENT = 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36'
+# DOWNLOADER_MIDDLEWARES = {'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,}
+
+# USER_AGENT = 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36'
 
 # Scrapy settings for dirbot project
 
 LOG_FILE = 'LOG_FILE.log'
 FEED_EXPORT_ENCODING = 'utf-8'
-LOG_LEVEL = "WARNING"
+LOG_LEVEL = "ERROR"

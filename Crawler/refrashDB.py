@@ -35,7 +35,7 @@ class refrashDB:
         dateTmp_curr = datetime.strptime(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
 
         for rs in result:
-            timeTmp1 = datetime.strptime(str(rs['postdate']), "%Y-%m-%d %H:%M:%S")
+            timeTmp1 = datetime.strptime(str(rs['mydate']), "%Y-%m-%d %H:%M:%S")
             timeGap = (dateTmp_curr - timeTmp1).total_seconds()
             # print(str(rs['mydate']) + " " + str(timeGap))
 
