@@ -93,15 +93,16 @@ class HumorUniv(scrapy.Spider):
                 # 게시물 게시일 저장
                 dateXpath = "td[@class='li_date']/span/text()"
                 item['date'] = createItemUseXpath(select, dateXpath,texttype="") + ":00"
-                # print(item['date'])
+                if len(item['date'].split("-")[0])<3:
+                    item['date'] = "20" + item['date']
 
                 # 게시물 조회수 저장
                 hitsXpath = "td[@class='li_und']/text()"
-                item['hits'] = createItemUseXpath(select, hitsXpath, texttype="")
+                item['hits'] = createItemUseXpath(select, hitsXpath, texttype="hits")
 
                 # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
                 recommenedXpath = "td[@class='li_und']/span[@class='o']/text()"
-                item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype="")
+                item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype="hits")
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재 시간

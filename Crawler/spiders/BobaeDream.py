@@ -57,12 +57,12 @@ class GameShot(scrapy.Spider):
                 # 게시물 제목 저장
                 titleXpath = "td/a/text()"
                 item['title'] = createItemUseXpath(select, titleXpath, texttype="")
-                # print(item['title'])
+                print(item['title'])
 
                 # 게시물 링크 저장
                 linkXpath = "td/a/@href"
                 item['link'] =  self.baseUrl + createItemUseXpath(select, linkXpath, texttype="link").split("java")[0]
-                # print(item['link'])
+                print(item['link'])
 
                 # 게시물 속성 저장
                 attrXpath = "//div[@class='titleArea02']/h2/img/@alt"
@@ -72,20 +72,20 @@ class GameShot(scrapy.Spider):
                 # 게시물 게시일 저장
                 tagName = "span"
                 tagAttrs =  {"class": "countGroup"}
-                item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="date").split("|")[2].strip()+":00"
+                item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="date").split("|")[-1].strip()+":00"
                 # print(item['date'])
 
                 # 게시물 조회수 저장
                 tagName = "span"
                 tagAttrs = {"class": "countGroup"}
-                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="hits").split("|")[0].strip()
+                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="hits").split("|")[0].strip()
                 # print(item['hits'])
 
                 # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
                 tagName = "span"
                 tagAttrs = {"class": "countGroup"}
                 item['hits'] = \
-                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="hits").split("|")[1].strip()
+                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="hits").split("|")[1].strip()
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재시간
@@ -99,7 +99,7 @@ class GameShot(scrapy.Spider):
                 # 게시물 텍스트 저장
                 tagName = "div"
                 tagAttrs = {"class": "bodyCont"}
-                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
+                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="")
                 # print(item['text'])
 
                 # Item -> DB에 저장

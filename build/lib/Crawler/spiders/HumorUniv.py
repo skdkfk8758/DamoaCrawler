@@ -1,16 +1,16 @@
 
 """
-웃긴대학 크롤링 스파이더
+웃긴대학 Spider
+Create : 2017.10.06
 
-클리앙 게시물 별로 크롤링
+MAX_PAGE -> Damoa.spiders.Setting에 있음
 
-2017.10.06
- - 스파이더 이름 변경 humiruniv -> humor
+2017.10.09
+ - 코드정리
 
 """
 
 import scrapy
-
 import requests
 from bs4 import BeautifulSoup
 from scrapy.selector import Selector
@@ -18,120 +18,106 @@ from scrapy.selector import Selector
 from Crawler.filterItem import *
 from Crawler.items import DamoaItem
 from Crawler.spiders.Setting import *
-
+from Crawler.CreateItem import *
 
 class HumorUniv(scrapy.Spider):
     name = 'humoruniv'
 
-    # 리퀘스트 요청 (여러 게시판 돌때 동기적으로 수행됨)
+    baseUrl = "http://web.humoruniv.com/board/humor/"
+
+    # 각 게시판별로 리퀘스트 요청
     def start_requests(self):
         for i in range(1, MAX_PAGE, 1):
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=pds&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=pdswait&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=kin&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=otl&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=art_toon&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=nova_toon&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=fear&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=guest&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=mild&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=free&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=pds&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=pdswait&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=kin&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=otl&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=art_toon&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com//board/humor/list.html?table=nova_toon&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=fear&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=guest&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=mild&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=free&pg={0}'.format(i - 1), self.parse_site)
             yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=poll&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=game&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=thema2&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=lol&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=pride&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=muzik&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=thema3&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=animaluniv&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=com&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=moofama&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=whitehand&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=workshop&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=solo&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=love&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=spnatural&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=car&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=sns&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=dump&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=studying&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=memory&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=program&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=sympathy&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=phone&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=army&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=worldcup&pg={0}'.format(i - 1), self.parse_site)
-            # yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=cabinet&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=game&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=thema2&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=lol&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=pride&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=muzik&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=thema3&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=animaluniv&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=com&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=moofama&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=whitehand&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=workshop&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=solo&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=love&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=spnatural&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=car&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=sns&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=dump&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=studying&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=memory&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=program&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=sympathy&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=phone&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=army&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=worldcup&pg={0}'.format(i - 1), self.parse_site)
+            yield scrapy.Request('http://web.humoruniv.com/board/humor/list.html?table=cabinet&pg={0}'.format(i - 1), self.parse_site)
 
-    # 사이트 파싱
+    # 리스폰스 받아서 사이트 파싱
     def parse_site(self, response):
         sel = Selector(response)
-
-        for parse_path in sel.xpath('//div[@id="cnts_list_new"]/div/table/tr'):
+        for select in sel.xpath('//div[@id="cnts_list_new"]/div/table/tr'):
             item = DamoaItem()
 
+            # 게시물 출처 저장
             item['source'] = self.name
 
-            # 해당xpath 텍스트를 읽어와서 문자열로 바꾸고 item객체에 저장
-            titleTmp = parse_path.xpath('td[@class="li_sbj"]/a/text()').extract()
-            tmpList_title = "".join(titleTmp).replace('\t', '').replace('\r', '').replace('\n','')
-
-            item['title'] = tmpList_title
-
-            # 링크 저장
-            tmp = parse_path.xpath('td[@class="li_sbj"]/a/@href').extract()
-
-            if len(tmp)>0:
-                part_link = parse_path.xpath('td[@class="li_sbj"]/a/@href').extract()[0]
+            # 게시물 제목 저장
+            titleXpath = "td[@class='li_sbj']/a/text()"
+            item['title'] = createItemUseXpath(select, titleXpath,texttype="")
+            if item['title'] == "":
+                pass
             else:
-                continue
-            item['link'] = 'http://web.humoruniv.com/board/humor/' + part_link
+                # 게시물 링크 저장
+                linkXpath = "td[@class='li_sbj']/a/@href"
+                item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype="link")
 
-            # 게시판에 게시물 링크 타고가기 위해 리퀘스트 재요청
-            postUrl = BeautifulSoup(requests.get(item['link']).content, "html.parser",from_encoding='CP949')
+                # 게시물 속성 저장
+                tagName = "a"
+                tagAttr = {"class" : "bo"}
+                item['attribute'] = createItemUseBs4(item['link'],tagName, tagAttr, encoding="CP949", texttype="")
+                # print(item['attribute'])
 
-            # 게시물로 이동후 속성읽어서 저장
-            attributeTmp = postUrl.find(name='a', attrs={"class" : "bo"}).text.strip()
-            item['attribute'] = attributeTmp
+                # 게시물 게시일 저장
+                dateXpath = "td[@class='li_date']/span/text()"
+                item['date'] = createItemUseXpath(select, dateXpath,texttype="") + ":00"
+                if len(item['date'].split("-")[0])<3:
+                    item['date'] = "20" + item['date']
 
-            # 게시일 저장
-            tmpdate = parse_path.xpath('td[@class="li_date"]/span/text()').extract()
-            item['date'] = ' '.join(tmpdate) + ":00"
+                # 게시물 조회수 저장
+                hitsXpath = "td[@class='li_und']/text()"
+                item['hits'] = createItemUseXpath(select, hitsXpath, texttype="hits")
 
-            print(item['date'])
+                # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
+                recommenedXpath = "td[@class='li_und']/span[@class='o']/text()"
+                item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype="hits")
+                # print(item['recommened'])
 
-            # 조회수 저장 -> 게시물 이동후 확인해야함
-            hitsTmp = parse_path.xpath('td[@class="li_und"]/text()').extract()
-            item['hits'] = "".join(hitsTmp).replace('\t', '').replace('\r', '').replace('\n','').replace('/','').replace(',','').strip()
+                # 마지막 갱신일 저장 -> 현재 시간
+                item['last_update'] = getCurrentTime("String")
 
-            # 추천수 저장
-            recommTmp = parse_path.xpath('td[@class="li_und"]/span[@class="o"]/text()').extract()
-            item['recommened'] = "".join(recommTmp).replace('\t', '').replace('\r', '').replace('\n', '').replace('/', '')
+                # 게시물 인기도 저장
+                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
+                # print(item['pop'])
 
-            # 마지막 갱신일 저장
-            item['last_update'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                # 게시물 텍스트 저장
+                tagName = "div"
+                tagAttr = {"id": "cnts"}
+                item['text'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949", texttype="")
 
-            # 인기도 저장
-            dateTmp_post = datetime.strptime(item['date'], '%Y-%m-%d %H:%M:%S')
-            dateTmp_curr = datetime.strptime(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
-
-            # 한시간당 가중치 감소(시간으로 조회수 나눔)
-            timeTmp = (dateTmp_curr-dateTmp_post).total_seconds()/3600
-
-            if(timeTmp <= 0):
-                timeTmp = 1
-                commentTmp = int(item['recommened']) + ((int(item['hits']) / timeTmp))
-            else :
-                commentTmp = int(item['recommened']) + ((int(item['hits']) / timeTmp))
-
-            popTmp = commentTmp
-            item['pop'] = popTmp
-            # 게시물 텍스트 읽어서 문자열로 변환후 저장
-            textTmp = postUrl.find(name="div", attrs={"id": "cnts"}).text.strip()
-            postText = "".join(textTmp).replace('\n', '')
-            item['text'] = postText
-
-
-            if filterItem(item) != None:
-                yield filterItem(item)
-
+                # Item -> DB에 저장
+                if filterItem(item) != None:
+                    # 아이템 필터링 후 DB저장
+                    yield filterItem(item)

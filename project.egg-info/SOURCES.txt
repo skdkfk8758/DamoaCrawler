@@ -1,5 +1,6 @@
 README.md
 setup.py
+Crawler/CreateItem.py
 Crawler/TotalpostDAO.py
 Crawler/__init__.py
 Crawler/filterItem.py
@@ -8,11 +9,13 @@ Crawler/middlewares.py
 Crawler/pipelines.py
 Crawler/refrashDB.py
 Crawler/settings.py
+Crawler/spiders/BobaeDream.py
 Crawler/spiders/Clien.py
 Crawler/spiders/GameShot.py
 Crawler/spiders/HumorUniv.py
 Crawler/spiders/Setting.py
 Crawler/spiders/ThisIsGame.py
+Crawler/spiders/Ygosu.py
 Crawler/spiders/__init__.py
 Crawler/spiders/ruliweb.py
 project.egg-info/PKG-INFO

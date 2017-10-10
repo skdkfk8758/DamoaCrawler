@@ -64,7 +64,7 @@ class GameShot(scrapy.Spider):
 
                 # 게시물 조회수 저장
                 hitsXpath = "td/abbr/text()"
-                item['hits'] = createItemUseXpath(select, hitsXpath, texttype="")
+                item['hits'] = createItemUseXpath(select, hitsXpath, texttype="hits")
                 # print(item['hits'])
 
                 # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0

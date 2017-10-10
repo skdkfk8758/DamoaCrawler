@@ -67,7 +67,7 @@ class ThisIsGame(scrapy.Spider):
                 # 게시물 게시일 저장
                 tagName = "span"
                 tagAttrs = {"class": "info-one postdate"}
-                item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="date")
+                item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="date")
                 # print(item['date'])
 
                 # 게시물 조회수 저장
@@ -79,7 +79,7 @@ class ThisIsGame(scrapy.Spider):
                 # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
                 tagName = "span"
                 tagAttrs = {"class": "field-tboard-overall-article-ratingsum"}
-                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
+                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="")
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재시간
@@ -92,7 +92,7 @@ class ThisIsGame(scrapy.Spider):
                 # 게시물 텍스트 저장
                 tagName = "div"
                 tagAttrs = {"class": "content board-content"}
-                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
+                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="")
                 # print(postText)
 
                 # Item -> DB에 저장
