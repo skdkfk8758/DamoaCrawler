@@ -68,7 +68,7 @@ class ThisIsGame(scrapy.Spider):
                 tagName = "span"
                 tagAttrs = {"class": "info-one postdate"}
                 item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="date")
-                print(item['date'])
+                # print(item['date'])
 
                 # 게시물 조회수 저장
                 tagName = "span"
@@ -79,7 +79,7 @@ class ThisIsGame(scrapy.Spider):
                 # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
                 recommenedXpath = "td/text()"
                 item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype="")[-1]
-                print(item['recommened'])
+                # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재시간
                 item['last_update'] = getCurrentTime("str")

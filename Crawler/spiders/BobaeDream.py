@@ -57,12 +57,12 @@ class GameShot(scrapy.Spider):
                 # 게시물 제목 저장
                 titleXpath = "td/a/text()"
                 item['title'] = createItemUseXpath(select, titleXpath, texttype="")
-                print(item['title'])
+                # print(item['title'])
 
                 # 게시물 링크 저장
                 linkXpath = "td/a/@href"
                 item['link'] =  self.baseUrl + createItemUseXpath(select, linkXpath, texttype="link").split("java")[0]
-                print(item['link'])
+                # print(item['link'])
 
                 # 게시물 속성 저장
                 attrXpath = "//div[@class='titleArea02']/h2/img/@alt"
