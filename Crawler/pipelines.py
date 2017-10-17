@@ -32,9 +32,7 @@ class DamoaPipeline(object):
     # 스파이더 종료되면 수행되는 부분
     def close_spider(self, spider):
         self.end = time.time()
-        print("close")
         self.dao.deleteOldData()
-        print("asd")
 
         f = open("Finished_LOG.log", "a")
         f.write("\n"+" <" + spider.name + "> " + "start : " + str(datetime.datetime.now()) + "runtime : " + str(self.end - self.start))
