@@ -20,7 +20,7 @@ def replaceText(text, texttype):
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '')\
             .replace('조회: ','').replace('READ : ','').replace('조회: ','').replace('추천 ','').replace('/','')
     elif texttype == "text":
-        replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '').replace('""','').replace(';"','')
+        replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '')
     else:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '')
     return replacedText
