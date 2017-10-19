@@ -15,7 +15,8 @@ def replaceText(text, texttype):
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace('\xa0','')\
             .replace(',', '').replace('/','').replace('.','-').replace("(","").replace('  ',' ')\
             .replace(")","").replace('DATE : ','').replace('READ : ','')\
-            .replace('일','').replace('월','').replace('화','').replace('수','').replace('목','').replace('금','').replace('토', '')
+            .replace('일','').replace('월','').replace('화','').replace('수','').replace('목','').replace('금','').replace('토', '')\
+            .replace("작성 : ", "")
     elif texttype == "hits":
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '')\
             .replace('조회: ','').replace('READ : ','').replace('조회: ','').replace('추천 ','').replace('/','')
