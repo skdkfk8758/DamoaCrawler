@@ -74,7 +74,7 @@ class UnderKG(scrapy.Spider):
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재시간
-                item['last_update'] = getCurrentTime("str")
+                item['last_update'] = getCurrentTime(TextType.STRING)
 
                 # 게시물 인기도 저장
                 item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])

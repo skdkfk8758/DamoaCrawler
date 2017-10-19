@@ -75,14 +75,14 @@ class Ygosu(scrapy.Spider):
 
             # 게시물 제목 저장
             titleXpath = "td[@class='tit']/a/text()"
-            item['title'] = createItemUseXpath(select, titleXpath, texttype="text")
+            item['title'] = createItemUseXpath(select, titleXpath, texttype="")
             if item['title'] == "":
                 # td태그안에 빈 텍스트가있어서 오류가 발생 -> 빈 텍스트는 패스
                 continue
             else:
                 # 게시물 링크 저장
                 linkXpath = "td[@class='tit']/a/@href"
-                item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype="link")
+                item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype=TextType.LINK)
                 # print(item['link'])
 
                 # 현재 게시판 url을 분석해서 게시판 속성 저장
@@ -92,13 +92,13 @@ class Ygosu(scrapy.Spider):
                 # 게시물 게시일 저장
                 tagName = "div"
                 tagAttr = {"class": "date"}
-                item['date'] = " ".join(createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="utf8").split(" ")[0:2])
+                item['date'] = " ".join(createItemUseBs4(item['link'], tagName, tagAttr, texttype=TextType.DATE, encoding="utf8").split(" ")[0:2])
                 # print(item['date'])
 
                 # 게시물 조회수 저장
                 tagName = "div"
                 tagAttrs = {"class": "date"}
-                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, texttype="date", encoding="utf8").split(" ")[-1]
+                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, texttype=TextType.INT, encoding="utf8").split(" ")[-1]
                 # print(item['hits'])
 
                 # 추천수 저장
@@ -106,11 +106,11 @@ class Ygosu(scrapy.Spider):
                 if select.xpath(recommenedXpath).extract()[0] == "-":
                     item['recommened'] = 0
                 else:
-                    item['recommened'] = createItemUseXpath(select,recommenedXpath,texttype="")
+                    item['recommened'] = createItemUseXpath(select,recommenedXpath,texttype=TextType.INT)
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재 시간
-                item['last_update'] = getCurrentTime("STR")
+                item['last_update'] = getCurrentTime(TextType.STRING)
 
                 # 게시물 인기도 저장
                 item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
@@ -119,10 +119,10 @@ class Ygosu(scrapy.Spider):
                 # 게시물 텍스트 저장
                 tagName = "div"
                 tagAttrs = {"class": "container"}
-                if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="text") == "":
+                if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT) == "":
                     item['text'] = "None Text"
                 else:
-                    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="text")
+                    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
                     # print(item['text'])
 
                 # Item -> DB에 저장

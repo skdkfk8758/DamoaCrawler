@@ -40,18 +40,18 @@ class Becle(scrapy.Spider):
 
             # 게시물 제목 저장
             titleXpath = "td/span/text()"
-            item['title'] = createItemUseXpath(select, titleXpath, texttype="text")
+            item['title'] = createItemUseXpath(select, titleXpath, texttype="")
             if item['title'] == "공지":
                 # 공지사항 필터링
                 pass
             else:
                 titleXpath = "td/a/text()"
-                item['title'] = createItemUseXpath(select, titleXpath, texttype="text")
+                item['title'] = createItemUseXpath(select, titleXpath, texttype="")
                 # print(item['title'])
 
                 # 게시물 링크 저장
                 linkXpath = "td/a/@href"
-                item['link'] = createItemUseXpath(select, linkXpath, texttype="link").split(" ")[0]
+                item['link'] = createItemUseXpath(select, linkXpath, texttype=TextType.LINK).split(" ")[0]
                 # print(item['link'])
 
                 # 현재 게시판 url을 분석해서 게시판 속성 저장
@@ -60,12 +60,12 @@ class Becle(scrapy.Spider):
 
                 # 게시물 게시일 저장
                 dateXpath = "td[@class='time']/text()"
-                item['date'] = createItemUseXpath(select, dateXpath, "date")+":00"
+                item['date'] = createItemUseXpath(select, dateXpath, texttype=TextType.DATE)+":00"
                 # print(item['date'])
 
                 # 게시물 조회수 저장
                 hitsXpath = "td/text()"
-                item['hits'] = createItemUseXpath(select, hitsXpath, texttype="hits").split(" ")[-1]
+                item['hits'] = createItemUseXpath(select, hitsXpath, texttype=TextType.INT).split(" ")[-1]
                 # print(item['hits'])
 
                 # 추천수 저장
@@ -73,7 +73,7 @@ class Becle(scrapy.Spider):
                 if select.xpath(recommenedXpath).extract()[0] == "-":
                     item['recommened'] = 0
                 else:
-                    item['recommened'] = createItemUseXpath(select, hitsXpath, texttype="hits").split(" ")[0]
+                    item['recommened'] = createItemUseXpath(select, hitsXpath, texttype=TextType.INT).split(" ")[0]
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재 시간
@@ -87,10 +87,10 @@ class Becle(scrapy.Spider):
                 # 게시물 텍스트 저장
                 tagName = "div"
                 tagAttrs = {"id": "article_1"}
-                if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="text") == "":
+                if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT) == "":
                     item['text'] = "None Text"
                 else:
-                    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="text")
+                    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
                     # print(item['text'])
 
                 # Item -> DB에 저장

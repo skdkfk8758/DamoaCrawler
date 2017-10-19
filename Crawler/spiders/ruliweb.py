@@ -403,10 +403,11 @@ class RuliWeb(scrapy.Spider):
             # 게시물 제목 저장
             titleXpath = "td[@class='subject']/div[@class='relative']/a/text()"
             item['title'] = createItemUseXpath(select, titleXpath, texttype="")
+            # print(item['title'])
 
             # 게시물 링크 저장
             linkXpath = "td/div[@class='relative']/a/@href"
-            item['link'] = createItemUseXpath(select, linkXpath, texttype="link")
+            item['link'] = createItemUseXpath(select, linkXpath, texttype=TextType.LINK)
 
             # 게시물 속성 저장
             attrXpath = "td[@class='divsn']/a/text()"
@@ -415,17 +416,17 @@ class RuliWeb(scrapy.Spider):
             # 게시물 게시일 저장
             tagName = "span"
             tagAttr = {"class": "regdate"}
-            item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype="date", encoding="CP949")
+            item['date'] = createItemUseBs4(item['link'], tagName, tagAttr, texttype=TextType.DATE, encoding="CP949")
             # print(item['date'])
 
             # 게시물 조회수 저장
             hitsXpath = "td[@class='hit']/text()"
-            item['hits'] = createItemUseXpath(select, hitsXpath, texttype="")
+            item['hits'] = createItemUseXpath(select, hitsXpath, texttype=TextType.INT)
             # print(item['hits'])
 
             # 추천수 OR 공감수 저장, 추천수나 공감수가 게시물에 존재하지않으면 0
             recommenedXpath = "td[@class='recomd']/text()"
-            item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype="")
+            item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype=TextType.INT)
 
             # 마지막 갱신일 저장 -> 현재시간
             item['last_update'] = getCurrentTime("string")
@@ -437,7 +438,7 @@ class RuliWeb(scrapy.Spider):
             # 게시물 텍스트 저장
             tagName = "div"
             tagAttrs = {"class": "view_content"}
-            item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
+            item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
 
             # Item -> DB에 저장
             if filterItem(item) != None:

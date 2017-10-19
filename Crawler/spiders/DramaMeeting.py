@@ -43,19 +43,21 @@ class DramaMeeting(scrapy.Spider):
             item['source'] = self.name
 
             # 게시물 제목 저장
-            titleXpath = "td/text()"
-            item['title'] = createItemUseXpath(select, titleXpath, texttype="text")
-            if item['title'] == "공지":
+            titleXpath = "td[@class='no']/strong/text()"
+            item['title'] = createItemUseXpath(select, titleXpath, texttype="")
+            # print(item['title'])
+            if item['title'] != "":
                 # 공지사항 필터링
+                # print(item['title'])
                 pass
             else:
-                titleXpath = "td/a/text()"
-                item['title'] = createItemUseXpath(select, titleXpath, texttype="text")
+                titleXpath = "td[@class='title']/a/text()"
+                item['title'] = createItemUseXpath(select, titleXpath, texttype="")
                 # print(item['title'])
 
                 # 게시물 링크 저장
-                linkXpath = "td/a/@href"
-                item['link'] = createItemUseXpath(select, linkXpath, texttype="link").split(" ")[0]
+                linkXpath = "td[@class='title']/a/@href"
+                item['link'] = createItemUseXpath(select, linkXpath, texttype=TextType.LINK).split(" ")[0]
                 # print(item['link'])
 
                 # 현재 게시판 url을 분석해서 게시판 속성 저장
@@ -64,7 +66,7 @@ class DramaMeeting(scrapy.Spider):
 
                 # 게시물 게시일 저장
                 dateXpath = "td[@class='time']/text()"
-                item['date'] = createItemUseXpath(select, dateXpath, "date")+" 00:00:00"
+                item['date'] = createItemUseXpath(select, dateXpath, texttype=TextType.DATE)+" 00:00:00"
                 # print(item['date'])
 
                 # 게시물 조회수 저장
@@ -75,11 +77,11 @@ class DramaMeeting(scrapy.Spider):
                 # 추천수 저장
                 tagName = "div"
                 tagAttrs = {"class":"side fr"}
-                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="int").split(" ")[2]
+                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.INT).split(" ")[3]
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재 시간
-                item['last_update'] = getCurrentTime("STR")
+                item['last_update'] = getCurrentTime(TextType.STRING)
                 # print(item['last_update'])
 
                 # 게시물 인기도 저장
@@ -89,10 +91,10 @@ class DramaMeeting(scrapy.Spider):
                 # 게시물 텍스트 저장
                 tagName = "div"
                 tagAttrs = {"class": "rd_body clear"}
-                if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="text") == "":
+                if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT) == "":
                     item['text'] = "None Text"
                 else:
-                    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype="text")
+                    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
                     # print(item['text'])
 
                 # Item -> DB에 저장

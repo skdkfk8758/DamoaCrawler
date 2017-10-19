@@ -6,4 +6,3 @@ class TextType(enum.Enum):
     TEXT = "text"
     INT = "int"
     STRING = "string"
-    DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
