@@ -21,7 +21,7 @@ def replaceText(text, texttype):
             .replace("작성 : ", "")
     elif texttype == TextType.INT:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '')\
-            .replace('조회: ','').replace('READ : ','').replace('조회: ','').replace('추천 ','').replace('/','')
+            .replace('조: ','').replace('READ : ','').replace('회: ','').replace('추천 ','').replace('/','')
     elif texttype == TextType.TEXT:
         replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '')
     else:
