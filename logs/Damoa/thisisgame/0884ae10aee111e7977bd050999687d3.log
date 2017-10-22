@@ -1,0 +1,60 @@
+2017-10-12 09:06:02 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=32&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 43, in parse
+    if select.xpath("td/span/text()").extract()[0] == "공지":
+IndexError: list index out of range
+2017-10-12 09:06:02 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=956&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 43, in parse
+    if select.xpath("td/span/text()").extract()[0] == "공지":
+IndexError: list index out of range
+2017-10-12 09:08:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=956&page=2> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 43, in parse
+    if select.xpath("td/span/text()").extract()[0] == "공지":
+IndexError: list index out of range
+2017-10-12 09:09:05 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.thisisgame.com/webzine/community/tboard/?board=32&page=2> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ThisIsGame.py", line 43, in parse
+    if select.xpath("td/span/text()").extract()[0] == "공지":
+IndexError: list index out of range

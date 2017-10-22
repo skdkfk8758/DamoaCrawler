@@ -1,0 +1,1887 @@
+2017-10-08 00:51:40 [scrapy.core.scraper] ERROR: Error processing {'attribute': '강좌게시판',
+ 'date': '2017-09-30 12:06:00',
+ 'hits': '3634',
+ 'last_update': '2017-10-08 00:51:40',
+ 'link': 'http://www.clien.net/service/board/lecture/11258752?po=0&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default',
+ 'pop': 26.103881734640563,
+ 'recommened': '6',
+ 'source': 'clien',
+ 'text': '⭐️PC 웹사이트: \xa0http://e-gen.or.kr/egen/hoemsin1.do안드로이드 앱: \xa0'
+         'https://play.google.com/store/apps/details?id=kr.go.mw&hl=koios '
+         '앱: \xa0'
+         'https://itunes.apple.com/kr/app/eung-geub-uilyojeongbojegong/id385668523?mt=8이 '
+         '서비스로 검색하면, 문 열려있는 병원을 찾을 수 있습니다.예전 추석 연휴 때, 병원 급하게 가야 할 일이 있었는데 '
+         '(급성치수염..-_-)이거로 찾아보면, 의외로 연휴에 문 여는 곳 있더라구요. 덕분에 살았어요.🙂예전엔 PC 웹사이트에 '
+         '비해 모바일이 병원 찾기가 불편했는데, 요즘은 모바일도 지도에서 찾는 기능이 개선되어서\xa0근거리 병원 보여주는 게 꽤 '
+         '편해진 것 같더군요.하지만 지역별로 필터링해서 병원 과목을 검색 하는 기능은 여전히 pc 웹사이트에만 존재합니다. 웬만하면 '
+         'pc웹사이트로 접속해서 찾으세요.(특정 진료과목 필터링이 잘 안될 때는, 지역만 선택하고 이름 검색에 과목을 넣으세요. '
+         '어차피 이름에 진료과목이 포함되는 경우가 대부분이라~)',
+ 'title': '추석 연휴 때 오픈하는 병원/약국 찾는 방법'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+    self.dao.checkDB(item)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 57, in checkDB
+    self.cursor.execute(sql,(item['title'],item['text']))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1267, "Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2017-10-08 00:57:23 [scrapy.core.scraper] ERROR: Error processing {'attribute': '자료실',
+ 'date': '2017-08-20 16:56:48',
+ 'hits': '7578',
+ 'last_update': '2017-10-08 00:57:23',
+ 'link': 'http://www.clien.net/service/board/pds/11100503?po=3&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default',
+ 'pop': 10.532703868621791,
+ 'recommened': '4',
+ 'source': 'clien',
+ 'text': '일본여행하면서 찍은 사진들입니다!   짧게 다녀와서 그런가 너무 아쉽네요 ㅠㅠ   나중에 꼭 한번 더 가봐야겠어요 😃',
+ 'title': '핸드폰 배경화면 (일본 여행)'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+    self.dao.checkDB(item)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 57, in checkDB
+    self.cursor.execute(sql,(item['title'],item['text']))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1267, "Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2017-10-08 01:02:17 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/park?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/park?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:02:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/kin?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/kin?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:02:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/bug?&od=T31&po=9>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/bug?&od=T31&po=9 took longer than 30.0 seconds..
+2017-10-08 01:02:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/useful?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/useful?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:03:24 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/news?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/news?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:03:24 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/chehum?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/chehum?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:03:24 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/park?&od=T31&po=11>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/park?&od=T31&po=11 took longer than 30.0 seconds..
+2017-10-08 01:03:31 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:03:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/useful?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/useful?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:03:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:03:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:04:05 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:04:05 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:04:06 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/use?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/use?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:04:11 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/bug?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/bug?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:04:48 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/news?&od=T31&po=5>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/news?&od=T31&po=5 took longer than 30.0 seconds..
+2017-10-08 01:04:48 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/kin?&od=T31&po=5>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/kin?&od=T31&po=5 took longer than 30.0 seconds..
+2017-10-08 01:04:48 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/useful?&od=T31&po=5>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/useful?&od=T31&po=5 took longer than 30.0 seconds..
+2017-10-08 01:04:52 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/park?&od=T31&po=5>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/park?&od=T31&po=5 took longer than 30.0 seconds..
+2017-10-08 01:04:54 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=2>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=2 took longer than 30.0 seconds..
+2017-10-08 01:05:25 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:05:25 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=2>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=2 took longer than 30.0 seconds..
+2017-10-08 01:05:28 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=1 took longer than 30.0 seconds..
+2017-10-08 01:05:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/useful?&od=T31&po=2>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/useful?&od=T31&po=2 took longer than 30.0 seconds..
+2017-10-08 01:06:10 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=2>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=2 took longer than 30.0 seconds..
+2017-10-08 01:06:10 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=2>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=2 took longer than 30.0 seconds..
+2017-10-08 01:06:16 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/bug?&od=T31&po=5>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/bug?&od=T31&po=5 took longer than 30.0 seconds..
+2017-10-08 01:09:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:09:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=6>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=6 took longer than 30.0 seconds..
+2017-10-08 01:09:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:09:42 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:09:51 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:10:13 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:10:13 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:10:13 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:10:25 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=6>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=6 took longer than 30.0 seconds..
+2017-10-08 01:10:35 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:10:35 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/useful?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/useful?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:11:00 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:11:00 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:11:08 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=7>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=7 took longer than 30.0 seconds..
+2017-10-08 01:11:17 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:11:17 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/kin?&od=T31&po=11>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/kin?&od=T31&po=11 took longer than 30.0 seconds..
+2017-10-08 01:11:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=9>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=9 took longer than 30.0 seconds..
+2017-10-08 01:11:58 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:12:43 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.clien.net/service/board/use?&od=T31&po=5> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x073B3130>: Failed to establish a new connection: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.clien.net', port=80): Max retries exceeded with url: /service/board/use/11242254?po=5&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x073B3130>: Failed to establish a new connection: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\Clien.py", line 59, in parse
+    postUrl = BeautifulSoup(requests.get(item['link']).content, "html.parser",from_encoding='CP949')
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='www.clien.net', port=80): Max retries exceeded with url: /service/board/use/11242254?po=5&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x073B3130>: Failed to establish a new connection: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다',))
+2017-10-08 01:12:43 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:12:43 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=8>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=8 took longer than 30.0 seconds..
+2017-10-08 01:12:43 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/useful?&od=T31&po=11>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/useful?&od=T31&po=11 took longer than 30.0 seconds..
+2017-10-08 01:12:43 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/news?&od=T31&po=11>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/news?&od=T31&po=11 took longer than 30.0 seconds..
+2017-10-08 01:13:04 [scrapy.core.scraper] ERROR: Error processing {'attribute': '자료실',
+ 'date': '2017-06-25 16:56:13',
+ 'hits': '10154',
+ 'last_update': '2017-10-08 01:13:04',
+ 'link': 'http://www.clien.net/service/board/pds/10902849?po=6&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default',
+ 'pop': 5.054657075534327,
+ 'recommened': '1',
+ 'source': 'clien',
+ 'text': '저번에 어느 그림 배경 그림 올렸었는데.. 뒤에 아주머니가 계신걸 모르고 그냥 막 올렸었네요..ㅠ 생각이 짧았습니다..   '
+         '죄송합니다😭😭   이번엔 조명이랑 컵 캘리그라피 한건데 배경으로도 괜찮은것 같아서 올려봅니당 😃   (캐논m3 호루스벤누 '
+         '35mm 수동렌즈)',
+ 'title': '배경화면 (조명) (캘리)'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+    def process_item(self, item, spider):
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 57, in checkDB
+    self.cursor.execute(sql,(item['title'],item['text']))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1267, "Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2017-10-08 01:13:49 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=9>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=9 took longer than 30.0 seconds..
+2017-10-08 01:14:32 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=9>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=9 took longer than 30.0 seconds..
+2017-10-08 01:14:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:15:24 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=10>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=10 took longer than 30.0 seconds..
+2017-10-08 01:21:17 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/news?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/news?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:21:29 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/pds?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/pds?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:21:29 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/useful?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/useful?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:22:12 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=12>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=12 took longer than 30.0 seconds..
+2017-10-08 01:23:00 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=12>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=12 took longer than 30.0 seconds..
+2017-10-08 01:23:21 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=12>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=12 took longer than 30.0 seconds..
+2017-10-08 01:25:25 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=13>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=13 took longer than 30.0 seconds..
+2017-10-08 01:26:09 [scrapy.core.scraper] ERROR: Error processing {'attribute': '강좌게시판',
+ 'date': '2017-07-11 23:39:39',
+ 'hits': '11354',
+ 'last_update': '2017-10-08 01:26:09',
+ 'link': 'http://www.clien.net/service/board/lecture/10961172?po=14&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default',
+ 'pop': 16.371432626462134,
+ 'recommened': '11',
+ 'source': 'clien',
+ 'text': '에어컨 때문에 전기요금을 신경 쓰는 계절이 돌아왔죠. 🙂작년 12월에 기존 6단계 누진에서 3단계로 새롭게 바뀐 전기요금 '
+         '차트입니다.원래 전기요금은 기본요금과 실제 사용요금을 누진 구간에 따라 적용하고..거기에 부가세와 기반 기금을 더해서 '
+         '최종적인 요금이 나오는데,\xa0어차피 최종 금액의 패턴이 일정하게 나오기 때문에, 그냥 보기 편하게 최종값만 차트로 '
+         '만들었어요. -_-ㅋ44 kWh까지는 추가 공제 4000원 때문에 요금이 1000원으로 찍혀서 부가세와 기반기금을 붙인 약 '
+         '1130원45~200은 kWh당 106원\xa0201~400 은 kWh당 214원 (단 201로 올라갈 때는 기본요금이 '
+         '오르고, 200kWh 이하 공제가 사라져서 5550원)401 부터는 kWh당 319원 (단 401로 올라갈 때는 기본요금이 '
+         '올라서 6800원)이런 식으로 보시면 됩니다.전기 사용량을 보고, 요금이 얼마나 나올지 예상해 보세요~※ 드물겠지만 '
+         '동·하계(7~8월, 12~2월) 1000kWh 초과하는 전력량요금은 kWh당 709.5원으로 계산됩니다.- 추가 -그냥 '
+         '옛날 전기요금이랑 비교하는 차트예요. ㅋ',
+ 'title': '간단하게 보는 전기요금 3단계 누진제'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 57, in checkDB
+    self.cursor.execute(sql,(item['title'],item['text']))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1267, "Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2017-10-08 01:26:12 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=13>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=13 took longer than 30.0 seconds..
+2017-10-08 01:27:43 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/kin?&od=T31&po=19>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/kin?&od=T31&po=19 took longer than 30.0 seconds..
+2017-10-08 01:27:43 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/news?&od=T31&po=19>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/news?&od=T31&po=19 took longer than 30.0 seconds..
+2017-10-08 01:28:00 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/useful?&od=T31&po=19>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/useful?&od=T31&po=19 took longer than 30.0 seconds..
+2017-10-08 01:28:02 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/pds?&od=T31&po=19>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/pds?&od=T31&po=19 took longer than 30.0 seconds..
+2017-10-08 01:32:12 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=14>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=14 took longer than 30.0 seconds..
+2017-10-08 01:32:12 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=15>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=15 took longer than 30.0 seconds..
+2017-10-08 01:33:32 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=15>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=15 took longer than 30.0 seconds..
+2017-10-08 01:33:32 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:33:32 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=15>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=15 took longer than 30.0 seconds..
+2017-10-08 01:34:13 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=17>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=17 took longer than 30.0 seconds..
+2017-10-08 01:34:50 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:34:50 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:34:50 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:35:18 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=16>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=16 took longer than 30.0 seconds..
+2017-10-08 01:35:18 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=17>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=17 took longer than 30.0 seconds..
+2017-10-08 01:35:18 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=17>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=17 took longer than 30.0 seconds..
+2017-10-08 01:37:05 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/bug?&od=T31&po=22>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2017-10-08 01:38:51 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:38:58 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:39:04 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:39:17 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=18>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2017-10-08 01:39:24 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:39:27 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:39:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/useful?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/useful?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:39:36 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=18>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=18 took longer than 30.0 seconds..
+2017-10-08 01:39:36 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=19>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=19 took longer than 30.0 seconds..
+2017-10-08 01:41:27 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=21>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=21 took longer than 30.0 seconds..
+2017-10-08 01:41:54 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=21>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=21 took longer than 30.0 seconds..
+2017-10-08 01:42:05 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/park?&od=T31&po=22>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/park?&od=T31&po=22 took longer than 30.0 seconds..
+2017-10-08 01:42:05 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=22>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=22 took longer than 30.0 seconds..
+2017-10-08 01:42:09 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/kin?&od=T31&po=22>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/kin?&od=T31&po=22 took longer than 30.0 seconds..
+2017-10-08 01:42:25 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/useful?&od=T31&po=22>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/useful?&od=T31&po=22 took longer than 30.0 seconds..
+2017-10-08 01:42:33 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=22>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=22 took longer than 30.0 seconds..
+2017-10-08 01:42:42 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/use?&od=T31&po=23>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/use?&od=T31&po=23 took longer than 30.0 seconds..
+2017-10-08 01:42:56 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/chehum?&od=T31&po=23>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/chehum?&od=T31&po=23 took longer than 30.0 seconds..
+2017-10-08 01:43:07 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/bug?&od=T31&po=23>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/bug?&od=T31&po=23 took longer than 30.0 seconds..
+2017-10-08 01:45:22 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=22>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=22 took longer than 30.0 seconds..
+2017-10-08 01:45:48 [scrapy.core.scraper] ERROR: Error downloading <GET https://clien.net/service/board/kin?&od=T31&po=25>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://clien.net/service/board/kin?&od=T31&po=25 took longer than 30.0 seconds..
+2017-10-08 01:47:21 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/bug?&od=T31&po=25>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/bug?&od=T31&po=25 took longer than 30.0 seconds..
+2017-10-08 01:47:21 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=23>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=23 took longer than 30.0 seconds..
+2017-10-08 01:47:21 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/chehum?&od=T31&po=25>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/chehum?&od=T31&po=25 took longer than 30.0 seconds..
+2017-10-08 01:47:34 [scrapy.core.scraper] ERROR: Error processing {'attribute': '모두의공원',
+ 'date': '2017-10-07 23:29:06',
+ 'hits': '1025',
+ 'last_update': '2017-10-08 01:47:34',
+ 'link': 'http://www.clien.net/service/board/park/11281441?po=25&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default',
+ 'pop': 444.15021665864225,
+ 'recommened': '0',
+ 'source': 'clien',
+ 'text': '치킨 시져시져~ 😀😁😂',
+ 'title': '치킨을 싫어하는 사람들이 먹는 샐러드'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 57, in checkDB
+    self.cursor.execute(sql,(item['title'],item['text']))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1267, "Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2017-10-08 01:47:53 [scrapy.core.scraper] ERROR: Error processing {'attribute': '강좌게시판',
+ 'date': '2017-05-10 06:56:21',
+ 'hits': '2873',
+ 'last_update': '2017-10-08 01:47:53',
+ 'link': 'http://www.clien.net/service/board/lecture/10725574?po=27&od=T31&sk=&sv=&category=&groupCd=&articlePeriod=default',
+ 'pop': 8.79389666417253,
+ 'recommened': '8',
+ 'source': 'clien',
+ 'text': '기존 [내 댓글 찾기] 버튼 스크립트에 검색창도 붙여 봤어요~ \xa0(2줄 추가)뉴-클리앙은 댓글 찾기 결과에 글을 '
+         '포함시키지 않기 때문에 [내 글 찾기] 버튼도 같이 만들었구요.검색은 제목, id검색, 닉네임 검색, 댓글 검색이 '
+         '가능합니다. 스샷처럼 마우스 눌러서 선택하세요.내용 검색은 어떤 검색 명령어를 넣어야 작동하는지 아직 '
+         '몰라서...ㅎㅎ \xa0(분명 내용 검색도 구현되어 있을텐데...)크롬의 Tampermonkey 익스텐션에서 새 스크립트 '
+         '버튼을 누르고 아래 리플 내용을 붙여넣으시면 '
+         '됩니다.https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo------------------------------------------------------------------\xa0'
+         '수정 \xa0🎶 \xa0v0.6제목 검색이나 일부 게시판에서 2페이지 이상 검색을 못하는 문제를 수정했습니다.클리앙에서 '
+         '제공하는 페이지 넘김 링크를 누르지 말고검색 결과에서 아래에 생기는 이전/다음 버튼을 눌러서 이동하면, 현 검색 결과를 '
+         '유지하면서 페이지 이동해요. (평상시엔 보이지 않는 버튼)그리고 검색창에 거슬리던 % 표시도 떼버려서 깔끔해졌어요.0.6 '
+         '써진거로 다시 바꾸세요!ㄴ(-- )ㄱ💨💨\xa0흰색 계열 테마에선 이런 느낌이예요.',
+ 'title': '(스크립트)[내 댓글 찾기]버튼 만들기 + 클리앙 게시판에 검색 기능 추가 +반복검색'}
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\pipelines.py", line 40, in process_item
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\TotalpostDAO.py", line 57, in checkDB
+    self.cursor.execute(sql,(item['title'],item['text']))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1267, "Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2017-10-08 01:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/news?&od=T31&po=26>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/news?&od=T31&po=26 took longer than 30.0 seconds..
+2017-10-08 01:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/park?&od=T31&po=26>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/park?&od=T31&po=26 took longer than 30.0 seconds..
+2017-10-08 01:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/kin?&od=T31&po=26>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/kin?&od=T31&po=26 took longer than 30.0 seconds..
+2017-10-08 01:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=24>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=24 took longer than 30.0 seconds..
+2017-10-08 01:47:58 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=24>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=24 took longer than 30.0 seconds..
+2017-10-08 01:48:38 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=24>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=24 took longer than 30.0 seconds..
+2017-10-08 01:48:38 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/news?&od=T31&po=24>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/news?&od=T31&po=24 took longer than 30.0 seconds..
+2017-10-08 01:49:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/chehum?&od=T31&po=27>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/chehum?&od=T31&po=27 took longer than 30.0 seconds..
+2017-10-08 01:49:20 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=25>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=25 took longer than 30.0 seconds..
+2017-10-08 01:49:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/news?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/news?&od=T31&po=28 took longer than 30.0 seconds..
+2017-10-08 01:49:20 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=25>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=25 took longer than 30.0 seconds..
+2017-10-08 01:49:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/use?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/use?&od=T31&po=28 took longer than 30.0 seconds..
+2017-10-08 01:49:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/lecture?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/lecture?&od=T31&po=28 took longer than 30.0 seconds..
+2017-10-08 01:49:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/useful?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/useful?&od=T31&po=28 took longer than 30.0 seconds..
+2017-10-08 01:49:50 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.clien.net/service/board/pds?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.clien.net/service/board/pds?&od=T31&po=28 took longer than 30.0 seconds..
+2017-10-08 01:50:01 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/lecture?&od=T31&po=26>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/lecture?&od=T31&po=26 took longer than 30.0 seconds..
+2017-10-08 01:50:01 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=27>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=27 took longer than 30.0 seconds..
+2017-10-08 01:50:03 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=27>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=27 took longer than 30.0 seconds..
+2017-10-08 01:50:03 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/use?&od=T31&po=26>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/use?&od=T31&po=26 took longer than 30.0 seconds..
+2017-10-08 01:50:03 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/pds?&od=T31&po=26>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/pds?&od=T31&po=26 took longer than 30.0 seconds..
+2017-10-08 01:50:52 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/chehum?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/chehum?&od=T31&po=28 took longer than 30.0 seconds..
+2017-10-08 01:50:52 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.clien.net/service/board/bug?&od=T31&po=28>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.clien.net/service/board/bug?&od=T31&po=28 took longer than 30.0 seconds..

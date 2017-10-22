@@ -1,0 +1,72 @@
+2017-10-10 10:00:09 [scrapy.core.scraper] ERROR: Spider error processing <GET http://bbs.ruliweb.com/ps/board/300421/list?page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x062470D0>: Failed to establish a new connection: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='bbs.ruliweb.com', port=80): Max retries exceeded with url: /ps/board/300421/read/30725515?page=1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x062470D0>: Failed to establish a new connection: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\ruliweb.py", line 440, in parse
+    item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype="")
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 32, in createItemUseBs4
+    JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser", from_encoding=encoding)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='bbs.ruliweb.com', port=80): Max retries exceeded with url: /ps/board/300421/read/30725515?page=1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x062470D0>: Failed to establish a new connection: [WinError 10060] 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다',))

@@ -1,0 +1,508 @@
+2017-10-21 21:00:43 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_game&sca=PC%EA%B2%8C%EC%9E%84&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\test.py", line 62, in parse
+    item['date'] = "20"+"".join(createItemUseBs4(item['link'], tagName, tagAttr, texttype=TextType.DATE, encoding="utf8")).split("조회")[0].split("작성")[2].strip() + ":00"
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 37, in createItemUseBs4
+    JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser", from_encoding=encoding)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\models.py", line 379, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-10-21 21:01:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_game&sca=PC%EA%B2%8C%EC%9E%84&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\test.py", line 62, in parse
+    item['date'] = "20"+"".join(createItemUseBs4(item['link'], tagName, tagAttr, texttype=TextType.DATE, encoding="utf8")).split("조회")[0].split("작성")[2].strip() + ":00"
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 37, in createItemUseBs4
+    JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser", from_encoding=encoding)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\requests\models.py", line 379, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-10-21 21:04:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_game&sca=PC%EA%B2%8C%EC%9E%84&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\test.py", line 62, in parse
+    item['date'] = "".join(createItemUseBs4(item['link'], tagName, tagAttr, texttype=TextType.DATE, encoding="utf8")).split("조회")[0].split("작성")[2].strip() + ":00"
+IndexError: list index out of range
+2017-10-21 21:05:28 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_game&sca=PC%EA%B2%8C%EC%9E%84&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\test.py", line 75, in parse
+    print(item['recommened'])
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'recommened'
+2017-10-21 21:07:00 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_game&sca=PC%EA%B2%8C%EC%9E%84&page=1> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\spiders\test.py", line 82, in parse
+    item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
+  File "D:\CapstoneDesign\Damoa\Git_Crawler\DamoaCrawler\Crawler\CreateItem.py", line 71, in createItem_pop
+    postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
+ValueError: invalid literal for int() with base 10: ''
+2017-10-21 22:23:55 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C&page=1>: User timeout caused connection failure.
+2017-10-21 22:23:55 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EC%9C%88%EB%8F%84%EC%9A%B0&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EC%9C%88%EB%8F%84%EC%9A%B0&page=1 took longer than 30.0 seconds..
+2017-10-21 22:23:55 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EC%A3%BC%EB%B3%80%EA%B8%B0%EA%B8%B0&page=1>: User timeout caused connection failure.
+2017-10-21 22:23:55 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_pcgame&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_pcgame&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:23:55 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_pcgame&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_pcgame&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:26:47 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_pcgame&sca=%EC%A0%95%EB%B3%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_pcgame&sca=%EC%A0%95%EB%B3%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_console&sca=%EC%9E%A1%EB%8B%B4&page=1>: User timeout caused connection failure.
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_hardware&sca=%EB%85%B8%ED%8A%B8%EB%B6%81&page=1>: User timeout caused connection failure.
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_hardware&sca=%EC%97%85%EA%B3%84%EB%8F%99%ED%96%A5&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qn_hardware&sca=%EC%97%85%EA%B3%84%EB%8F%99%ED%96%A5&page=1 took longer than 30.0 seconds..
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_hardware&sca=%EA%B8%B0%ED%83%80%2F%EC%A3%BC%EB%B3%80%EA%B8%B0%EA%B8%B0&page=1>: User timeout caused connection failure.
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EC%95%A0%ED%94%8C&page=1>: User timeout caused connection failure.
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cmr&sca=%EC%A0%95%EB%B3%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cmr&sca=%EC%A0%95%EB%B3%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:27:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_vga&sca=%EC%9E%A1%EB%8B%B4&page=1>: User timeout caused connection failure.
+2017-10-21 22:30:25 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_vga&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_vga&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EC%97%85%EA%B3%84%EB%8F%99%ED%96%A5&page=1>: User timeout caused connection failure.
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qn_mobile&sca=%EA%B8%B0%ED%83%80&page=1>: User timeout caused connection failure.
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_hwjoin&sca=%EC%9E%A1%EB%8B%B4&page=1>: User timeout caused connection failure.
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_hwjoin&sca=%EC%A7%88%EB%AC%B8&page=1>: User timeout caused connection failure.
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cool&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cool&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cool&sca=%EC%A0%95%EB%B3%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cool&sca=%EC%A0%95%EB%B3%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:31:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_storage&page=1>: User timeout caused connection failure.
+2017-10-21 22:34:02 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_mobile&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_mobile&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_mobile&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_mobile&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_mobile&sca=%EC%A0%95%EB%B3%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_mobile&sca=%EC%A0%95%EB%B3%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cmr&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cmr&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cmr&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cmr&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sound&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sound&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_dp&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_dp&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:34:40 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_dp&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_dp&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:37:41 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_vga&sca=%EC%A0%95%EB%B3%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_vga&sca=%EC%A0%95%EB%B3%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_case&sca=%EC%9E%A1%EB%8B%B4&page=1>: User timeout caused connection failure.
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_case&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_case&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_case&sca=%EC%A0%95%EB%B3%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_case&sca=%EC%A0%95%EB%B3%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cool&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_cool&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_etc&page=1>: User timeout caused connection failure.
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_free&page=1>: User timeout caused connection failure.
+2017-10-21 22:38:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_humor&page=1>: User timeout caused connection failure.
+2017-10-21 22:41:41 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_power&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_power&page=1 took longer than 30.0 seconds..
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_input&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_input&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_input&sca=%EC%A7%88%EB%AC%B8&page=1>: User timeout caused connection failure.
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_input&sca=%EC%A0%95%EB%B3%B4&page=1>: User timeout caused connection failure.
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sound&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sound&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_saleinfo&sca=%EA%B2%8C%EC%9E%84&page=1>: User timeout caused connection failure.
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_give&page=1>: User timeout caused connection failure.
+2017-10-21 22:42:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_figure&page=1>: User timeout caused connection failure.
+2017-10-21 22:45:37 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_net&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_net&page=1 took longer than 30.0 seconds..
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sw&sca=%EC%9E%A1%EB%8B%B4&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sw&sca=%EC%9E%A1%EB%8B%B4&page=1 took longer than 30.0 seconds..
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sw&sca=%EC%A7%88%EB%AC%B8&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sw&sca=%EC%A7%88%EB%AC%B8&page=1 took longer than 30.0 seconds..
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_nb&page=1>: User timeout caused connection failure.
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qf_sw&sca=%EC%A0%95%EB%B3%B4&page=1>: User timeout caused connection failure.
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_sport&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qb_sport&page=1 took longer than 30.0 seconds..
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_tip&page=1>
+Traceback (most recent call last):
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\python\failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\xkdlr\appdata\local\programs\python\python36-32\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 320, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://quasarzone.co.kr/bbs/board.php?bo_table=qb_tip&page=1 took longer than 30.0 seconds..
+2017-10-21 22:46:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://quasarzone.co.kr/bbs/board.php?bo_table=qb_saleinfo&sca=%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4&page=1>: User timeout caused connection failure.

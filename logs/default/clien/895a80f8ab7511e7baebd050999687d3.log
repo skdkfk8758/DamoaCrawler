@@ -1,0 +1,570 @@
+2017-10-08 00:38:22 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: Damoa)
+2017-10-08 00:38:22 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'Damoa', 'CONCURRENT_REQUESTS': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 30, 'LOG_FILE': 'logs\\default\\clien\\895a80f8ab7511e7baebd050999687d3.log', 'NEWSPIDER_MODULE': 'Crawler.spiders', 'REACTOR_THREADPOOL_MAXSIZE': 20, 'REDIRECT_ENABLED': False, 'SPIDER_MODULES': ['Crawler.spiders']}
+2017-10-08 00:38:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2017-10-08 00:38:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-10-08 00:38:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-10-08 00:38:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['Crawler.pipelines.DamoaPipeline']
+2017-10-08 00:38:22 [scrapy.core.engine] INFO: Spider opened
+2017-10-08 00:38:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-10-08 00:38:22 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6026
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=0> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=1> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=2> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=0>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=1>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=3> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=2>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=4> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:22 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=5> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=3>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=6> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=4>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=7> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=5>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=6>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=8> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=7>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=9> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=8>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=10> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=9>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=10>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=11> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=12> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=13> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=11>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=12>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=14> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=13>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=15> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=16> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=14>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=17> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=15>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=18> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=16>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=17>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=18>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=19> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:23 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=20> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=19>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=21> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=20>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=22> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=21>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=23> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=24> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=22>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=25> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=23>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=26> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=24>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=25>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/park?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=27> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/pds?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/kin?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/news?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/useful?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=26>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/lecture?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/bug?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/use?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.core.engine] DEBUG: Crawled (302) <GET http://clien.net/service/board/chehum?&od=T31&po=28> (referer: None)
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/park?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=27>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/pds?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/kin?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/news?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/useful?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/lecture?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/bug?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/use?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <302 http://clien.net/service/board/chehum?&od=T31&po=28>: HTTP status code is not handled or not allowed
+2017-10-08 00:38:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-10-08 00:38:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 62376,
+ 'downloader/request_count': 261,
+ 'downloader/request_method_count/GET': 261,
+ 'downloader/response_bytes': 28446,
+ 'downloader/response_count': 261,
+ 'downloader/response_status_count/302': 261,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 10, 7, 15, 38, 26, 416605),
+ 'httperror/response_ignored_count': 261,
+ 'httperror/response_ignored_status_count/302': 261,
+ 'log_count/DEBUG': 262,
+ 'log_count/INFO': 268,
+ 'response_received_count': 261,
+ 'scheduler/dequeued': 261,
+ 'scheduler/dequeued/memory': 261,
+ 'scheduler/enqueued': 261,
+ 'scheduler/enqueued/memory': 261,
+ 'start_time': datetime.datetime(2017, 10, 7, 15, 38, 22, 606842)}
+2017-10-08 00:38:26 [scrapy.core.engine] INFO: Spider closed (finished)

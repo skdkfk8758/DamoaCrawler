@@ -2,7 +2,7 @@
 
 scrapyd &
 
-python3.6 scrapyd-client/scrapyd_client/deploy.py
+python3.6 ../scrapyd-client/scrapyd_client/deploy.py
 
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=clien
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=bobaedream
