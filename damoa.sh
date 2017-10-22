@@ -4,6 +4,8 @@ scrapyd &
 
 python3.6 scrapyd-client/scrapyd_client/deploy.py
 
+sleep 5
+
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=clien
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=bobaedream
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=gameshot
@@ -12,7 +14,7 @@ curl http://localhost:6800/schedule.json -d project=Damoa -d spider=humoruniv
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=thisisgame
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=ygosu
 
-sleep 10
+sleep 5
 
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=becle
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=82cook
