@@ -103,7 +103,7 @@ class Spider(scrapy.Spider):
                 # if select.xpath(recommenedXpath) == "":
                 #     item['recommened'] = 0
                 # else:
-                #     item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype=TextType.INT)
+                #     item['recommened'] = createItemUseXpath(select, recommenedXpath,  texttype=TextType.INT)
                 # print(item['recommened'])
 
                 # 마지막 갱신일 저장 -> 현재 시간
