@@ -18,10 +18,10 @@ def replaceText(text, texttype):
             .replace(',', '').replace('/','').replace('.','-').replace("(","").replace('  ',' ')\
             .replace(")","").replace('DATE : ','').replace('READ : ','')\
             .replace('일','').replace('월','').replace('화','').replace('수','').replace('목','').replace('금','').replace('토', '')\
-            .replace("작성 : ", "")
+            .replace("작성 : ", "").replace(".","-")
     elif texttype == TextType.INT:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '')\
-            .replace('조: ','').replace('READ : ','').replace('회: ','').replace('추천 ','').replace('/','')
+            .replace('조: ','').replace('READ : ','').replace('회: ','').replace('추천 ','').replace('/','').replace("수","").replace("조회","").replace("댓글","")
     elif texttype == TextType.TEXT:
         replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '')
     else:
