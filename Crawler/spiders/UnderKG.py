@@ -15,7 +15,7 @@ from Crawler.spiders.Setting import *
 from Crawler.CreateItem import *
 from Crawler.TextTypeEnum import *
 
-class UnderKG(scrapy.Spider):
+class Spider(scrapy.Spider):
     name = 'underkg' # spider name
 
     baseUrl = "http://underkg.co.kr/"

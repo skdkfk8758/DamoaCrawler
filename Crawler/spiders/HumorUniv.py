@@ -20,7 +20,7 @@ from Crawler.items import DamoaItem
 from Crawler.spiders.Setting import *
 from Crawler.CreateItem import *
 
-class HumorUniv(scrapy.Spider):
+class Spider(scrapy.Spider):
     name = 'humoruniv'
 
     baseUrl = "http://web.humoruniv.com/board/humor/"

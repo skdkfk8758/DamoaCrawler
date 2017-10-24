@@ -20,7 +20,7 @@ from Crawler.items import DamoaItem
 from Crawler.spiders.Setting import *
 from Crawler.CreateItem import *
 
-class RuliWeb(scrapy.Spider):
+class Spider(scrapy.Spider):
     name = 'ruli' # spider name
 
     # 각 게시판별로 리퀘스트 요청

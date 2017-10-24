@@ -14,7 +14,7 @@ from Crawler.items import DamoaItem
 from Crawler.spiders.Setting import *
 from Crawler.CreateItem import *
 
-class Ygosu(scrapy.Spider):
+class Spider(scrapy.Spider):
     name = 'ygosu' # spider name
 
     baseUrl = "http://www.ygosu.com"
