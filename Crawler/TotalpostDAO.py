@@ -13,13 +13,14 @@ DB에 접근 및 입력, 삭제, 수정하는 클래스
 import pymysql
 from Crawler.filterItem import *
 from Crawler.spiders.Setting import *
+from Crawler.DBConfig import *
 
 class TotalpostDAO:
 
     # DB접속을 위해 커넥션 얻는 부분
     def __init__(self):
         try:
-            self.conn = pymysql.connect(host="gb1541.synology.me", port = 32768, user="root", password="rmstlr1234", db="Damoa",charset="utf8mb4")
+            self.conn = pymysql.connect(host = HOST, port = PORT, user = USER, password = PASSWORD, db = DB,charset = CHARSET)
             self.cursor = self.conn.cursor()
 
         except pymysql.Error:
