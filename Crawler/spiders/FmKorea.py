@@ -74,7 +74,7 @@ class Spider(scrapy.Spider):
                 # 게시물 링크 저장
                 linkXpath = "td[@class='title']/a/@href"
                 item['link'] = (self.baseUrl + createItemUseXpath(select, linkXpath, texttype=TextType.LINK)).split(' ')[0]
-                print(item['link'])
+                # print(item['link'])
 
                 # 현재 게시판 url을 분석해서 게시판 속성 저장
                 attrXpath = "td[@class='cate']/span/a/text()"
