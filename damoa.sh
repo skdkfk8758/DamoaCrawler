@@ -2,7 +2,7 @@
 
 scrapyd &
 
-python3.6 scrapyd-client/scrapyd_client/deploy.py
+python3.6 scrapyd-client-1.2.0a1/scrapyd_client/deploy.py
 
 sleep 5
 
