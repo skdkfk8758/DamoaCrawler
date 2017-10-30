@@ -39,7 +39,7 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
         conversion = replaceText(origin, texttype)
     except AttributeError as e:
-        print(e)
+        # print(e)
         conversion = ""
     return conversion
 
