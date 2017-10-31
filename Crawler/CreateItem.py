@@ -22,7 +22,7 @@ def replaceText(text, texttype):
     elif texttype == TextType.INT:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '').replace(',', '')\
             .replace('조: ','').replace('READ : ','').replace('회: ','').replace('추천 ','').replace('/','').replace("수","").replace("조회","").replace("댓글","")\
-            .replace('조 ', '')
+            .replace('조', '')
     elif texttype == TextType.TEXT:
         replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '')
     elif texttype == TextType.CLIEN:
