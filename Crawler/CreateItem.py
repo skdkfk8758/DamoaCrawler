@@ -43,7 +43,7 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
         conversion = replaceText(origin, texttype)
     except AttributeError as e:
-        # print(e)
+        print("Attr Errot" + e)
         conversion = ""
     return conversion
 
@@ -72,14 +72,16 @@ def createItem_pop(postdate, postrecommened, posthits):
         try:
             postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
             return postPop
-        except ValueError:
+        except ValueError as e:
+            print("Value Error" + e)
             postPop = 0
             return postPop
     else:
         try:
             postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
             return postPop
-        except ValueError:
+        except ValueError as e:
+            print("Value Error" + e)
             postPop = 0;
             return postPop
 

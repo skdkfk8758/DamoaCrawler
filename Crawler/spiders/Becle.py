@@ -53,7 +53,6 @@ class Spider(scrapy.Spider):
 
                 hitsXpath = "td/text()"
                 item['hits'] = createItemUseXpath(select, hitsXpath, texttype=TextType.INT).split(" ")[-1]
-                # print(item['hits'])
 
                 recommenedXpath = "td/text()"
                 if select.xpath(recommenedXpath).extract()[0] == "-":
