@@ -23,17 +23,17 @@ class Spider(scrapy.Spider):
     baseUrl = "http://www.thisisgame.com"
 
     def start_requests(self):
-        for i in range(1, MAX_PAGE, 1):
+        for i in range(1, 2, 1):
             yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=36&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=37&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=38&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=39&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=40&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=956&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=32&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=1&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=2&page={}".format(i))
-            yield scrapy.Request("http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=13page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=37&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=38&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=39&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=40&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=956&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/community/tboard/?board=32&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=1&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=2&page={}".format(i))
+            # yield scrapy.Request("http://www.thisisgame.com/webzine/gallery/tboard/?board=33&&category=13page={}".format(i))
 
     def parse(self, response):
         for select in response.xpath("//table/tbody/tr"):
