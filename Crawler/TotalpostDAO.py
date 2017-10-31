@@ -25,7 +25,6 @@ class TotalpostDAO:
 
         except pymysql.Error as e:
             print("DB Connection Error")
-            print(e)
 
     def insertOrUpdateItemToDB(self, item):
 
@@ -37,7 +36,7 @@ class TotalpostDAO:
         try:
             self.cursor.execute(sql,listToTuple)
         except pymysql.Error as e:
-            print(e)
+            print("Insert Error : " + e)
 
         self.conn.commit()
 
@@ -48,7 +47,7 @@ class TotalpostDAO:
         try:
             self.cursor.execute(sql, (SIX_MONTH,))
         except pymysql.Error as e:
-            print(e)
+            print("Delete Errot" + e)
 
         self.conn.commit()
 
