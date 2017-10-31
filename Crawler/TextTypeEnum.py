@@ -5,4 +5,5 @@ class TextType(enum.Enum):
     DATE = "date"
     TEXT = "text"
     INT = "int"
+    CLIEN = "clien"
     STRING = "string"

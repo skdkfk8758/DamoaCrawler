@@ -23,8 +23,9 @@ class TotalpostDAO:
             self.conn = pymysql.connect(host = HOST, port = PORT, user = USER, password = PASSWORD, db = DB,charset = CHARSET)
             self.cursor = self.conn.cursor()
 
-        except pymysql.Error:
+        except pymysql.Error as e:
             print("DB Connection Error")
+            print(e)
 
     def insertOrUpdateItemToDB(self, item):
 
