@@ -20,7 +20,7 @@ class Spider(scrapy.Spider):
     baseUrl = "http://www.fmkorea.com/"
 
     def start_requests(self):
-        for i in range(1, MAX_PAGE, 1):
+        for i in range(1, 2, 1):
             yield scrapy.Request("http://www.fmkorea.com/index.php?mid=humor&page={}".format(i))
             yield scrapy.Request("http://www.fmkorea.com/index.php?mid=mystery&page={}".format(i))
             yield scrapy.Request("http://www.fmkorea.com/index.php?mid=news&page={}".format(i))
@@ -93,8 +93,8 @@ class Spider(scrapy.Spider):
                 else:
                     item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-            if filterItem(item) != None:
-                yield filterItem(item)
+                item['image'] = createItemUseBs4_PostImage(item['link'])
 
+                yield item
 
 

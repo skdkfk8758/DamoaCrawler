@@ -63,10 +63,11 @@ class Clien(scrapy.Spider):
             item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
 
             tagName = "div"
-            tagAttrs = {"class": "post-article fr-view"}
+            tagAttrs = {"class": "post-content"}
             item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
 
-            if filterItem(item) != None:
-                yield filterItem(item)
+            item['image'] = createItemUseBs4_PostImage(item['link'])
+
+            yield item
 
 

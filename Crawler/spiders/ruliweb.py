@@ -424,7 +424,8 @@ class Spider(scrapy.Spider):
             tagAttrs = {"class": "view_content"}
             item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
 
-            if filterItem(item) != None:
-                yield filterItem(item)
+            item['image'] = createItemUseBs4_PostImage(item['link'])
+
+            yield item
 
 

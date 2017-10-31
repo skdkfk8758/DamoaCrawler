@@ -78,11 +78,11 @@ class Spider(scrapy.Spider):
                 item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
 
                 tagName = "div"
-                tagAttrs = {"class": "bodyCont"}
+                tagAttrs = {"class": "docuCont03"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                if filterItem(item) != None:
-                    yield filterItem(item)
+                item['image'] = createItemUseBs4_PostImage(item['link'])
 
+                yield item
 
 

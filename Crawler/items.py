@@ -21,5 +21,6 @@ class DamoaItem(scrapy.Item):
     last_update = scrapy.Field()
     pop = scrapy.Field()
     text = scrapy.Field()
+    image = scrapy.Field()
 
     pass

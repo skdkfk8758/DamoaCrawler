@@ -43,8 +43,18 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
         conversion = replaceText(origin, texttype)
     except AttributeError as e:
-        print("Attr Errot" + str(e))
+        print("Attr Error : " + str(e))
         conversion = ""
+    return conversion
+
+def createItemUseBs4_PostImage(url):
+    JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser")
+    try:
+        img = JoinPostUrl.find("img").get("src")
+        conversion = img
+    except AttributeError as e:
+        print("Attr Error : " + str(e))
+        conversion = None
     return conversion
 
 def getCurrentTime(returntype):
@@ -73,7 +83,7 @@ def createItem_pop(postdate, postrecommened, posthits):
             postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
             return postPop
         except ValueError as e:
-            print("Value Error" + str(e))
+            print("Value Error : " + str(e))
             postPop = 0
             return postPop
     else:
@@ -81,7 +91,7 @@ def createItem_pop(postdate, postrecommened, posthits):
             postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
             return postPop
         except ValueError as e:
-            print("Value Error" + str(e))
+            print("Value Error : " + str(e))
             postPop = 0;
             return postPop
 

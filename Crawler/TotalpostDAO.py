@@ -28,7 +28,7 @@ class TotalpostDAO:
 
     def insertOrUpdateItemToDB(self, item):
 
-        sql = "call checkDataForInsertOrUpdate(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        sql = "call checkDataForInsertOrUpdate(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 
         tmpList = dict(item).values()
         listToTuple =tuple(tmpList)
@@ -47,7 +47,7 @@ class TotalpostDAO:
         try:
             self.cursor.execute(sql, (SIX_MONTH,))
         except pymysql.Error as e:
-            print("Delete Errot" + str(e))
+            print("Delete Error : " + str(e))
 
         self.conn.commit()
 
