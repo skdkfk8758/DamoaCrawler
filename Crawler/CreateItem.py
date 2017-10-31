@@ -24,6 +24,9 @@ def replaceText(text, texttype):
             .replace('조: ','').replace('READ : ','').replace('회: ','').replace('추천 ','').replace('/','').replace("수","").replace("조회","").replace("댓글","")
     elif texttype == TextType.TEXT:
         replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '')
+    elif texttype == TextType.CLIEN:
+        replacedText = text.replace('f', '').replace('a', '').replace('b', '').replace('l', '').replace('i', '').replace('n', '')\
+            .replace('o', '').replace('d', '').replace('t', '').replace('u', '')
     else:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '')
     return replacedText
@@ -65,9 +68,18 @@ def createItem_pop(postdate, postrecommened, posthits):
     # 인기도 계산 -> 저장
     if (postOpeningTime <= 0):
         postOpeningTime = 1
-        postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
-        return postPop
+        try:
+            postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
+            return postPop
+        except ValueError:
+            postPop = 0
+            return postPop
     else:
-        postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
-        return postPop
+        try:
+            postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
+            return postPop
+        except ValueError:
+            postPop = 0;
+            return postPop
+
 
