@@ -17,9 +17,6 @@ from Crawler.CreateItem import *
 class Spider(scrapy.Spider):
     name = 'quasarzone' # spider name
 
-    # baseUrl = "http://quasarzone.co.kr/"
-
-    # 각 게시판별로 리퀘스트 요청
     def start_requests(self):
         for i in range(1, MAX_PAGE, 1):
             yield scrapy.Request("http://quasarzone.co.kr/bbs/board.php?bo_table=qn_game&sca=PC%EA%B2%8C%EC%9E%84&page={}".format(i))
@@ -91,71 +88,47 @@ class Spider(scrapy.Spider):
             yield scrapy.Request("http://quasarzone.co.kr/bbs/board.php?bo_table=qb_saleinfo&sca=%EA%B2%8C%EC%9E%84&page={}".format(i))
             yield scrapy.Request("http://quasarzone.co.kr/bbs/board.php?bo_table=qb_give&page={}".format(i))
 
-    # 리스폰스 받아서 사이트 파싱
     def parse(self, response):
-        # print(response.xpath("//ul[@class='list-body']/li"))
         for select in response.xpath("//ul[@class='list-body']/li"):
             item = DamoaItem() # item객체 생성
 
-            # 게시물 출처 저장
             item['source'] = self.name
 
-            # 게시물 제목 저장
             if createItemUseXpath(select, "div[@class='wr-category fs11 hidden-xs']/text()", texttype="")== "":
                 # 공지사항 패스
                 continue
             else:
                 titleXpath = "div[@class='wr-subject']/a/text()"
                 item['title'] = createItemUseXpath(select, titleXpath, texttype="").strip()
-                # print(item['title'])
 
-                # 게시물 링크 저장
                 linkXpath = "div[@class='wr-subject']/a/@href"
                 item['link'] = createItemUseXpath(select, linkXpath, texttype=TextType.LINK).strip()
-                # print(item['link'])
 
-                # 현재 게시판 url을 분석해서 게시판 속성 저장
                 attrXpath = "div[@class='wr-category fs11 hidden-xs']/text()"
                 item['attribute'] = createItemUseXpath(select, attrXpath, texttype="")
-                # print(item['attribute'])
 
-                # 게시물 게시일 저장
                 tagName = "span"
                 tagAttr = {"itemprop": "datePublished"}
                 item['date'] = "".join(createItemUseBs4(item['link'], tagName, tagAttr, texttype=TextType.DATE, encoding="utf8")) + ":00"
-                # print(item['date'])
 
-                # 게시물 조회수 저장
                 hitsXpath = "div[@class='wr-hit fs11 hidden-xs']/text()"
                 item['hits'] = createItemUseXpath(select, hitsXpath, texttype=TextType.INT)
-                # print(item['hits'])
 
-                # 추천수 저장
                 recoXpath = "div[@class='wr-good count_good fs11 hidden-xs']/text()"
                 item['recommened'] = createItemUseXpath(select, recoXpath, texttype=TextType.INT).strip()
-                # item['recommened'] = 0
-                # print(item['recommened'])
 
-                # 마지막 갱신일 저장 -> 현재 시간
                 item['last_update'] = getCurrentTime(TextType.STRING)
 
-                # 게시물 인기도 저장
                 item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
-                # print(item['pop'])
 
-                # 게시물 텍스트 저장
                 tagName = "div"
                 tagAttrs = {"itemprop": "description"}
                 if createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT) == "":
                     item['text'] = "None Text"
                 else:
                     item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
-                # print(item['text'])
 
-
-            # Item -> DB에 저장
             if filterItem(item) != None:
-                # 아이템 필터링 후 DB저장
                 yield filterItem(item)
 
 
