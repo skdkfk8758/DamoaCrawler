@@ -36,7 +36,7 @@ class TotalpostDAO:
         try:
             self.cursor.execute(sql,listToTuple)
         except pymysql.Error as e:
-            print("Insert Error : " + e)
+            print("Insert Error : " + str(e))
 
         self.conn.commit()
 
@@ -47,7 +47,7 @@ class TotalpostDAO:
         try:
             self.cursor.execute(sql, (SIX_MONTH,))
         except pymysql.Error as e:
-            print("Delete Errot" + e)
+            print("Delete Errot" + str(e))
 
         self.conn.commit()
 

@@ -32,9 +32,7 @@ class DamoaPipeline(object):
         f = open("Finished_LOG.log", "a")
         f.write("\n"+" <" + spider.name + "> " + "start : " + str(datetime.datetime.now()) + "runtime : " + str(self.end - self.start))
         f.close()
-        print("close")
         subprocess.call("curl http://localhost:6800/schedule.json -d project=Damoa -d spider={}".format(spider.name), shell=True)
-        print("call")
 
     def process_item(self, item, spider):
         self.dao.insertOrUpdateItemToDB(item)
