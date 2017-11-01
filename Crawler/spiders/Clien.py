@@ -20,16 +20,16 @@ class Clien(scrapy.Spider):
     baseUrl = "http://www.clien.net"
 
     def start_requests(self):
-        for i in range(1, MAX_PAGE, 1):
+        for i in range(1, 2, 1):
             yield scrapy.Request('http://clien.net/service/board/park?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/kin?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/news?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/useful?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/pds?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/lecture?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/use?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/chehum?&od=T31&po={0}'.format(i - 1))
-            yield scrapy.Request('http://clien.net/service/board/bug?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/kin?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/news?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/useful?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/pds?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/lecture?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/use?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/chehum?&od=T31&po={0}'.format(i - 1))
+            # yield scrapy.Request('http://clien.net/service/board/bug?&od=T31&po={0}'.format(i - 1))
 
     def parse(self, response):
         for select in response.xpath('//div[@class="item"]'):
@@ -60,7 +60,13 @@ class Clien(scrapy.Spider):
 
             item['last_update'] = getCurrentTime(TextType.STRING)
 
-            item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
+            item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])\
+
+            # print((getCurrentTime("datetime") - getPostTime(item['date'], "datetime")).total_seconds() / 3600)
+            # print(item['hits'])
+            # print(item['recommened'])
+            print(item['title'])
+            print(item['pop'])
 
             tagName = "div"
             tagAttrs = {"class": "post-content"}

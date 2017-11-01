@@ -5,6 +5,7 @@ Create : 2017.10.09
 """
 
 import requests
+import math
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -76,23 +77,31 @@ def createItem_pop(postdate, postrecommened, posthits):
     # 한시간당 가중치 감소(시간으로 조회수 나눔)
     postOpeningTime = (getCurrentTime("datetime") - getPostTime(postdate, "datetime")).total_seconds() / 3600
 
-    # 인기도 계산 -> 저장
-    if (postOpeningTime <= 0):
-        postOpeningTime = 1
-        try:
-            postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
-            return postPop
-        except ValueError as e:
-            print("Value Error : " + str(e))
-            postPop = 0
-            return postPop
-    else:
-        try:
-            postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
-            return postPop
-        except ValueError as e:
-            print("Value Error : " + str(e))
-            postPop = 0;
-            return postPop
+    posttmp = (int(posthits)/1000) + (int(postrecommened)/10)
+    print(int(posthits)/1000)
+    print(int(postrecommened) / 10)
+    print(posttmp)
+    postPop = 100 / (1 + pow((1.05), (-posttmp)))
+
+    return postPop
+
+    # # 인기도 계산 -> 저장
+    # if (postOpeningTime <= 0):
+    #     postOpeningTime = 1
+    #     try:
+    #         postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
+    #         return postPop
+    #     except ValueError as e:
+    #         print("Value Error : " + str(e))
+    #         postPop = 0
+    #         return postPop
+    # else:
+    #     try:
+    #         postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
+    #         return postPop
+    #     except ValueError as e:
+    #         print("Value Error : " + str(e))
+    #         postPop = 0;
+    #         return postPop
 
 

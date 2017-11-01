@@ -27,15 +27,15 @@ class DamoaPipeline(object):
 
     def close_spider(self, spider):
         self.end = time.time()
-        self.dao.deleteOldData()
+        # self.dao.deleteOldData()
 
         f = open("Finished_LOG.log", "a")
         f.write("\n"+" <" + spider.name + "> " + "start : " + str(datetime.datetime.now()) + "runtime : " + str(self.end - self.start))
         f.close()
         subprocess.call("curl http://localhost:6800/schedule.json -d project=Damoa -d spider={}".format(spider.name), shell=True)
 
-    def process_item(self, item, spider):
-        self.dao.insertOrUpdateItemToDB(item)
+    # def process_item(self, item, spider):
+    #     self.dao.insertOrUpdateItemToDB(item)
 
 
 
