@@ -79,16 +79,11 @@ def createItem_pop(postDate, postRecommened, postHits):
 
     if time < 1:
         time = 1
-        z = (((hit / 100) / time) + (recc / time))
+        pop = (((hit / 100) / time) + (recc / time))
+
     else:
-        z = (((hit / 100) / time) + (recc / time))
+        pop = (((hit / 100) / time) + (recc / time))
 
-    pop = 1 / 1 + math.exp((-z))
-
-    if pop < 1:
-        pop=0
-    else:
-        pop = (pop-1) * 10
-
-    return pop
+    return (math.sqrt(pop))
+    # return pop
 

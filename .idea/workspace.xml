@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c97197a3-b9c3-4762-a1c8-d3592b53ff66" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawler/hitsPerHour.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DamoaCrawler.iml" afterPath="$PROJECT_DIR$/.idea/DamoaCrawler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/CreateItem.py" afterPath="$PROJECT_DIR$/Crawler/CreateItem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/TotalpostDAO.py" afterPath="$PROJECT_DIR$/Crawler/TotalpostDAO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/pipelines.py" afterPath="$PROJECT_DIR$/Crawler/pipelines.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/spiders/BobaeDream.py" afterPath="$PROJECT_DIR$/Crawler/spiders/BobaeDream.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/spiders/Clien.py" afterPath="$PROJECT_DIR$/Crawler/spiders/Clien.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" afterPath="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateItem.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateItem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/CreateItem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="692">
+              <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
               <folding>
                 <element signature="e#54#69#0" expanded="true" />
               </folding>
@@ -36,7 +31,7 @@
       <file leaf-file-name="DramaMeeting.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/DramaMeeting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
+            <state relative-caret-position="633">
               <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
@@ -68,14 +63,14 @@
       <file leaf-file-name="Clien.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/Clien.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="345">
+              <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HumorUniv.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HumorUniv.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -108,8 +103,8 @@
       <file leaf-file-name="BobaeDream.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/BobaeDream.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -160,7 +155,6 @@
         <option value="$PROJECT_DIR$/Crawler/DBConfig.py" />
         <option value="$PROJECT_DIR$/Crawler/TextTypeEnum.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/_82Cook.py" />
-        <option value="$PROJECT_DIR$/Crawler/spiders/BobaeDream.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/DramaMeeting.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/FmKorea.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/GiggleHD.py" />
@@ -178,10 +172,11 @@
         <option value="$PROJECT_DIR$/Crawler/__init__.py" />
         <option value="$PROJECT_DIR$/Crawler/TotalpostDAO.py" />
         <option value="$PROJECT_DIR$/Crawler/hitsPerHour.py" />
-        <option value="$PROJECT_DIR$/Crawler/CreateItem.py" />
-        <option value="$PROJECT_DIR$/Crawler/spiders/Clien.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/GameShot.py" />
+        <option value="$PROJECT_DIR$/Crawler/spiders/BobaeDream.py" />
+        <option value="$PROJECT_DIR$/Crawler/CreateItem.py" />
+        <option value="$PROJECT_DIR$/Crawler/spiders/Clien.py" />
       </list>
     </option>
   </component>
@@ -578,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509420985219</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="인기도 계산 수정">
+      <created>1509591521245</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1509591521245</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -591,7 +593,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40133333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42133334" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -609,7 +611,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="크롤러 추가 : This Is Game" />
     <MESSAGE value="크롤러 추가 : Ygosu&#10;크롤러 코드정리" />
     <MESSAGE value="크롤러 코드정리&#10;&#10;createItem 클래스 구현" />
     <MESSAGE value="크롤러 코드정리&#10;&#10;createItem 클래스 구현&#10;&#10;Windows에서 추석연휴 마무리 맥에서 봅시다" />
@@ -634,7 +635,8 @@
     <MESSAGE value="CreateItem 수정 replaceText 조회수 '조 ' 추가" />
     <MESSAGE value="에러체크구문 작성" />
     <MESSAGE value="에러체크구문 작성 두번째 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="에러체크구문 작성 두번째 수정" />
+    <MESSAGE value="인기도 계산 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="인기도 계산 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -841,6 +843,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#125#139#0" expanded="true" />
+            <marker date="1509577179080" expanded="true" signature="586:664" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -862,30 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/spiders/BobaeDream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/spiders/Clien.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,21 +905,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/spiders/DramaMeeting.py">
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/BobaeDream.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/CreateItem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="692">
+          <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
           <folding>
             <element signature="e#54#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/DramaMeeting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/Clien.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
