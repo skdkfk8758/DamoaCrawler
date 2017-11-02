@@ -34,8 +34,8 @@ class DamoaPipeline(object):
         f.close()
         subprocess.call("curl http://localhost:6800/schedule.json -d project=Damoa -d spider={}".format(spider.name), shell=True)
 
-    # def process_item(self, item, spider):
-    #     self.dao.insertOrUpdateItemToDB(item)
+    def process_item(self, item, spider):
+        self.dao.insertOrUpdateItemToDB(item)
 
 
 
