@@ -11,7 +11,6 @@ DB에 접근 및 입력, 삭제, 수정하는 클래스
 """
 
 import pymysql
-from Crawler.filterItem import *
 from Crawler.spiders.Setting import *
 from Crawler.DBConfig import *
 
@@ -50,4 +49,3 @@ class TotalpostDAO:
             print("Delete Error : " + str(e))
 
         self.conn.commit()
-

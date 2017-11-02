@@ -8,7 +8,6 @@ import requests
 import math
 from datetime import datetime
 from bs4 import BeautifulSoup
-
 from Crawler.TextTypeEnum import *
 
 def replaceText(text, texttype):
@@ -28,7 +27,7 @@ def replaceText(text, texttype):
         replacedText = text.replace('\xa0','').replace('\t', '').replace('\n', '').replace('\r', '')
     elif texttype == TextType.CLIEN:
         replacedText = text.replace('f', '').replace('a', '').replace('b', '').replace('l', '').replace('i', '').replace('n', '')\
-            .replace('o', '').replace('d', '').replace('t', '').replace('u', '')
+            .replace('o', '').replace('d', '').replace('t', '').replace('u', '').replace('p','')
     else:
         replacedText = text.replace('\t', '').replace('\n', '').replace('\r', '')
     return replacedText
@@ -73,35 +72,23 @@ def getPostTime(postdate, returntype):
         postTime = datetime.strptime(postdate,"%Y-%m-%d %H:%M:%S")
         return postTime
 
-def createItem_pop(postdate, postrecommened, posthits):
-    # 한시간당 가중치 감소(시간으로 조회수 나눔)
-    postOpeningTime = (getCurrentTime("datetime") - getPostTime(postdate, "datetime")).total_seconds() / 3600
+def createItem_pop(postDate, postRecommened, postHits):
+    time = int((getCurrentTime("datetime") - getPostTime(postDate, "datetime")).total_seconds() / 3600)
+    hit = int(postHits)
+    recc = int(postRecommened)
 
-    posttmp = (int(posthits)/1000) + (int(postrecommened)/10)
-    print(int(posthits)/1000)
-    print(int(postrecommened) / 10)
-    print(posttmp)
-    postPop = 100 / (1 + pow((1.05), (-posttmp)))
+    if time < 1:
+        time = 1
+        z = (((hit / 100) / time) + (recc / time))
+    else:
+        z = (((hit / 100) / time) + (recc / time))
 
-    return postPop
+    pop = 1 / 1 + math.exp((-z))
 
-    # # 인기도 계산 -> 저장
-    # if (postOpeningTime <= 0):
-    #     postOpeningTime = 1
-    #     try:
-    #         postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
-    #         return postPop
-    #     except ValueError as e:
-    #         print("Value Error : " + str(e))
-    #         postPop = 0
-    #         return postPop
-    # else:
-    #     try:
-    #         postPop = int(postrecommened) + ((int(posthits) / postOpeningTime))
-    #         return postPop
-    #     except ValueError as e:
-    #         print("Value Error : " + str(e))
-    #         postPop = 0;
-    #         return postPop
+    if pop < 1:
+        pop=0
+    else:
+        pop = (pop-1) * 10
 
+    return pop
 
