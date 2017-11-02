@@ -70,7 +70,6 @@ class Spider(scrapy.Spider):
 
                 tagName = "span"
                 tagAttrs = {"class": "countGroup"}
-                item['hits'] = \
                 item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.INT).split("|")[1].strip()
 
                 item['last_update'] = getCurrentTime(TextType.STRING)

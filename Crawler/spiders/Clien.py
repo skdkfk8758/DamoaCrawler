@@ -36,40 +36,41 @@ class Clien(scrapy.Spider):
 
             item['source'] = self.name
 
-            titleXpath = "div[@class='list-title']/a[@class='list-subject']/text()"
-            item['title'] = createItemUseXpath(select, titleXpath, texttype="")
+            if "div[@class='list-symph']/span/text()" == "공지":
+                pass
+            else:
+                titleXpath = "div[@class='list-title']/a[@class='list-subject']/text()"
+                item['title'] = createItemUseXpath(select, titleXpath, texttype="")
 
-            linkXpath = "div[@class='list-title']/a/@href"
-            item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype=TextType.LINK)
+                linkXpath = "div[@class='list-title']/a/@href"
+                item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype=TextType.LINK)
 
-            tagName = "li"
-            tagAttr = {"class": "board-title"}
-            item['attribute'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949",texttype=TextType.CLIEN)
-            if item['attribute'] == "이용규칙":
-                continue
+                tagName = "li"
+                tagAttr = {"class": "board-title"}
+                item['attribute'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949",texttype=TextType.CLIEN)
 
-            dateXpath = "div/span[@class='time']/span[@class='timestamp']/text()"
-            item['date'] = createItemUseXpath(select, dateXpath,texttype="")
+                dateXpath = "div/span[@class='time']/span[@class='timestamp']/text()"
+                item['date'] = createItemUseXpath(select, dateXpath,texttype="")
 
-            tagName = "span"
-            tagAttr = {"class" : "view-count"}
-            item['hits'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949",texttype=TextType.INT)
+                tagName = "span"
+                tagAttr = {"class" : "view-count"}
+                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949",texttype=TextType.INT)
 
-            tagName = "div"
-            tagAttr = {"class": "title-symph"}
-            item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949",texttype=TextType.INT)
+                tagName = "div"
+                tagAttr = {"class": "title-symph"}
+                item['recommened'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949",texttype=TextType.INT)
 
-            item['last_update'] = getCurrentTime(TextType.STRING)
+                item['last_update'] = getCurrentTime(TextType.STRING)
 
-            item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
+                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'])
 
-            tagName = "div"
-            tagAttrs = {"class": "post-content"}
-            item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
+                tagName = "div"
+                tagAttrs = {"class": "post-content"}
+                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
 
-            item['image'] = createItemUseBs4_PostImage(item['link'])
+                item['image'] = createItemUseBs4_PostImage(item['link'])
 
-            yield item
+                yield item
 
 
 
