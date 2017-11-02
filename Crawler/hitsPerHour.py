@@ -51,7 +51,16 @@ class TotalpostDAO:
 
         self.conn.commit()
 
+    def nogada(self):
+        sql = "select post_attribute from totalposts group by post_attribute"
+
+        self.cursor.execute(sql)
+
+        results = self.cursor.fetchall()
+
+        for rs in results:
+            print(rs[0])
 
 if __name__ == '__main__':
     dd = TotalpostDAO()
-    dd.asd()
+    dd.nogada()
