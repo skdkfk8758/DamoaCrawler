@@ -61,6 +61,14 @@ class TotalpostDAO:
         for rs in results:
             print(rs[0])
 
+
 if __name__ == '__main__':
-    dd = TotalpostDAO()
-    dd.nogada()
+
+    ban = ["www", ".c"]
+    ss = ["www.naver.com", "aaa.sadas.ss"]
+
+    for s in ss:
+        if "www" in s:
+            pass
+        else:
+            print(s)
