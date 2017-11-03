@@ -54,7 +54,8 @@ def createItemUseBs4_PostImage(url):
         imgs = JoinPostUrl.find_all("img")
         for img in imgs:
             imageUrl = img.get("src")
-            if ".gif" in imageUrl or "member" in imageUrl or "navi" in imageUrl:
+            if ".gif" in imageUrl or "member" in imageUrl or "navi" in imageUrl or "bulletin" in imageUrl\
+                    or "huv" in imageUrl or "attach" in imageUrl or "logo" in imageUrl:
                 pass
             else:
                 return (img.get("src"))
