@@ -67,7 +67,7 @@ class Spider(scrapy.Spider):
                 else:
                     item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'])
+                item['image'] = createItemUseBs4_PostImage(item['link'], "rel")
 
                 yield item
 

@@ -73,7 +73,7 @@ class Spider(scrapy.Spider):
                 tagAttrs = {"class": "content board-content"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'])
+                item['image'] = createItemUseBs4_PostImage(item['link'], "/upload/tboard/user")
 
                 yield item
 

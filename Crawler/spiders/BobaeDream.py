@@ -80,7 +80,7 @@ class Spider(scrapy.Spider):
                 tagAttrs = {"class": "docuCont03"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'])
+                item['image'] = createItemUseBs4_PostImage(item['link'], "onclick")
 
                 yield item
 
