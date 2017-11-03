@@ -6,10 +6,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DamoaCrawler.iml" afterPath="$PROJECT_DIR$/.idea/DamoaCrawler.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/hitsPerHour.py" afterPath="$PROJECT_DIR$/Crawler/hitsPerHour.py" />
+=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/CreateItem.py" afterPath="$PROJECT_DIR$/Crawler/CreateItem.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/spiders/Clien.py" afterPath="$PROJECT_DIR$/Crawler/spiders/Clien.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" afterPath="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/spiders/_82Cook.py" afterPath="$PROJECT_DIR$/Crawler/spiders/_82Cook.py" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,9 +36,17 @@
       <file leaf-file-name="_82Cook.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/_82Cook.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="0">
+              <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+              <folding>
+                <element signature="e#54#69#0" expanded="true" />
+              </folding>
+=======
             <state relative-caret-position="304">
               <caret line="74" column="102" lean-forward="false" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
               <folding />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
             </state>
           </provider>
         </entry>
@@ -42,13 +54,28 @@
       <file leaf-file-name="HumorUniv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="1028">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+=======
             <state relative-caret-position="266">
               <caret line="98" column="101" lean-forward="false" selection-start-line="98" selection-start-column="101" selection-end-line="98" selection-end-column="101" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="hitsPerHour.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawler/hitsPerHour.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#483#1634#0" expanded="false" />
+=======
       <file leaf-file-name="ThisIsGame.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/ThisIsGame.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,11 +93,20 @@
               <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding>
                 <marker date="1509664704917" expanded="true" signature="850:933" ph="..." />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="attrsNomalization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backEnd/attrsNomalization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="94" column="92" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="94" selection-end-column="92" />
+              <folding />
+=======
       <file leaf-file-name="CreateItem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/CreateItem.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,15 +115,34 @@
               <folding>
                 <element signature="e#54#69#0" expanded="true" />
               </folding>
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Chuchendo_sample.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backEnd/Chuchendo_sample.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-324">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monthPastDelete.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backEnd/monthPastDelete.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
       <file leaf-file-name="TotalpostDAO.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/TotalpostDAO.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="741">
               <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
               <folding />
             </state>
           </provider>
@@ -96,28 +151,49 @@
       <file leaf-file-name="Clien.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/spiders/Clien.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="345">
+              <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+=======
             <state relative-caret-position="1140">
               <caret line="64" column="103" lean-forward="false" selection-start-line="64" selection-start-column="103" selection-end-line="64" selection-end-column="103" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="_82Cook.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Crawler/spiders/_82Cook.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+=======
       <file leaf-file-name="HitPerTimeForWebSiteEnum.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/HitPerTimeForWebSiteEnum.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="HumorUniv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+=======
       <file leaf-file-name="TextTypeEnum.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/TextTypeEnum.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
               <folding />
             </state>
           </provider>
@@ -182,16 +258,26 @@
         <option value="$PROJECT_DIR$/Crawler/pipelines.py" />
         <option value="$PROJECT_DIR$/Crawler/__init__.py" />
         <option value="$PROJECT_DIR$/Crawler/TotalpostDAO.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" />
+=======
         <option value="$PROJECT_DIR$/Crawler/hitsPerHour.py" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
         <option value="$PROJECT_DIR$/Crawler/spiders/GameShot.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/BobaeDream.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/Clien.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Crawler/변환파일" />
+        <option value="$PROJECT_DIR$/Crawler/hitsPerHour.py" />
+        <option value="$PROJECT_DIR$/Crawler/단어 원형.txt" />
+=======
         <option value="$PROJECT_DIR$/Crawler/HitPerTimeForWebSite.py" />
         <option value="$PROJECT_DIR$/LOG_FILE.log" />
         <option value="$PROJECT_DIR$/Crawler/spiders/_82Cook.py" />
         <option value="$PROJECT_DIR$/Crawler/spiders/HumorUniv.py" />
         <option value="$PROJECT_DIR$/Crawler/HitPerTimeForWebSiteEnum.py" />
         <option value="$PROJECT_DIR$/Crawler/CreateItem.py" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
       </list>
     </option>
   </component>
@@ -225,6 +311,11 @@
             <path>
               <item name="DamoaCrawler" type="b2602c69:ProjectViewProjectNode" />
               <item name="DamoaCrawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DamoaCrawler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DamoaCrawler" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DamoaCrawler" type="b2602c69:ProjectViewProjectNode" />
@@ -595,7 +686,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509591521245</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="인기도 계산 수정2">
+      <created>1509597451414</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1509597451414</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -606,9 +704,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.292" sideWeight="0.503125" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33695653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40133333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40133333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42133334" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
+=======
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42089552" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -626,7 +728,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="크롤러 추가 : Ygosu&#10;크롤러 코드정리" />
     <MESSAGE value="크롤러 코드정리&#10;&#10;createItem 클래스 구현" />
     <MESSAGE value="크롤러 코드정리&#10;&#10;createItem 클래스 구현&#10;&#10;Windows에서 추석연휴 마무리 맥에서 봅시다" />
     <MESSAGE value="크롤러 코드정리&#10;&#10;오류수정" />
@@ -651,7 +752,8 @@
     <MESSAGE value="에러체크구문 작성" />
     <MESSAGE value="에러체크구문 작성 두번째 수정" />
     <MESSAGE value="인기도 계산 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="인기도 계산 수정" />
+    <MESSAGE value="인기도 계산 수정2" />
+    <option name="LAST_COMMIT_MESSAGE" value="인기도 계산 수정2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -660,6 +762,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/Crawler/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -688,6 +792,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scrapy/cmdline.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scrapy/utils/project.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scrapy/settings/__init__.py" />
@@ -843,9 +948,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/TotalpostDAO.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="557">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#125#139#0" expanded="false" />
+            <marker date="1509577179080" expanded="true" signature="586:664" ph="..." />
+          </folding>
+=======
         <state relative-caret-position="741">
           <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
         </state>
       </provider>
     </entry>
@@ -875,28 +989,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+<<<<<<< HEAD
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <marker date="1509664704917" expanded="true" signature="850:933" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/hitsPerHour.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="45" />
+          <folding />
+=======
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/spiders/BobaeDream.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1005">
+          <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+          <folding />
+=======
+        <state relative-caret-position="399">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding>
+            <marker date="1509664704917" expanded="true" signature="850:933" ph="..." />
+          </folding>
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/CreateItem.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding>
+            <element signature="e#54#69#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="660">
+          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/Clien.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="345">
+          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backEnd/Chuchendo_sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
         <state relative-caret-position="264">
           <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
         </state>
@@ -913,12 +1073,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/spiders/Clien.py">
+    <entry file="file://$PROJECT_DIR$/backEnd/monthPastDelete.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
         <state relative-caret-position="1140">
           <caret line="64" column="103" lean-forward="false" selection-start-line="64" selection-start-column="103" selection-end-line="64" selection-end-column="103" />
           <folding />
@@ -929,36 +1094,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="74" column="102" lean-forward="false" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/spiders/HumorUniv.py">
+    <entry file="file://$PROJECT_DIR$/backEnd/attrsNomalization.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="253">
+          <caret line="94" column="92" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="94" selection-end-column="92" />
+=======
         <state relative-caret-position="266">
           <caret line="98" column="101" lean-forward="false" selection-start-line="98" selection-start-column="101" selection-end-line="98" selection-end-column="101" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Crawler/변환파일">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="92" lean-forward="false" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+=======
     <entry file="file://$PROJECT_DIR$/Crawler/HitPerTimeForWebSiteEnum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Crawler/단어 원형.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/hitsPerHour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#483#1634#0" expanded="false" />
+=======
     <entry file="file://$PROJECT_DIR$/Crawler/CreateItem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="91" column="40" lean-forward="true" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
           <folding>
             <element signature="e#54#69#0" expanded="true" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/DramaMeeting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1028">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/spiders/_82Cook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+=======
     <entry file="file://$PROJECT_DIR$/LOG_FILE.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="442">
@@ -968,6 +1178,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+>>>>>>> 748d2622b82bab664e2f6e96cde7985d203a2e0b
           <folding />
         </state>
       </provider>
