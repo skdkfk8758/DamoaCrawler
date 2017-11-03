@@ -82,14 +82,13 @@ def createItem_pop(postDate, postRecommened, postHits, spiderName):
     recc = int(postRecommened)
 
     hitPerTime = hitPerTimeDic[spiderName]
-
-    calcTime = (time + hitPerTime)
+    hitPerReco = hitPerRecoDic[spiderName]
 
     if time < 1:
         time = 1
-        pop = (((hit / 100) /  calcTime) + (recc / calcTime))
+        pop = (((hit * hitPerReco) /  time) + ((recc * 100) / time))
 
     else:
-        pop = (((hit / 100) / calcTime) + (recc / calcTime))
+        pop = (((hit * hitPerReco) / time) + ((recc * 100) / time))
 
-    return pop
+    return (pop/hitPerTime)
