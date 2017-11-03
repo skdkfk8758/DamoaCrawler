@@ -96,7 +96,7 @@ class Spider(scrapy.Spider):
 
                 item['last_update'] = getCurrentTime(TextType.STRING)
 
-                item['pop'] = createItem_pop(item['date'], item['recommened'],item['hits'])
+                item['pop'] = createItem_pop(item['date'], item['recommened'],item['hits'], self.name)
 
                 tagName = "div"
                 tagAttr = {"id": "cnts"}
