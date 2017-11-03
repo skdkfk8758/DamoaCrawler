@@ -22,20 +22,20 @@ class Spider(scrapy.Spider):
     def start_requests(self):
         for i in range(1, MAX_PAGE, 1):
             yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=1&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=2&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=3&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=31&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=6&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=7&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=8&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=9&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=11&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=12&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=13&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=14&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=15&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=16&page={}".format(i))
-            # yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=17&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=2&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=3&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=31&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=6&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=7&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=8&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=9&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=11&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=12&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=13&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=14&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=15&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=16&page={}".format(i))
+            yield scrapy.Request("http://www.82cook.com/entiz/enti.php?bn=17&page={}".format(i))
 
 
     # 사이트 파싱
@@ -78,7 +78,7 @@ class Spider(scrapy.Spider):
                 tagAttrs = {"id": "articleBody"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'], "id")
+                item['image'] = createItemUseBs4_PostImage(item['link'], "imagedb/tmp")
 
                 yield item
 

@@ -93,7 +93,10 @@ class Spider(scrapy.Spider):
                 else:
                     item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                item['image'] = "http:" + createItemUseBs4_PostImage(item['link'], "data-file-srl")
+                if createItemUseBs4_PostImage(item['link'], "files/attach/new") != None:
+                    item['image'] = "http:" + str(createItemUseBs4_PostImage(item['link'], "files/attach/new"))
+                else:
+                    item['image'] = None
 
                 yield item
 
