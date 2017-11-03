@@ -48,15 +48,18 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         conversion = ""
     return conversion
 
-def createItemUseBs4_PostImage(url):
+def createItemUseBs4_PostImage(url, filterString):
     JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser")
     try:
-        img = JoinPostUrl.find("img").get("src")
-        conversion = img
+        imgs = JoinPostUrl.find_all("img")
+        for img in imgs:
+            if ".gif" in img.get("src"):
+                pass
+            else:
+                return (img.get("src"))
     except AttributeError as e:
         print("Attr Error : " + str(e))
-        conversion = None
-    return conversion
+        return None
 
 def getCurrentTime(returntype):
     currentTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # type of String
@@ -85,10 +88,4 @@ def createItem_pop(postDate, postRecommened, postHits, spiderName):
     else:
         pop = (((hit / 100) / time) + (recc / time))
 
-    # return (math.sqrt(pop))
-
-    print(pop)
-    print(pop/Website.HUMORUNIV.value)
-    return (pop/Website.HUMORUNIV.value)
-    # return pop
-
+    return (pop/webSite[spiderName])

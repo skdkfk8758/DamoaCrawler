@@ -32,13 +32,15 @@ class Clien(scrapy.Spider):
 
     def parse(self, response):
         for select in response.xpath('//div[@class="item"]'):
-            item = DamoaItem() # item객체 생성
 
-            item['source'] = self.name
+            try:
+                if select.xpath("div[@class='list-symph']/span/text()").extract()[0] == "공지":
+                    pass
+            except:
+                item = DamoaItem()  # item객체 생성
 
-            if "div[@class='list-symph']/span/text()" == "공지":
-                pass
-            else:
+                item['source'] = self.name
+
                 titleXpath = "div[@class='list-title']/a[@class='list-subject']/text()"
                 item['title'] = createItemUseXpath(select, titleXpath, texttype="")
 
