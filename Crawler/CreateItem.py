@@ -9,6 +9,7 @@ import math
 from datetime import datetime
 from bs4 import BeautifulSoup
 from Crawler.TextTypeEnum import *
+from Crawler.HitPerTimeForWebSiteEnum import *
 
 def replaceText(text, texttype):
     if texttype == TextType.LINK:
@@ -72,7 +73,7 @@ def getPostTime(postdate, returntype):
         postTime = datetime.strptime(postdate,"%Y-%m-%d %H:%M:%S")
         return postTime
 
-def createItem_pop(postDate, postRecommened, postHits):
+def createItem_pop(postDate, postRecommened, postHits, spiderName):
     time = int((getCurrentTime("datetime") - getPostTime(postDate, "datetime")).total_seconds() / 3600)
     hit = int(postHits)
     recc = int(postRecommened)
@@ -84,6 +85,10 @@ def createItem_pop(postDate, postRecommened, postHits):
     else:
         pop = (((hit / 100) / time) + (recc / time))
 
-    return (math.sqrt(pop))
+    # return (math.sqrt(pop))
+
+    print(pop)
+    print(pop/Website.HUMORUNIV.value)
+    return (pop/Website.HUMORUNIV.value)
     # return pop
 
