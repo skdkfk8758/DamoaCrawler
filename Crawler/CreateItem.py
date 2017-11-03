@@ -48,12 +48,13 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         conversion = ""
     return conversion
 
-def createItemUseBs4_PostImage(url, filterString):
+def createItemUseBs4_PostImage(url):
     JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser")
     try:
         imgs = JoinPostUrl.find_all("img")
         for img in imgs:
-            if ".gif" in img.get("src"):
+            imageUrl = img.get("src")
+            if ".gif" in imageUrl or "member" in imageUrl or "navi" in imageUrl:
                 pass
             else:
                 return (img.get("src"))
