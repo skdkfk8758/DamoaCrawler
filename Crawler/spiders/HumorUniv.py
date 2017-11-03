@@ -102,6 +102,6 @@ class Spider(scrapy.Spider):
                 tagAttr = {"id": "cnts"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttr, encoding="CP949", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'])
+                item['image'] = createItemUseBs4_PostImage(item['link'], "http://c.huv")
 
                 yield item

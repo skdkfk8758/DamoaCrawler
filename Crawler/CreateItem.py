@@ -48,18 +48,13 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         conversion = ""
     return conversion
 
-def createItemUseBs4_PostImage(url):
+def createItemUseBs4_PostImage(url, tagAttr):
     JoinPostUrl = BeautifulSoup(requests.get(url).content, "html.parser")
     try:
         imgs = JoinPostUrl.find_all("img")
         for img in imgs:
-            imageUrl = img.get("src")
-            if ".gif" in imageUrl or "member" in imageUrl or "navi" in imageUrl or "bulletin" in imageUrl\
-                    or "i.huv.kr" in imageUrl or "attach" in imageUrl or "logo" in imageUrl or "thumbnails" in imageUrl\
-                    or "zoom" in imageUrl or "iconshop" in imageUrl or "file4" in imageUrl:
-                pass
-            else:
-                return (img.get("src"))
+            if img.get(tagAttr) != None:
+                return img.get("src")
     except AttributeError as e:
         print("Attr Error : " + str(e))
         return None
@@ -84,12 +79,13 @@ def createItem_pop(postDate, postRecommened, postHits, spiderName):
     hit = int(postHits)
     recc = int(postRecommened)
 
+    hitPerTime = webSite[spiderName]
+
     if time < 1:
         time = 1
-        pop = (((hit / 100) / time) + (recc / time))
+        pop = (((hit / 100) / (time * hitPerTime)) + (recc / (time * hitPerTime)))
 
     else:
-        pop = (((hit / 100) / time) + (recc / time))
+        pop = (((hit / 100) / (time * hitPerTime)) + (recc / (time * hitPerTime)))
 
-    # return (pop/webSite[spiderName])
     return pop
