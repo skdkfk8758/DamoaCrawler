@@ -17,34 +17,27 @@ class TotalpostDAO:
 
 
     def asd(self):
-        sql = "select mydate, hits, recommened from totalposts where source=%s"
+        sql = "select hits, recommened from totalposts where source=%s"
 
         sum = 0
 
-        for name in ["clien", "humoruniv", "ygosu", "ruli", "giggle", "bobaedream"]:
+        for name in ["clien", "humoruniv", "ygosu", "ruli", "giggle", "bobaedream", "82cook", "dramameeting",
+                     "fmkorea", "gameshot", "hwbattle", "quasarzone", "thisisgame", "underkg"]:
             try:
                 self.cursor.execute(sql, name)
 
                 results = self.cursor.fetchall()
 
                 for result in results:
-                    timeTmp = result[0].strftime("%Y-%m-%d %H:%M:%S")  # type of String
-                    time = (getCurrentTime("datetime") - getPostTime(timeTmp,"datetime")).total_seconds() / 3600
-                    hit = result[1]
-                    recc = result[2]
-                    sum = sum+(hit/time)
+                    hit = result[0]
+                    recc = result[1]
+                    if hit < 1:
+                        hit = 1
+                        sum = sum + (recc/hit)
+                    else:
+                        sum = sum + (recc/hit)
 
-                    z = (((hit/100)/time) + (recc/time))
-
-                    pop = 1 / 1 + math.exp((-z))
-
-                    # print("z : "  +  str(z))
-                    print(name + " poptmp : " + str(pop-1))
-                    # print(name + " pop : " + str((pop/8.58)))
-
-                # print(sum)
-                # print(len(results))
-                # print(sum/len(results))
+                print(name + " " + str((sum/len(results)) * 100))
 
             except pymysql.Error as e:
                 print("SELECT Error : " + str(e))
@@ -64,11 +57,6 @@ class TotalpostDAO:
 
 if __name__ == '__main__':
 
-    ban = ["www", ".c"]
-    ss = ["www.naver.com", "aaa.sadas.ss"]
+    dd = TotalpostDAO()
 
-    for s in ss:
-        if "www" in s:
-            pass
-        else:
-            print(s)
+    dd.asd()

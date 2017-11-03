@@ -70,7 +70,7 @@ class Clien(scrapy.Spider):
                 tagAttrs = {"class": "post-content"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'], "class")
+                item['image'] = createItemUseBs4_PostImage(item['link'], "web/api/file/F01")
 
                 yield item
 

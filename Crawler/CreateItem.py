@@ -53,7 +53,9 @@ def createItemUseBs4_PostImage(url, tagAttr):
     try:
         imgs = JoinPostUrl.find_all("img")
         for img in imgs:
-            if img.get(tagAttr) != None:
+            print(img.get("src"))
+            if tagAttr in img.get("src"):
+                print(img.get("src"))
                 return img.get("src")
     except AttributeError as e:
         print("Attr Error : " + str(e))
@@ -79,13 +81,15 @@ def createItem_pop(postDate, postRecommened, postHits, spiderName):
     hit = int(postHits)
     recc = int(postRecommened)
 
-    hitPerTime = webSite[spiderName]
+    hitPerTime = hitPerTimeDic[spiderName]
+
+    calcTime = (time + hitPerTime)
 
     if time < 1:
         time = 1
-        pop = (((hit / 100) / (time * hitPerTime)) + (recc / (time * hitPerTime)))
+        pop = (((hit / 100) /  calcTime) + (recc / calcTime))
 
     else:
-        pop = (((hit / 100) / (time * hitPerTime)) + (recc / (time * hitPerTime)))
+        pop = (((hit / 100) / calcTime) + (recc / calcTime))
 
     return pop
