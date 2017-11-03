@@ -55,7 +55,8 @@ def createItemUseBs4_PostImage(url):
         for img in imgs:
             imageUrl = img.get("src")
             if ".gif" in imageUrl or "member" in imageUrl or "navi" in imageUrl or "bulletin" in imageUrl\
-                    or "huv" in imageUrl or "attach" in imageUrl or "logo" in imageUrl:
+                    or "i.huv.kr" in imageUrl or "attach" in imageUrl or "logo" in imageUrl or "thumbnails" in imageUrl\
+                    or "zoom" in imageUrl or "iconshop" in imageUrl or "file4" in imageUrl:
                 pass
             else:
                 return (img.get("src"))
@@ -90,4 +91,5 @@ def createItem_pop(postDate, postRecommened, postHits, spiderName):
     else:
         pop = (((hit / 100) / time) + (recc / time))
 
-    return (pop/webSite[spiderName])
+    # return (pop/webSite[spiderName])
+    return pop
