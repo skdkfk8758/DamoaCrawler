@@ -72,13 +72,13 @@ class Spider(scrapy.Spider):
 
                 tagName = "section"
                 tagAttrs = {"id": "bo_v_info"}
-                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, texttype=TextType.INT, encoding="utf8").split("조회")[1].split(" ")[0].replace("회","")
+                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, texttype=TextType.INT, encoding="utf8").split(" ")[-9].replace("회","")
 
                 item['recommened'] = 0
 
                 item['last_update'] = getCurrentTime(TextType.STRING)
 
-                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'], self.name)
+                item['pop'] = createItem_pop(item['recommened'], item['hits'], self.name)
 
                 tagName = "div"
                 tagAttrs = {"id": "bo_v_con"}
@@ -89,10 +89,7 @@ class Spider(scrapy.Spider):
 
                 item['image'] = createItemUseBs4_PostImage(item['link'], "/data/editor")
 
-                if item['pop'] < 1:
-                    pass
-                else:
-                    yield item
+                yield item
 
 
 

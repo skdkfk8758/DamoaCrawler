@@ -59,17 +59,14 @@ class Spider(scrapy.Spider):
 
                 item['last_update'] = getCurrentTime(TextType.STRING)
 
-                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'], self.name)
+                item['pop'] = createItem_pop(item['recommened'], item['hits'], self.name)
 
                 tagName = "div"
                 tagAttrs = {"id": "content"}
                 item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="CP949", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'], "'http://ftp'")
+                item['image'] = createItemUseBs4_PostImage(item['link'], "http://ftp")
 
-                if item['pop'] < 1:
-                    pass
-                else:
-                    yield item
+                yield item
 
 
