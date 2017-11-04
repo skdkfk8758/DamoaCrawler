@@ -87,9 +87,12 @@ class Spider(scrapy.Spider):
                 else:
                     item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-            item['image'] = createItemUseBs4_PostImage(item['link'], "/data/editor")
+                item['image'] = createItemUseBs4_PostImage(item['link'], "/data/editor")
 
-            yield item
+                if item['pop'] < 1:
+                    pass
+                else:
+                    yield item
 
 
 
