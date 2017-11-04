@@ -80,7 +80,10 @@ class Spider(scrapy.Spider):
 
                 item['image'] = createItemUseBs4_PostImage(item['link'], "imagedb/tmp")
 
-                yield item
+                if item['pop'] < 1:
+                    pass
+                else:
+                    yield item
 
 
 

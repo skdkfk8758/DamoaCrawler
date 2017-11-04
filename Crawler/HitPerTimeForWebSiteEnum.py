@@ -14,3 +14,9 @@ hitPerRecoDic = {
     "hwbattle" : 30.2361,"ruli":0.0348, "thisisgame" : 8.9808, "quasarzone" : 13.8676,
     "underkg" : 6.0838, "ygosu" : 0.0577
 }
+#
+# for name in ["clien", "humoruniv", "ygosu", "ruli", "giggle", "bobaedream", "82cook", "dramameeting",
+#                      "fmkorea", "gameshot", "hwbattle", "quasarzone", "thisisgame", "underkg"]:
+#     ss = hitPerRecoDic[name] * hitPerTimeDic[name]
+#
+#     print(name +  " : " + str(ss))

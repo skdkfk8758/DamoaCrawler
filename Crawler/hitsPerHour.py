@@ -1,5 +1,6 @@
 import pymysql
 from Crawler.DBConfig import *
+from Crawler.HitPerTimeForWebSiteEnum import *
 from Crawler.CreateItem import *
 import math
 from matplotlib import pyplot
@@ -28,16 +29,20 @@ class TotalpostDAO:
 
                 results = self.cursor.fetchall()
 
-                for result in results:
-                    hit = result[0]
-                    recc = result[1]
+                for rs in results:
+                    hit = rs[0]
+                    reco = rs[1]
+
+                    print(hit)
+                    print(reco)
+
                     if hit < 1:
                         hit = 1
-                        sum = sum + (recc/hit)
+                        aaa = ((reco/hit)*100)/(hitPerRecoDic[name])
                     else:
-                        sum = sum + (recc/hit)
+                        aaa = ((reco / hit) * 100) / (hitPerRecoDic[name])
 
-                print(name + " " + str((sum/len(results)) * 100))
+                print(name + " " + str(aaa))
 
             except pymysql.Error as e:
                 print("SELECT Error : " + str(e))
@@ -59,4 +64,6 @@ if __name__ == '__main__':
 
     dd = TotalpostDAO()
 
+    # for i in range(20):
     dd.asd()
+        # print("\n")
