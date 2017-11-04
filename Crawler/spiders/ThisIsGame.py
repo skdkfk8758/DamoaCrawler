@@ -40,45 +40,41 @@ class Spider(scrapy.Spider):
             if select.xpath("td/span/text()").extract()[0] == "공지":
                 # 공지사항 거르고 크롤링
                 pass
-            else:
-                item = DamoaItem() # item객체 생성
+            item = DamoaItem() # item객체 생성
 
-                item['source'] = self.name
+            item['source'] = self.name
 
-                titleXpath = "td/a/text()"
-                item['title'] = createItemUseXpath(select, titleXpath, texttype="")
+            titleXpath = "td/a/text()"
+            item['title'] = createItemUseXpath(select, titleXpath, texttype="")
 
-                linkXpath = "td/a/@href"
-                item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype=TextType.LINK)
+            linkXpath = "td/a/@href"
+            item['link'] = self.baseUrl + createItemUseXpath(select, linkXpath, texttype=TextType.LINK)
 
-                attrXpath = "//div[@class='board-title-part']/h1/a/strong/text()"
-                item['attribute'] = createItemUseXpath(select, attrXpath, texttype="")
+            attrXpath = "//div[@class='board-title-part']/h1/a/strong/text()"
+            item['attribute'] = createItemUseXpath(select, attrXpath, texttype="")
 
-                tagName = "span"
-                tagAttrs = {"class": "info-one postdate"}
-                item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.DATE)
+            tagName = "span"
+            tagAttrs = {"class": "info-one postdate"}
+            item['date'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.DATE)
 
-                tagName = "span"
-                tagAttrs = {"class": "info-one readcount"}
-                item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.INT)
+            tagName = "span"
+            tagAttrs = {"class": "info-one readcount"}
+            item['hits'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.INT)
 
-                recommenedXpath = "td/text()"
-                item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype=TextType.INT)[-1]
+            recommenedXpath = "td/text()"
+            item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype=TextType.INT)[-1]
 
-                item['last_update'] = getCurrentTime("str")
+            item['last_update'] = getCurrentTime("str")
 
-                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'], self.name)
+            item['pop'] = createItem_pop(item['recommened'], item['hits'], self.name)
 
-                tagName = "div"
-                tagAttrs = {"class": "content board-content"}
-                item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
+            tagName = "div"
+            tagAttrs = {"class": "content board-content"}
+            item['text'] = createItemUseBs4(item['link'], tagName, tagAttrs, encoding="utf8", texttype=TextType.TEXT)
 
-                item['image'] = createItemUseBs4_PostImage(item['link'], "/upload/tboard/user")
+            item['image'] = createItemUseBs4_PostImage(item['link'], "/upload/tboard/user")
 
-                if item['pop'] < 1:
-                    pass
-                else:
-                    yield item
+            yield item
 
 
 

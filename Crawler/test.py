@@ -1,9 +1,7 @@
 import pymysql
 from Crawler.DBConfig import *
-from Crawler.HitPerTimeForWebSiteEnum import *
+from Crawler.avarageDataBySiteEnum import *
 from Crawler.CreateItem import *
-import math
-from matplotlib import pyplot
 
 class TotalpostDAO:
 
@@ -22,7 +20,7 @@ class TotalpostDAO:
 
         sum = 0
 
-        for name in ["clien", "humoruniv", "ygosu", "ruli", "giggle", "bobaedream", "82cook", "dramameeting",
+        for name in ["clien", "humoruniv", "ygosu", "ruli", "giggle", "bobaedream", "82cook",
                      "fmkorea", "gameshot", "hwbattle", "quasarzone", "thisisgame", "underkg"]:
             try:
                 self.cursor.execute(sql, name)
@@ -33,14 +31,14 @@ class TotalpostDAO:
                     hit = rs[0]
                     reco = rs[1]
 
-                    print(hit)
-                    print(reco)
+                    # print(hit)
+                    # print(reco)
 
                     if hit < 1:
                         hit = 1
-                        aaa = ((reco/hit)*100)/(hitPerRecoDic[name])
+                        aaa = (((reco+1)/hit) * 100) / hitPerTimeDic[name]
                     else:
-                        aaa = ((reco / hit) * 100) / (hitPerRecoDic[name])
+                        aaa = (((reco+1) / hit) * 100) / hitPerTimeDic[name]
 
                 print(name + " " + str(aaa))
 

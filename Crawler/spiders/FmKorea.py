@@ -84,7 +84,7 @@ class Spider(scrapy.Spider):
 
                 item['last_update'] = getCurrentTime(TextType.STRING)
 
-                item['pop'] = createItem_pop(item['date'], item['recommened'], item['hits'], self.name)
+                item['pop'] = createItem_pop(item['recommened'], item['hits'], self.name)
 
                 tagName = "div"
                 tagAttrs = {"class": "xe_content"}
@@ -98,9 +98,6 @@ class Spider(scrapy.Spider):
                 else:
                     item['image'] = None
 
-                if item['pop'] < 1:
-                    pass
-                else:
                     yield item
 
 

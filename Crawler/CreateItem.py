@@ -9,7 +9,7 @@ import math
 from datetime import datetime
 from bs4 import BeautifulSoup
 from Crawler.TextTypeEnum import *
-from Crawler.HitPerTimeForWebSiteEnum import *
+from Crawler.avarageDataBySiteEnum import *
 
 def replaceText(text, texttype):
     if texttype == TextType.LINK:
@@ -44,7 +44,7 @@ def createItemUseBs4(url, name, attr,texttype, encoding):
         origin = JoinPostUrl.find(name=name, attrs=attr).text.strip()
         conversion = replaceText(origin, texttype)
     except AttributeError as e:
-        print("Attr Error : " + str(e))
+        print("Attr Error1 : " + str(e))
         conversion = ""
     return conversion
 
@@ -53,10 +53,13 @@ def createItemUseBs4_PostImage(url, tagAttr):
     try:
         imgs = JoinPostUrl.find_all("img")
         for img in imgs:
-            if tagAttr in img.get("src"):
-                return img.get("src")
+            if tagAttr in img.get("src") or "http://i2" in img.get("src") or "http://i3" in img.get("src"):
+                    if "profile" in img.get("src"):
+                        pass
+                    else:
+                        return img.get("src")
     except AttributeError as e:
-        print("Attr Error : " + str(e))
+        print("Attr Error2 : " + str(e))
         return None
 
 def getCurrentTime(returntype):
@@ -74,13 +77,13 @@ def getPostTime(postdate, returntype):
         postTime = datetime.strptime(postdate,"%Y-%m-%d %H:%M:%S")
         return postTime
 
-def createItem_pop(postDate, postRecommened, postHits, spiderName):
+def createItem_pop(postRecommened, postHits, spiderName):
     hit = int(postHits)
     reco = int(postRecommened)
 
     if hit < 1:
         pop = 0
     else:
-        pop = ((reco * 100) / hit) / hitPerRecoDic[spiderName]
+        pop = (((reco+1) * 100) / hit) / hitPerRecoDic[spiderName]
 
     return math.sqrt(pop)
