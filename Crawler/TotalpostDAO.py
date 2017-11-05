@@ -38,6 +38,8 @@ class TotalpostDAO:
             print("Insert Error : " + str(e))
 
         self.conn.commit()
+        self.cursor.close()
+        self.conn.close()
 
     def deleteOldData(self):
 
@@ -49,3 +51,5 @@ class TotalpostDAO:
             print("Delete Error : " + str(e))
 
         self.conn.commit()
+        self.cursor.close()
+        self.conn.close()
