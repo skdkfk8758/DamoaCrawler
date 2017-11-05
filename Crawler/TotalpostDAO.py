@@ -38,6 +38,8 @@ class TotalpostDAO:
             print("Insert Error : " + str(e))
 
         self.conn.commit()
+
+    def DBClose(self):
         self.cursor.close()
         self.conn.close()
 
