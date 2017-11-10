@@ -6,7 +6,7 @@ scrapyd-deploy
 
 sleep 2
 
-curl http://localhost:6800/schedule.json -d project=Damoa -d spider=clien
+#curl http://localhost:6800/schedule.json -d project=Damoa -d spider=clien
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=bobaedream
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=gameshot
 curl http://localhost:6800/schedule.json -d project=Damoa -d spider=ruli

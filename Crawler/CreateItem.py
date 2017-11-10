@@ -5,7 +5,6 @@ Create : 2017.10.09
 """
 
 import requests
-import math
 from datetime import datetime
 from bs4 import BeautifulSoup
 from Crawler.TextTypeEnum import *
@@ -81,9 +80,9 @@ def createItem_pop(postRecommened, postHits, spiderName):
     hit = int(postHits)
     reco = int(postRecommened)
 
-    if hit < 1:
-        pop = 0
-    else:
-        pop = (((reco+1) * 100) / hit) / hitPerRecoDic[spiderName]
+    # if hit < 1:
+    #     pop = 0
+    # else:
+    pop = (hit / hit_per_reco[spiderName]) + reco
 
-    return math.sqrt(pop)
+    return pop
