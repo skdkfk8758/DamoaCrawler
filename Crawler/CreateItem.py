@@ -85,4 +85,7 @@ def createItem_pop(postRecommened, postHits, spiderName):
     # else:
     pop = (hit / hit_per_reco[spiderName]) + reco
 
+    if pop > 100:
+        pop = 100
+
     return pop
