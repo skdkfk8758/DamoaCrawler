@@ -1,61 +1,75 @@
 import pymysql
-from Crawler.DBConfig import *
-from Crawler.avarageDataBySiteEnum import *
-from Crawler.CreateItem import *
+import matplotlib.pyplot as plt
 
 class TotalpostDAO:
-
     # DB접속을 위해 커넥션 얻는 부분
     def __init__(self):
         try:
-            self.conn = pymysql.connect(host = HOST, port = PORT, user = USER, password = PASSWORD, db = DB,charset = CHARSET)
+            self.conn = pymysql.connect(
+                host="damoa.cfgh1vs9ndmp.ap-northeast-2.rds.amazonaws.com",
+                port=3306,
+                user="root",
+                password="sxcv5012",
+                db="Damoa",
+                charset="utf8mb4")
             self.cursor = self.conn.cursor()
 
         except pymysql.Error as e:
             print("DB Connection Error")
 
-
     def asd(self):
-        sql = "select hits, recommened from totalposts where source=%s"
+        sql = "select title, hits, recommened from totalposts where source=%s"
 
-        sum = 0
+        hitSum = 0
+        recoSum = 0
 
-        for name in ["clien", "humoruniv", "ygosu", "ruli", "giggle", "bobaedream", "82cook",
-                     "fmkorea", "gameshot", "hwbattle", "quasarzone", "thisisgame", "underkg"]:
+        pops = []
+
+        for name in ["humoruniv",
+                     "ygosu",
+                     "ruli",
+                     "giggle",
+                     "bobaedream",
+                     "82cook",
+                     "fmkorea",
+                     "gameshot",
+                     "hwbattle",
+                     "quasarzone",
+                     "thisisgame",
+                     "underkg"
+                     ]:
             try:
                 self.cursor.execute(sql, name)
 
                 results = self.cursor.fetchall()
 
                 for rs in results:
-                    hit = rs[0]
-                    reco = rs[1]
+                    hit = rs[1]
+                    reco = rs[2]
+                    title = rs[0]
 
-                    # print(hit)
-                    # print(reco)
+                    hitSum = hitSum + hit
+                    recoSum = recoSum + reco
 
-                    if hit < 1:
-                        hit = 1
-                        aaa = (((reco+1)/hit) * 100) / hitPerTimeDic[name]
-                    else:
-                        aaa = (((reco+1) / hit) * 100) / hitPerTimeDic[name]
+                    hpp = hitSum / len(results)
+                    rpp = recoSum / len(results)
+                    hpr = (hitSum / len(results)) / (recoSum / len(results))
 
-                print(name + " " + str(aaa))
+                    pop = (hit / hpr) + reco
+
+                print(
+                    # "pop :", pop,
+                      # "recoSum :", recoSum,
+                      "avg(hit/post) :", hpp,
+                      "avg(reco/post) :", rpp,
+                      "avg(hit/reco) : ", hpr,
+                       name, len(results))
+
 
             except pymysql.Error as e:
                 print("SELECT Error : " + str(e))
 
         self.conn.commit()
-
-    def nogada(self):
-        sql = "select post_attribute from totalposts group by post_attribute"
-
-        self.cursor.execute(sql)
-
-        results = self.cursor.fetchall()
-
-        for rs in results:
-            print(rs[0])
 
 
 if __name__ == '__main__':
