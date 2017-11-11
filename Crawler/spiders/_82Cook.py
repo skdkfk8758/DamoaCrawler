@@ -68,7 +68,10 @@ class Spider(scrapy.Spider):
                 item['hits'] = createItemUseXpath(select, hitsXpath, texttype=TextType.INT).split(" ")[0]
 
                 recommenedXpath = "td[@class='numbers']/text()"
-                item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype=TextType.INT).split(" ")[1]
+                try:
+                    item['recommened'] = createItemUseXpath(select, recommenedXpath, texttype=TextType.INT).split(" ")[1]
+                except:
+                    item['recommened'] = 0
 
                 item['last_update'] = getCurrentTime(TextType.STRING)
 
