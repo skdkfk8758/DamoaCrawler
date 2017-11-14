@@ -76,16 +76,17 @@ def getPostTime(postdate, returntype):
         postTime = datetime.strptime(postdate,"%Y-%m-%d %H:%M:%S")
         return postTime
 
-def createItem_pop(postRecommened, postHits, spiderName):
+def createItem_pop(postRecommened, postHits,postdate, spiderName):
     hit = int(postHits)
     reco = int(postRecommened)
+    postOpeningTime = (getCurrentTime("datetime") - getPostTime(postdate, "datetime")).total_seconds() / 3600
+    time = postOpeningTime / 100
 
-    # if hit < 1:
-    #     pop = 0
-    # else:
-    pop = (hit / hit_per_reco[spiderName]) + reco
+    pop = ((hit / hit_per_reco[spiderName]) + reco) - time
 
     if pop > 100:
         pop = 100
+    if pop < 0:
+        pop = 0
 
     return pop

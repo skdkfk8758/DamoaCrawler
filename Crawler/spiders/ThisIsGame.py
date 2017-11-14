@@ -66,7 +66,7 @@ class Spider(scrapy.Spider):
 
             item['last_update'] = getCurrentTime("str")
 
-            item['pop'] = createItem_pop(item['recommened'], item['hits'], self.name)
+            item['pop'] = createItem_pop(item['recommened'], item['hits'], item['date'], self.name)
 
             tagName = "div"
             tagAttrs = {"class": "content board-content"}
